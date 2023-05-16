@@ -82,10 +82,11 @@
             this.TeacherTabs.Controls.Add(this.TeacherTab_2);
             this.TeacherTabs.Controls.Add(this.ViewProgressTab);
             this.TeacherTabs.Controls.Add(this.CommentsTab);
-            this.TeacherTabs.Location = new System.Drawing.Point(-2, 4);
+            this.TeacherTabs.Location = new System.Drawing.Point(-1, 3);
+            this.TeacherTabs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TeacherTabs.Name = "TeacherTabs";
             this.TeacherTabs.SelectedIndex = 0;
-            this.TeacherTabs.Size = new System.Drawing.Size(1396, 702);
+            this.TeacherTabs.Size = new System.Drawing.Size(931, 456);
             this.TeacherTabs.TabIndex = 1;
             // 
             // TeacherTab_1
@@ -100,10 +101,11 @@
             this.TeacherTab_1.Controls.Add(this.txtAssDueDate);
             this.TeacherTab_1.Controls.Add(this.txtAssDesc);
             this.TeacherTab_1.Controls.Add(this.createNewAssingment);
-            this.TeacherTab_1.Location = new System.Drawing.Point(4, 29);
+            this.TeacherTab_1.Location = new System.Drawing.Point(4, 22);
+            this.TeacherTab_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TeacherTab_1.Name = "TeacherTab_1";
-            this.TeacherTab_1.Padding = new System.Windows.Forms.Padding(3);
-            this.TeacherTab_1.Size = new System.Drawing.Size(1388, 669);
+            this.TeacherTab_1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TeacherTab_1.Size = new System.Drawing.Size(923, 430);
             this.TeacherTab_1.TabIndex = 0;
             this.TeacherTab_1.Text = "Create Assignment";
             this.TeacherTab_1.UseVisualStyleBackColor = true;
@@ -111,9 +113,10 @@
             // CreateAssignment
             // 
             this.CreateAssignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateAssignment.Location = new System.Drawing.Point(1077, 529);
+            this.CreateAssignment.Location = new System.Drawing.Point(718, 344);
+            this.CreateAssignment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CreateAssignment.Name = "CreateAssignment";
-            this.CreateAssignment.Size = new System.Drawing.Size(160, 61);
+            this.CreateAssignment.Size = new System.Drawing.Size(107, 40);
             this.CreateAssignment.TabIndex = 22;
             this.CreateAssignment.Text = "Create";
             this.CreateAssignment.UseVisualStyleBackColor = true;
@@ -123,9 +126,10 @@
             // 
             this.AssignmetFile.AutoSize = true;
             this.AssignmetFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssignmetFile.Location = new System.Drawing.Point(152, 344);
+            this.AssignmetFile.Location = new System.Drawing.Point(101, 224);
+            this.AssignmetFile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AssignmetFile.Name = "AssignmetFile";
-            this.AssignmetFile.Size = new System.Drawing.Size(185, 29);
+            this.AssignmetFile.Size = new System.Drawing.Size(122, 20);
             this.AssignmetFile.TabIndex = 21;
             this.AssignmetFile.Text = "Assignment File";
             // 
@@ -133,9 +137,10 @@
             // 
             this.assPoints.AutoSize = true;
             this.assPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assPoints.Location = new System.Drawing.Point(999, 344);
+            this.assPoints.Location = new System.Drawing.Point(666, 224);
+            this.assPoints.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.assPoints.Name = "assPoints";
-            this.assPoints.Size = new System.Drawing.Size(211, 29);
+            this.assPoints.Size = new System.Drawing.Size(141, 20);
             this.assPoints.TabIndex = 20;
             this.assPoints.Text = "Assignment Points";
             // 
@@ -143,9 +148,10 @@
             // 
             this.AssignmentDueDate.AutoSize = true;
             this.AssignmentDueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssignmentDueDate.Location = new System.Drawing.Point(999, 129);
+            this.AssignmentDueDate.Location = new System.Drawing.Point(666, 84);
+            this.AssignmentDueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AssignmentDueDate.Name = "AssignmentDueDate";
-            this.AssignmentDueDate.Size = new System.Drawing.Size(238, 29);
+            this.AssignmentDueDate.Size = new System.Drawing.Size(162, 20);
             this.AssignmentDueDate.TabIndex = 19;
             this.AssignmentDueDate.Text = "Assignment DueDate";
             // 
@@ -153,42 +159,47 @@
             // 
             this.AssignmentDescription.AutoSize = true;
             this.AssignmentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssignmentDescription.Location = new System.Drawing.Point(151, 129);
+            this.AssignmentDescription.Location = new System.Drawing.Point(101, 84);
+            this.AssignmentDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AssignmentDescription.Name = "AssignmentDescription";
-            this.AssignmentDescription.Size = new System.Drawing.Size(266, 29);
+            this.AssignmentDescription.Size = new System.Drawing.Size(177, 20);
             this.AssignmentDescription.TabIndex = 18;
             this.AssignmentDescription.Text = "Assignment Description";
             // 
             // txtAssignmetFile
             // 
             this.txtAssignmetFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssignmetFile.Location = new System.Drawing.Point(155, 406);
+            this.txtAssignmetFile.Location = new System.Drawing.Point(103, 264);
+            this.txtAssignmetFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssignmetFile.Name = "txtAssignmetFile";
-            this.txtAssignmetFile.Size = new System.Drawing.Size(189, 35);
+            this.txtAssignmetFile.Size = new System.Drawing.Size(127, 26);
             this.txtAssignmetFile.TabIndex = 17;
             // 
             // txtAssPoints
             // 
             this.txtAssPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssPoints.Location = new System.Drawing.Point(1004, 406);
+            this.txtAssPoints.Location = new System.Drawing.Point(669, 264);
+            this.txtAssPoints.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssPoints.Name = "txtAssPoints";
-            this.txtAssPoints.Size = new System.Drawing.Size(210, 35);
+            this.txtAssPoints.Size = new System.Drawing.Size(141, 26);
             this.txtAssPoints.TabIndex = 16;
             // 
             // txtAssDueDate
             // 
             this.txtAssDueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssDueDate.Location = new System.Drawing.Point(1004, 183);
+            this.txtAssDueDate.Location = new System.Drawing.Point(669, 119);
+            this.txtAssDueDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssDueDate.Name = "txtAssDueDate";
-            this.txtAssDueDate.Size = new System.Drawing.Size(210, 35);
+            this.txtAssDueDate.Size = new System.Drawing.Size(141, 26);
             this.txtAssDueDate.TabIndex = 15;
             // 
             // txtAssDesc
             // 
-            this.txtAssDesc.Location = new System.Drawing.Point(155, 183);
+            this.txtAssDesc.Location = new System.Drawing.Point(103, 119);
+            this.txtAssDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssDesc.Multiline = true;
             this.txtAssDesc.Name = "txtAssDesc";
-            this.txtAssDesc.Size = new System.Drawing.Size(619, 129);
+            this.txtAssDesc.Size = new System.Drawing.Size(414, 85);
             this.txtAssDesc.TabIndex = 14;
             // 
             // createNewAssingment
@@ -196,9 +207,10 @@
             this.createNewAssingment.AutoSize = true;
             this.createNewAssingment.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.createNewAssingment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createNewAssingment.Location = new System.Drawing.Point(523, 43);
+            this.createNewAssingment.Location = new System.Drawing.Point(349, 28);
+            this.createNewAssingment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.createNewAssingment.Name = "createNewAssingment";
-            this.createNewAssingment.Size = new System.Drawing.Size(383, 37);
+            this.createNewAssingment.Size = new System.Drawing.Size(269, 26);
             this.createNewAssingment.TabIndex = 13;
             this.createNewAssingment.Text = "Create New Assignment";
             // 
@@ -210,10 +222,11 @@
             this.TeacherTab_2.Controls.Add(this.labelAssignmentDueDate);
             this.TeacherTab_2.Controls.Add(this.labelAssignmentNumber);
             this.TeacherTab_2.Controls.Add(this.labelSetDeadlinesofAssignments);
-            this.TeacherTab_2.Location = new System.Drawing.Point(4, 29);
+            this.TeacherTab_2.Location = new System.Drawing.Point(4, 22);
+            this.TeacherTab_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TeacherTab_2.Name = "TeacherTab_2";
-            this.TeacherTab_2.Padding = new System.Windows.Forms.Padding(3);
-            this.TeacherTab_2.Size = new System.Drawing.Size(1388, 669);
+            this.TeacherTab_2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TeacherTab_2.Size = new System.Drawing.Size(923, 430);
             this.TeacherTab_2.TabIndex = 1;
             this.TeacherTab_2.Text = "Set Deadline";
             this.TeacherTab_2.UseVisualStyleBackColor = true;
@@ -221,9 +234,10 @@
             // buttonSetDeadline
             // 
             this.buttonSetDeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSetDeadline.Location = new System.Drawing.Point(1088, 522);
+            this.buttonSetDeadline.Location = new System.Drawing.Point(725, 339);
+            this.buttonSetDeadline.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSetDeadline.Name = "buttonSetDeadline";
-            this.buttonSetDeadline.Size = new System.Drawing.Size(149, 65);
+            this.buttonSetDeadline.Size = new System.Drawing.Size(99, 42);
             this.buttonSetDeadline.TabIndex = 5;
             this.buttonSetDeadline.Text = "Submit";
             this.buttonSetDeadline.UseVisualStyleBackColor = true;
@@ -232,26 +246,29 @@
             // txtAssDue
             // 
             this.txtAssDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssDue.Location = new System.Drawing.Point(500, 186);
+            this.txtAssDue.Location = new System.Drawing.Point(333, 121);
+            this.txtAssDue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssDue.Name = "txtAssDue";
-            this.txtAssDue.Size = new System.Drawing.Size(232, 32);
+            this.txtAssDue.Size = new System.Drawing.Size(156, 24);
             this.txtAssDue.TabIndex = 4;
             // 
             // txtAssNo
             // 
             this.txtAssNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssNo.Location = new System.Drawing.Point(68, 186);
+            this.txtAssNo.Location = new System.Drawing.Point(45, 121);
+            this.txtAssNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssNo.Name = "txtAssNo";
-            this.txtAssNo.Size = new System.Drawing.Size(201, 32);
+            this.txtAssNo.Size = new System.Drawing.Size(135, 24);
             this.txtAssNo.TabIndex = 3;
             // 
             // labelAssignmentDueDate
             // 
             this.labelAssignmentDueDate.AutoSize = true;
             this.labelAssignmentDueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAssignmentDueDate.Location = new System.Drawing.Point(495, 114);
+            this.labelAssignmentDueDate.Location = new System.Drawing.Point(330, 74);
+            this.labelAssignmentDueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAssignmentDueDate.Name = "labelAssignmentDueDate";
-            this.labelAssignmentDueDate.Size = new System.Drawing.Size(237, 26);
+            this.labelAssignmentDueDate.Size = new System.Drawing.Size(159, 18);
             this.labelAssignmentDueDate.TabIndex = 2;
             this.labelAssignmentDueDate.Text = "Assignment Due Date?";
             this.labelAssignmentDueDate.Click += new System.EventHandler(this.label3_Click);
@@ -260,9 +277,10 @@
             // 
             this.labelAssignmentNumber.AutoSize = true;
             this.labelAssignmentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAssignmentNumber.Location = new System.Drawing.Point(63, 114);
+            this.labelAssignmentNumber.Location = new System.Drawing.Point(42, 74);
+            this.labelAssignmentNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAssignmentNumber.Name = "labelAssignmentNumber";
-            this.labelAssignmentNumber.Size = new System.Drawing.Size(223, 26);
+            this.labelAssignmentNumber.Size = new System.Drawing.Size(150, 18);
             this.labelAssignmentNumber.TabIndex = 1;
             this.labelAssignmentNumber.Text = "Assignment Number?";
             this.labelAssignmentNumber.Click += new System.EventHandler(this.label2_Click);
@@ -271,9 +289,10 @@
             // 
             this.labelSetDeadlinesofAssignments.AutoSize = true;
             this.labelSetDeadlinesofAssignments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSetDeadlinesofAssignments.Location = new System.Drawing.Point(495, 31);
+            this.labelSetDeadlinesofAssignments.Location = new System.Drawing.Point(330, 20);
+            this.labelSetDeadlinesofAssignments.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSetDeadlinesofAssignments.Name = "labelSetDeadlinesofAssignments";
-            this.labelSetDeadlinesofAssignments.Size = new System.Drawing.Size(361, 29);
+            this.labelSetDeadlinesofAssignments.Size = new System.Drawing.Size(251, 20);
             this.labelSetDeadlinesofAssignments.TabIndex = 0;
             this.labelSetDeadlinesofAssignments.Text = "Set Deadlines of Assignments";
             // 
@@ -285,10 +304,11 @@
             this.ViewProgressTab.Controls.Add(this.txtStudentsID);
             this.ViewProgressTab.Controls.Add(this.StudentID);
             this.ViewProgressTab.Controls.Add(this.labelViewProgress);
-            this.ViewProgressTab.Location = new System.Drawing.Point(4, 29);
+            this.ViewProgressTab.Location = new System.Drawing.Point(4, 22);
+            this.ViewProgressTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ViewProgressTab.Name = "ViewProgressTab";
-            this.ViewProgressTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ViewProgressTab.Size = new System.Drawing.Size(1388, 669);
+            this.ViewProgressTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewProgressTab.Size = new System.Drawing.Size(923, 430);
             this.ViewProgressTab.TabIndex = 2;
             this.ViewProgressTab.Text = "View Progress";
             this.ViewProgressTab.UseVisualStyleBackColor = true;
@@ -296,47 +316,52 @@
             // buttonViewProgress
             // 
             this.buttonViewProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewProgress.Location = new System.Drawing.Point(1097, 522);
+            this.buttonViewProgress.Location = new System.Drawing.Point(731, 339);
+            this.buttonViewProgress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonViewProgress.Name = "buttonViewProgress";
-            this.buttonViewProgress.Size = new System.Drawing.Size(140, 63);
+            this.buttonViewProgress.Size = new System.Drawing.Size(93, 41);
             this.buttonViewProgress.TabIndex = 8;
             this.buttonViewProgress.Text = "Submit";
             this.buttonViewProgress.UseVisualStyleBackColor = true;
-            this.buttonViewProgress.Click += new System.EventHandler(this.Submit2_Click);
+            this.buttonViewProgress.Click += new System.EventHandler(this.viewProgressButton_Clicked);
             // 
             // txtAssNo2
             // 
             this.txtAssNo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssNo2.Location = new System.Drawing.Point(113, 369);
+            this.txtAssNo2.Location = new System.Drawing.Point(75, 240);
+            this.txtAssNo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssNo2.Name = "txtAssNo2";
-            this.txtAssNo2.Size = new System.Drawing.Size(201, 32);
+            this.txtAssNo2.Size = new System.Drawing.Size(135, 24);
             this.txtAssNo2.TabIndex = 7;
             // 
             // labelAssNo2
             // 
             this.labelAssNo2.AutoSize = true;
             this.labelAssNo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAssNo2.Location = new System.Drawing.Point(108, 297);
+            this.labelAssNo2.Location = new System.Drawing.Point(72, 193);
+            this.labelAssNo2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAssNo2.Name = "labelAssNo2";
-            this.labelAssNo2.Size = new System.Drawing.Size(223, 26);
+            this.labelAssNo2.Size = new System.Drawing.Size(150, 18);
             this.labelAssNo2.TabIndex = 6;
             this.labelAssNo2.Text = "Assignment Number?";
             // 
             // txtStudentsID
             // 
             this.txtStudentsID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentsID.Location = new System.Drawing.Point(113, 198);
+            this.txtStudentsID.Location = new System.Drawing.Point(75, 129);
+            this.txtStudentsID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStudentsID.Name = "txtStudentsID";
-            this.txtStudentsID.Size = new System.Drawing.Size(201, 32);
+            this.txtStudentsID.Size = new System.Drawing.Size(135, 24);
             this.txtStudentsID.TabIndex = 5;
             // 
             // StudentID
             // 
             this.StudentID.AutoSize = true;
             this.StudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentID.Location = new System.Drawing.Point(108, 126);
+            this.StudentID.Location = new System.Drawing.Point(72, 82);
+            this.StudentID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudentID.Name = "StudentID";
-            this.StudentID.Size = new System.Drawing.Size(127, 26);
+            this.StudentID.Size = new System.Drawing.Size(84, 18);
             this.StudentID.TabIndex = 4;
             this.StudentID.Text = "Student ID?";
             // 
@@ -344,19 +369,21 @@
             // 
             this.labelViewProgress.AutoSize = true;
             this.labelViewProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelViewProgress.Location = new System.Drawing.Point(577, 41);
+            this.labelViewProgress.Location = new System.Drawing.Point(385, 27);
+            this.labelViewProgress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelViewProgress.Name = "labelViewProgress";
-            this.labelViewProgress.Size = new System.Drawing.Size(183, 29);
+            this.labelViewProgress.Size = new System.Drawing.Size(123, 20);
             this.labelViewProgress.TabIndex = 1;
             this.labelViewProgress.Text = "View Progress";
             // 
             // CommentsTab
             // 
             this.CommentsTab.Controls.Add(this.tabControl1);
-            this.CommentsTab.Location = new System.Drawing.Point(4, 29);
+            this.CommentsTab.Location = new System.Drawing.Point(4, 22);
+            this.CommentsTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CommentsTab.Name = "CommentsTab";
-            this.CommentsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CommentsTab.Size = new System.Drawing.Size(1388, 669);
+            this.CommentsTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CommentsTab.Size = new System.Drawing.Size(923, 430);
             this.CommentsTab.TabIndex = 3;
             this.CommentsTab.Text = "Comments";
             this.CommentsTab.UseVisualStyleBackColor = true;
@@ -367,9 +394,10 @@
             this.tabControl1.Controls.Add(this.deleteCommentTab);
             this.tabControl1.Controls.Add(this.updateCommentTab);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1381, 663);
+            this.tabControl1.Size = new System.Drawing.Size(921, 431);
             this.tabControl1.TabIndex = 0;
             // 
             // addCommentTab
@@ -382,10 +410,11 @@
             this.addCommentTab.Controls.Add(this.labelCOmmentDate);
             this.addCommentTab.Controls.Add(this.labelCommentDesc);
             this.addCommentTab.Controls.Add(this.labelnewComment);
-            this.addCommentTab.Location = new System.Drawing.Point(4, 29);
+            this.addCommentTab.Location = new System.Drawing.Point(4, 22);
+            this.addCommentTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addCommentTab.Name = "addCommentTab";
-            this.addCommentTab.Padding = new System.Windows.Forms.Padding(3);
-            this.addCommentTab.Size = new System.Drawing.Size(1373, 630);
+            this.addCommentTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCommentTab.Size = new System.Drawing.Size(913, 405);
             this.addCommentTab.TabIndex = 0;
             this.addCommentTab.Text = "Add Comment";
             this.addCommentTab.UseVisualStyleBackColor = true;
@@ -393,9 +422,10 @@
             // txtAssignmentID
             // 
             this.txtAssignmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssignmentID.Location = new System.Drawing.Point(766, 354);
+            this.txtAssignmentID.Location = new System.Drawing.Point(511, 230);
+            this.txtAssignmentID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssignmentID.Name = "txtAssignmentID";
-            this.txtAssignmentID.Size = new System.Drawing.Size(232, 32);
+            this.txtAssignmentID.Size = new System.Drawing.Size(156, 24);
             this.txtAssignmentID.TabIndex = 13;
             this.txtAssignmentID.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
             // 
@@ -403,9 +433,10 @@
             // 
             this.AssignmentID.AutoSize = true;
             this.AssignmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssignmentID.Location = new System.Drawing.Point(761, 291);
+            this.AssignmentID.Location = new System.Drawing.Point(507, 189);
+            this.AssignmentID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AssignmentID.Name = "AssignmentID";
-            this.AssignmentID.Size = new System.Drawing.Size(155, 26);
+            this.AssignmentID.Size = new System.Drawing.Size(103, 18);
             this.AssignmentID.TabIndex = 12;
             this.AssignmentID.Text = "Assignment ID";
             this.AssignmentID.Click += new System.EventHandler(this.label1_Click_6);
@@ -413,30 +444,33 @@
             // buttonAddComment
             // 
             this.buttonAddComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddComment.Location = new System.Drawing.Point(1124, 514);
+            this.buttonAddComment.Location = new System.Drawing.Point(749, 334);
+            this.buttonAddComment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAddComment.Name = "buttonAddComment";
-            this.buttonAddComment.Size = new System.Drawing.Size(149, 65);
+            this.buttonAddComment.Size = new System.Drawing.Size(99, 42);
             this.buttonAddComment.TabIndex = 11;
             this.buttonAddComment.Text = "Submit";
             this.buttonAddComment.UseVisualStyleBackColor = true;
-            this.buttonAddComment.Click += new System.EventHandler(this.button1_Click_1);
+            this.buttonAddComment.Click += new System.EventHandler(this.addCommentButton_Clicked);
             // 
             // txtCommentDate
             // 
             this.txtCommentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommentDate.Location = new System.Drawing.Point(766, 192);
+            this.txtCommentDate.Location = new System.Drawing.Point(511, 125);
+            this.txtCommentDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCommentDate.Name = "txtCommentDate";
-            this.txtCommentDate.Size = new System.Drawing.Size(232, 32);
+            this.txtCommentDate.Size = new System.Drawing.Size(156, 24);
             this.txtCommentDate.TabIndex = 10;
             this.txtCommentDate.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // txtCommentDesc
             // 
             this.txtCommentDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommentDesc.Location = new System.Drawing.Point(104, 192);
+            this.txtCommentDesc.Location = new System.Drawing.Point(69, 125);
+            this.txtCommentDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCommentDesc.Multiline = true;
             this.txtCommentDesc.Name = "txtCommentDesc";
-            this.txtCommentDesc.Size = new System.Drawing.Size(518, 253);
+            this.txtCommentDesc.Size = new System.Drawing.Size(347, 166);
             this.txtCommentDesc.TabIndex = 9;
             this.txtCommentDesc.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -444,9 +478,10 @@
             // 
             this.labelCOmmentDate.AutoSize = true;
             this.labelCOmmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCOmmentDate.Location = new System.Drawing.Point(761, 129);
+            this.labelCOmmentDate.Location = new System.Drawing.Point(507, 84);
+            this.labelCOmmentDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCOmmentDate.Name = "labelCOmmentDate";
-            this.labelCOmmentDate.Size = new System.Drawing.Size(160, 26);
+            this.labelCOmmentDate.Size = new System.Drawing.Size(109, 18);
             this.labelCOmmentDate.TabIndex = 8;
             this.labelCOmmentDate.Text = "Comment Date";
             this.labelCOmmentDate.Click += new System.EventHandler(this.label1_Click_5);
@@ -455,9 +490,10 @@
             // 
             this.labelCommentDesc.AutoSize = true;
             this.labelCommentDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCommentDesc.Location = new System.Drawing.Point(99, 120);
+            this.labelCommentDesc.Location = new System.Drawing.Point(66, 78);
+            this.labelCommentDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCommentDesc.Name = "labelCommentDesc";
-            this.labelCommentDesc.Size = new System.Drawing.Size(223, 26);
+            this.labelCommentDesc.Size = new System.Drawing.Size(153, 18);
             this.labelCommentDesc.TabIndex = 7;
             this.labelCommentDesc.Text = "Comment Description";
             this.labelCommentDesc.Click += new System.EventHandler(this.label2_Click_1);
@@ -466,39 +502,43 @@
             // 
             this.labelnewComment.AutoSize = true;
             this.labelnewComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelnewComment.Location = new System.Drawing.Point(534, 42);
+            this.labelnewComment.Location = new System.Drawing.Point(356, 27);
+            this.labelnewComment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelnewComment.Name = "labelnewComment";
-            this.labelnewComment.Size = new System.Drawing.Size(184, 29);
+            this.labelnewComment.Size = new System.Drawing.Size(124, 20);
             this.labelnewComment.TabIndex = 6;
             this.labelnewComment.Text = "New Comment";
             this.labelnewComment.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // deleteCommentTab
             // 
-            this.deleteCommentTab.Location = new System.Drawing.Point(4, 29);
+            this.deleteCommentTab.Location = new System.Drawing.Point(4, 22);
+            this.deleteCommentTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteCommentTab.Name = "deleteCommentTab";
-            this.deleteCommentTab.Padding = new System.Windows.Forms.Padding(3);
-            this.deleteCommentTab.Size = new System.Drawing.Size(1373, 630);
+            this.deleteCommentTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteCommentTab.Size = new System.Drawing.Size(913, 405);
             this.deleteCommentTab.TabIndex = 1;
             this.deleteCommentTab.Text = "Delete Comment";
             this.deleteCommentTab.UseVisualStyleBackColor = true;
             // 
             // updateCommentTab
             // 
-            this.updateCommentTab.Location = new System.Drawing.Point(4, 29);
+            this.updateCommentTab.Location = new System.Drawing.Point(4, 22);
+            this.updateCommentTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updateCommentTab.Name = "updateCommentTab";
-            this.updateCommentTab.Padding = new System.Windows.Forms.Padding(3);
-            this.updateCommentTab.Size = new System.Drawing.Size(1373, 630);
+            this.updateCommentTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateCommentTab.Size = new System.Drawing.Size(913, 405);
             this.updateCommentTab.TabIndex = 2;
             this.updateCommentTab.Text = "Update Comment";
             this.updateCommentTab.UseVisualStyleBackColor = true;
             // 
             // TeacherPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1395, 718);
+            this.ClientSize = new System.Drawing.Size(913, 467);
             this.Controls.Add(this.TeacherTabs);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TeacherPanel";
             this.Text = "TeacherPanel";
             this.Load += new System.EventHandler(this.TeacherPanel_Load);

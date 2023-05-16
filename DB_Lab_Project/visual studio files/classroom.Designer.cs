@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControlClassroom = new System.Windows.Forms.TabControl();
             this.ClassesP = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.noClassLabel = new System.Windows.Forms.Label();
             this.AddClassP = new System.Windows.Forms.TabPage();
             this.Add = new System.Windows.Forms.Button();
@@ -63,7 +64,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.assignmentButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControlClassroom.SuspendLayout();
             this.ClassesP.SuspendLayout();
@@ -78,11 +79,11 @@
             // classroomName
             // 
             this.classroomName.AutoSize = true;
-            this.classroomName.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classroomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.classroomName.Location = new System.Drawing.Point(18, 24);
             this.classroomName.Name = "classroomName";
-            this.classroomName.Size = new System.Drawing.Size(136, 31);
+            this.classroomName.Size = new System.Drawing.Size(144, 31);
             this.classroomName.TabIndex = 0;
             this.classroomName.Text = "Classroom";
             // 
@@ -136,6 +137,7 @@
             // ClassesP
             // 
             this.ClassesP.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClassesP.Controls.Add(this.assignmentButton);
             this.ClassesP.Controls.Add(this.flowLayoutPanel1);
             this.ClassesP.Controls.Add(this.noClassLabel);
             this.ClassesP.Controls.Add(this.panel1);
@@ -146,6 +148,14 @@
             this.ClassesP.Size = new System.Drawing.Size(1086, 516);
             this.ClassesP.TabIndex = 0;
             this.ClassesP.Text = "Classes";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 152);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1011, 238);
+            this.flowLayoutPanel1.TabIndex = 7;
+            this.flowLayoutPanel1.Visible = false;
             // 
             // noClassLabel
             // 
@@ -182,7 +192,7 @@
             this.Add.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.Add.FlatAppearance.BorderSize = 3;
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add.Location = new System.Drawing.Point(475, 302);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(304, 35);
@@ -202,10 +212,10 @@
             // className
             // 
             this.className.AutoSize = true;
-            this.className.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.className.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.className.Location = new System.Drawing.Point(307, 213);
             this.className.Name = "className";
-            this.className.Size = new System.Drawing.Size(105, 22);
+            this.className.Size = new System.Drawing.Size(111, 24);
             this.className.TabIndex = 9;
             this.className.Text = "Class Name";
             // 
@@ -223,10 +233,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(307, 154);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 22);
+            this.label12.Size = new System.Drawing.Size(106, 24);
             this.label12.TabIndex = 7;
             this.label12.Text = "Class Code";
             // 
@@ -267,11 +277,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(18, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 31);
+            this.label3.Size = new System.Drawing.Size(138, 31);
             this.label3.TabIndex = 0;
             this.label3.Text = "Add Class";
             // 
@@ -297,7 +307,7 @@
             this.update.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.update.FlatAppearance.BorderSize = 3;
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.Location = new System.Drawing.Point(475, 302);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(304, 35);
@@ -317,10 +327,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(307, 213);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 22);
+            this.label13.Size = new System.Drawing.Size(111, 24);
             this.label13.TabIndex = 14;
             this.label13.Text = "Class Name";
             // 
@@ -335,10 +345,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(307, 154);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 22);
+            this.label15.Size = new System.Drawing.Size(106, 24);
             this.label15.TabIndex = 12;
             this.label15.Text = "Class Code";
             // 
@@ -379,11 +389,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(18, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 31);
+            this.label7.Size = new System.Drawing.Size(178, 31);
             this.label7.TabIndex = 0;
             this.label7.Text = "Update Class";
             // 
@@ -407,7 +417,7 @@
             this.remove.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.remove.FlatAppearance.BorderSize = 3;
             this.remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.remove.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remove.Location = new System.Drawing.Point(475, 238);
             this.remove.Name = "remove";
             this.remove.Size = new System.Drawing.Size(304, 35);
@@ -427,10 +437,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(307, 154);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 22);
+            this.label14.Size = new System.Drawing.Size(106, 24);
             this.label14.TabIndex = 12;
             this.label14.Text = "Class Code";
             // 
@@ -471,21 +481,23 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(18, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 31);
+            this.label5.Size = new System.Drawing.Size(191, 31);
             this.label5.TabIndex = 0;
             this.label5.Text = "Remove Class";
             // 
-            // flowLayoutPanel1
+            // assignmentButton
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 152);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1011, 238);
-            this.flowLayoutPanel1.TabIndex = 7;
-            this.flowLayoutPanel1.Visible = false;
+            this.assignmentButton.Location = new System.Drawing.Point(909, 111);
+            this.assignmentButton.Name = "assignmentButton";
+            this.assignmentButton.Size = new System.Drawing.Size(75, 23);
+            this.assignmentButton.TabIndex = 8;
+            this.assignmentButton.Text = "Assignment";
+            this.assignmentButton.UseVisualStyleBackColor = true;
+            this.assignmentButton.Click += new System.EventHandler(this.createAssignmentButton);
             // 
             // classroom
             // 
@@ -557,5 +569,6 @@
         private System.Windows.Forms.TextBox classCodeField2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button assignmentButton;
     }
 }

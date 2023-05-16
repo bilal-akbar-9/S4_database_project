@@ -65,7 +65,7 @@ namespace intial_form_1_
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CreateAssignment_Click(object sender, EventArgs e)
         {
             string AssignmentDesc = txtAssDesc.Text;
             string AssignmentDueDate = txtAssDueDate.Text;
@@ -140,7 +140,7 @@ namespace intial_form_1_
             }
         }
 
-        private void Submit2_Click(object sender, EventArgs e)
+        private void viewProgressButton_Clicked(object sender, EventArgs e)
         {
             string StudentID = txtStudentsID.Text;
             string AssignmentNumber = txtAssNo2.Text;
@@ -187,7 +187,7 @@ namespace intial_form_1_
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void addCommentButton_Clicked(object sender, EventArgs e)
         {
             string CommentDesc = txtCommentDesc.Text;
             string CommentDate = txtCommentDate.Text;
@@ -225,9 +225,5 @@ namespace intial_form_1_
 
         }
 
-        private void CreateAssignment_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

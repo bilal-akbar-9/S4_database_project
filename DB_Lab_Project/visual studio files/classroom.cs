@@ -170,5 +170,12 @@ namespace intial_form_1_
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void createAssignmentButton(object sender, EventArgs e)
+        {
+            this.Hide();
+            TeacherPanel teacherPanel = new TeacherPanel(teacherUsername);
+            teacherPanel.Show();
+        }
     }
 }

@@ -1,18 +1,7 @@
 ﻿create database DBLabProject
 use DBLabProject;
 
-create table Classroom
-(
-    classroomID int IDENTITY(1,1) not null,
-    classroomName varchar(20) not null,
-    classroomCode varchar(20) not null unique,
-    teacherUsername varchar(20) not null,
-    -- Primary key
-    primary key (classroomID),
-    -- Foreign key
-    foreign key (teacherUsername) references tblUser(username)
 
-)
 
 create table tblUser
 (
@@ -24,6 +13,19 @@ create table tblUser
     check (role in ('Student', 'Teacher', 'Admin')),
     -- Primary key  
     primary key (username)
+)
+
+create table Classroom
+(
+    classroomID int IDENTITY(1,1) not null,
+    classroomName varchar(20) not null,
+    classroomCode varchar(20) not null unique,
+    teacherUsername varchar(20) not null,
+    -- Primary key
+    primary key (classroomID),
+    -- Foreign key
+    foreign key (teacherUsername) references tblUser(username)
+
 )
 
 create table ClassroomAndStudent
