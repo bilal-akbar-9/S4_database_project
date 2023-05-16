@@ -83,6 +83,8 @@ create table Assignment
     foreign key (classroomID) references Classroom(classroomID)
 )
 
+select * from Assignment
+
 CREATE TABLE Submissions
 (
     -- username from User
@@ -110,4 +112,5 @@ create table Comment
     -- Foreign key
     foreign key (assignmentID) references Assignment(assignmentID)
 )
+
 

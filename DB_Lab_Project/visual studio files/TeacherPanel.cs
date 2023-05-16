@@ -189,7 +189,30 @@ namespace intial_form_1_
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            string CommentDesc = txtCommentDesc.Text;
+            string CommentDate = txtCommentDate.Text;
+            string AssignmentID = txtAssignmentID.Text;
 
+            try
+            {
+                cn.Open();
+                cm = new SqlCommand("insert into Comment (commentDescription,commentDate,assignmentID) values (@CommentDesc,@CommentDate,@AssignmentID)", cn);
+                cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
+                cm.Parameters.AddWithValue("@CommentDate", CommentDate);
+                cm.Parameters.AddWithValue("@AssignmentID", AssignmentID);
+                cm.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("Comment Added Successfully with ID: " + AssignmentID, "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCommentDesc.Clear();
+                txtCommentDate.Clear();
+                txtAssignmentID.Clear();
+                txtCommentDesc.Focus();
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void label1_Click_6(object sender, EventArgs e)
@@ -198,6 +221,11 @@ namespace intial_form_1_
         }
 
         private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateAssignment_Click(object sender, EventArgs e)
         {
 
         }
