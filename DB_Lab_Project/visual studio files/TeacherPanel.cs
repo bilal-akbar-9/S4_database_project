@@ -83,8 +83,7 @@ namespace intial_form_1_
                 cm.Parameters.AddWithValue("@username", username);
                 cm.ExecuteNonQuery();
                 cn.Close();
-                string AssignmentID = dr["assignmentID"].ToString();
-                MessageBox.Show("Assignment Added Successfully with ID: " + AssignmentID, "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Assignment Added Successfully" , "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtAssDesc.Clear();
                 txtAssDueDate.Clear();
                 txtAssignmetFile.Clear();
@@ -225,5 +224,113 @@ namespace intial_form_1_
 
         }
 
+        private void label1_Click_7(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_8(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteCommentButton(object sender, EventArgs e)
+        {
+            string CommentID = txtCommentID.Text;
+
+            try
+            {
+                cn.Open();
+                cm = new SqlCommand("delete from Comment where commentID=@CommentID", cn);
+                cm.Parameters.AddWithValue("@CommentID", CommentID);
+                cm.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("Comment Deleted Successfully with ID: " + CommentID, "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCommentID.Clear();
+                txtCommentID.Focus();
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_9(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateCOmmentButton(object sender, EventArgs e)
+        {
+            string CommentDesc = txtCommentDescUPDAtE.Text;
+            string CommentDate = txtCommentDateUpdate.Text;
+            string AssignmentID = txtAssIDUpdate.Text;
+            string CommentID = txtCOmmentIDUpdate.Text;
+
+            try
+            {
+                cn.Open();
+                cm = new SqlCommand("update Comment set commentDescription=@CommentDesc,commentDate=@CommentDate,assignmentID=@AssignmentID where commentID=@CommentID", cn);
+                cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
+                cm.Parameters.AddWithValue("@CommentDate", CommentDate);
+                cm.Parameters.AddWithValue("@AssignmentID", AssignmentID);
+                cm.Parameters.AddWithValue("@CommentID", CommentID);
+                cm.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("Comment Updated Successfully with ID: " + CommentID, "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCommentDescUPDAtE.Clear();
+                txtCommentDateUpdate.Clear();
+                txtAssIDUpdate.Clear();
+                txtCOmmentIDUpdate.Clear();
+                txtCommentDescUPDAtE.Focus();
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_4(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCommetnIDUpdate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
