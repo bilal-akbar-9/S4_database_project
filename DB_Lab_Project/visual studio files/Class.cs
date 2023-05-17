@@ -72,9 +72,8 @@ namespace intial_form_1_
         private void createAssignmentButton_Clicked(object sender, EventArgs e)
         {
             this.Hide();
-            TeacherPanel teacherPanel = new TeacherPanel(teacherName,teacherUsername,classroomID);
-            teacherPanel.Show();
-
+            Assignments assignments = new Assignments(teacherUsername, classroomID);
+            assignments.Show();
         }
 
         private void Class_FormClosed(object sender, FormClosedEventArgs e)

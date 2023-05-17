@@ -124,7 +124,6 @@ namespace intial_form_1_
                     } while (dr.Read());
 
                 }
-
                 cn.Close();
             }
             catch (Exception ex)
@@ -198,6 +197,9 @@ namespace intial_form_1_
             }
         }
 
-       
+        private void teacherNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
