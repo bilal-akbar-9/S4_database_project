@@ -64,7 +64,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.assignmentButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControlClassroom.SuspendLayout();
             this.ClassesP.SuspendLayout();
@@ -137,7 +136,6 @@
             // ClassesP
             // 
             this.ClassesP.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClassesP.Controls.Add(this.assignmentButton);
             this.ClassesP.Controls.Add(this.flowLayoutPanel1);
             this.ClassesP.Controls.Add(this.noClassLabel);
             this.ClassesP.Controls.Add(this.panel1);
@@ -489,16 +487,6 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Remove Class";
             // 
-            // assignmentButton
-            // 
-            this.assignmentButton.Location = new System.Drawing.Point(909, 111);
-            this.assignmentButton.Name = "assignmentButton";
-            this.assignmentButton.Size = new System.Drawing.Size(75, 23);
-            this.assignmentButton.TabIndex = 8;
-            this.assignmentButton.Text = "Assignment";
-            this.assignmentButton.UseVisualStyleBackColor = true;
-            this.assignmentButton.Click += new System.EventHandler(this.createAssignmentButton);
-            // 
             // classroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,6 +557,5 @@
         private System.Windows.Forms.TextBox classCodeField2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button assignmentButton;
     }
 }

@@ -94,6 +94,15 @@ namespace intial_form_1_
                         classCode.Location = new Point(10, 30);
                         panel.Controls.Add(classCode);
                         flowLayoutPanel1.Controls.Add(panel);
+                        //create new form on a click of a class inside a panel and pass the id of class as a parameter
+                        panel.Click += (s, ev) =>
+                        {
+                            //show in the message box, the id of the class
+                            //MessageBox.Show(teacherName);
+                            this.Hide();
+                            Class teacherClassroom = new Class(teacherName, panel.Name);
+                            teacherClassroom.Show();
+                        };
                     } while (dr.Read());
 
                 }
@@ -171,11 +180,6 @@ namespace intial_form_1_
             }
         }
 
-        private void createAssignmentButton(object sender, EventArgs e)
-        {
-            this.Hide();
-            TeacherPanel teacherPanel = new TeacherPanel(teacherUsername);
-            teacherPanel.Show();
-        }
+       
     }
 }

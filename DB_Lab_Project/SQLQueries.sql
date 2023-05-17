@@ -28,6 +28,8 @@ create table Classroom
 
 )
 
+select * from Classroom
+
 create table ClassroomAndStudent
 (
     -- username from User
@@ -85,6 +87,9 @@ create table Assignment
     foreign key (classroomID) references Classroom(classroomID)
 )
 
+-- insertion
+insert into Assignment(assignmentDescription, assignmentPoints, assignmentDueDate, assignmentFile, classroomID, username_Teacher)
+values ('Assignment 1 with alot of questions', 10, '2021-05-01', 1, 3, 'teacher')
 select * from Assignment
 
 CREATE TABLE Submissions
