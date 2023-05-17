@@ -35,7 +35,7 @@ namespace intial_form_1_
         public TeacherPanel(string teacherName, string teacherUsername, string classroomID)
         {
             InitializeComponent();
-            this.teacherUserName=teacherUsername;
+            this.teacherUserName = teacherUsername;
             this.classroomID = classroomID;
             this.teacherName = teacherName;
             cn = new SqlConnection(dbcon.MyConnection());
@@ -51,7 +51,8 @@ namespace intial_form_1_
             string AssignmentFile = txtAssignmetFile.Text;
             string AssignmentPoints = txtAssPoints.Text;
 
-            try {
+            try
+            {
                 cn.Open();
                 cm = new SqlCommand("insert into Assignment (assignmentDescription,assignmentPoints,assignmentDueDate,assignmentFile,classroomID,username_Teacher) values (@AssignmentDesc,@AssignmentPoints,@AssignmentDueDate,@AssignmentFile,@classroomID,@username)", cn);
                 cm.Parameters.AddWithValue("@AssignmentDesc", AssignmentDesc);
@@ -62,7 +63,7 @@ namespace intial_form_1_
                 cm.Parameters.AddWithValue("@username", teacherUserName);
                 cm.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("Assignment Added Successfully" , "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Assignment Added Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtAssDesc.Clear();
                 txtAssignmetFile.Clear();
                 txtAssPoints.Clear();
@@ -79,18 +80,21 @@ namespace intial_form_1_
 
         private void viewProgressButton_Clicked(object sender, EventArgs e)
         {
-            string StudentID = txtStudentsID.Text;
+            // string StudentID = txtStudentsID.Text;
             string AssignmentNumber = txtAssNo2.Text;
 
-            // get total count of Assignment submitted in AssignmentSubmission
-            try{
-                cn.Open();
-                cm = new SqlCommand("select count(*) from Submissions where assignmentID=@AssignmentNumber", cn);
-                cm.Parameters.AddWithValue("@AssignmentNumber", AssignmentNumber);
-                int count = Convert.ToInt32(cm.ExecuteScalar());
-                cn.Close();
 
-                MessageBox.Show("Total Assignment Submitted: " + count.ToString());
+            // get all the assignments submission for a specific assignment
+            try
+            {
+                cn.Open();
+                cm = new SqlCommand("select * from Submissions where assignmentID=@AssignmentNumber", cn);
+                cm.Parameters.AddWithValue("@AssignmentNumber", AssignmentNumber);
+                adapter = new SqlDataAdapter(cm);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                ViewProgressDatagridView.DataSource = dt;
+                cn.Close();
             }
             catch (Exception ex)
             {
@@ -283,7 +287,7 @@ namespace intial_form_1_
                     modifyAssignmentPointsBox.Text = dr["assignmentPoints"].ToString();
                     modifyDueDateBox.Text = dr["assignmentDueDate"].ToString();
                     modifyAssignmentFileBox.Text = dr["assignmentFile"].ToString();
-                    
+
                     changeModifyAssignmentTab();
                 }
                 cn.Close();
@@ -349,7 +353,7 @@ namespace intial_form_1_
                 cn.Open();
                 //if data is empty, set it to null run query with dat
 
-                    cm = new SqlCommand("UPDATE Assignment SET assignmentDescription = @assignmentDescription, assignmentPoints = @assignmentPoints, assignmentDueDate = @assignmentDueDate, assignmentFile = @assignmentFile WHERE assignmentID = @assignmentID", cn);
+                cm = new SqlCommand("UPDATE Assignment SET assignmentDescription = @assignmentDescription, assignmentPoints = @assignmentPoints, assignmentDueDate = @assignmentDueDate, assignmentFile = @assignmentFile WHERE assignmentID = @assignmentID", cn);
                 cm.Parameters.AddWithValue("@assignmentDescription", assignmentDescription);
                 cm.Parameters.AddWithValue("@assignmentPoints", assignmentPoints);
                 cm.Parameters.AddWithValue("@assignmentDueDate", assignmentDueDate);
@@ -373,6 +377,11 @@ namespace intial_form_1_
             this.Hide();
             Class classForm = new Class(teacherName, teacherUserName, classroomID);
             classForm.Show();
+        }
+
+        private void assignmentsList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
