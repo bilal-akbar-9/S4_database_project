@@ -19,18 +19,20 @@ namespace intial_form_1_
         DBConnection dbcon = new DBConnection();
         SqlDataReader dr;
         String teacherUsername;
+        String teacherName;
         String classroomID;
         public Class()
         {
             InitializeComponent();
         }
         //parameterized constructor that accepts the teacher's username and class code
-        public Class(String teacherUsername, String classroomID)
+        public Class(String teacherName, String teacherUsername, String classroomID)
         {
             InitializeComponent();
             //Set the teacher's username and class code
             this.teacherUsername = teacherUsername;
             this.classroomID = classroomID;
+            this.teacherName = teacherName;
         }
         
 
@@ -49,7 +51,7 @@ namespace intial_form_1_
                  if (dr.HasRows)
                  {
                      classroomName.Text = dr["classroomName"].ToString();
-                     teacherNameLabel.Text = teacherUsername;
+                     teacherNameLabel.Text = "Name: " + teacherName;
                      //
                  }
                  else
@@ -69,11 +71,22 @@ namespace intial_form_1_
 
         private void createAssignmentButton_Clicked(object sender, EventArgs e)
         {
-
             this.Hide();
-            TeacherPanel teacherPanel = new TeacherPanel(teacherUsername, classroomID);
+            TeacherPanel teacherPanel = new TeacherPanel(teacherName,teacherUsername,classroomID);
             teacherPanel.Show();
 
+        }
+
+        private void Class_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            classroom classroom = new classroom(teacherName, teacherUsername);
+            classroom.Show();
         }
         //function that changes the name of classroom to the clas name of class code received
 

@@ -76,7 +76,7 @@ create table Assignment
     assignmentID int IDENTITY(1,1) not null,
     assignmentDescription varchar(100) not null,
     assignmentPoints int not null,
-    assignmentDueDate date ,
+    assignmentDueDate date,
     assignmentFile varchar(100),
     classroomID int not null,
     username_Teacher varchar(20) not null,
@@ -89,7 +89,7 @@ create table Assignment
 
 -- insertion
 insert into Assignment(assignmentDescription, assignmentPoints, assignmentDueDate, assignmentFile, classroomID, username_Teacher)
-values ('Assignment 1 with alot of questions', 10, '2021-05-01', 1, 3, 'teacher')
+values ('Assignment 1 with alot of questions', 10, '2021-05-01', 1, 3, 'teach')
 select * from Assignment
 
 CREATE TABLE Submissions

@@ -127,7 +127,7 @@
             // Cancel1
             // 
             this.Cancel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Cancel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel1.Font = new System.Drawing.Font("HP Simplified Hans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Cancel1.Location = new System.Drawing.Point(492, 239);
             this.Cancel1.Margin = new System.Windows.Forms.Padding(2);
@@ -141,7 +141,7 @@
             // save1
             // 
             this.save1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
-            this.save1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save1.Font = new System.Drawing.Font("HP Simplified Hans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save1.ForeColor = System.Drawing.SystemColors.Control;
             this.save1.Location = new System.Drawing.Point(399, 239);
             this.save1.Margin = new System.Windows.Forms.Padding(2);
@@ -181,7 +181,7 @@
             // Name1
             // 
             this.Name1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Name1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name1.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name1.Location = new System.Drawing.Point(208, 197);
             this.Name1.Margin = new System.Windows.Forms.Padding(2);
             this.Name1.Name = "Name1";
@@ -192,7 +192,7 @@
             // retypePassword1
             // 
             this.retypePassword1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.retypePassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retypePassword1.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.retypePassword1.Location = new System.Drawing.Point(208, 131);
             this.retypePassword1.Margin = new System.Windows.Forms.Padding(2);
             this.retypePassword1.Name = "retypePassword1";
@@ -215,7 +215,7 @@
             // password1
             // 
             this.password1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.password1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password1.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password1.Location = new System.Drawing.Point(208, 93);
             this.password1.Margin = new System.Windows.Forms.Padding(2);
             this.password1.Name = "password1";
@@ -238,7 +238,7 @@
             // username1
             // 
             this.username1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username1.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username1.Location = new System.Drawing.Point(208, 58);
             this.username1.Margin = new System.Windows.Forms.Padding(2);
             this.username1.Name = "username1";
@@ -283,7 +283,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("HP Simplified Hans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(493, 222);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -296,7 +296,7 @@
             // save2
             // 
             this.save2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
-            this.save2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save2.Font = new System.Drawing.Font("HP Simplified Hans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save2.ForeColor = System.Drawing.SystemColors.Control;
             this.save2.Location = new System.Drawing.Point(400, 222);
             this.save2.Margin = new System.Windows.Forms.Padding(2);
@@ -332,7 +332,7 @@
             // newPassword2
             // 
             this.newPassword2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.newPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPassword2.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newPassword2.Location = new System.Drawing.Point(207, 136);
             this.newPassword2.Margin = new System.Windows.Forms.Padding(2);
             this.newPassword2.Name = "newPassword2";
@@ -355,7 +355,7 @@
             // oldPassword2
             // 
             this.oldPassword2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.oldPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oldPassword2.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oldPassword2.Location = new System.Drawing.Point(207, 98);
             this.oldPassword2.Margin = new System.Windows.Forms.Padding(2);
             this.oldPassword2.Name = "oldPassword2";
@@ -378,7 +378,7 @@
             // username2
             // 
             this.username2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username2.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username2.Location = new System.Drawing.Point(207, 63);
             this.username2.Margin = new System.Windows.Forms.Padding(2);
             this.username2.Name = "username2";
@@ -416,7 +416,7 @@
             // save3
             // 
             this.save3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
-            this.save3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save3.Font = new System.Drawing.Font("HP Simplified Hans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save3.ForeColor = System.Drawing.SystemColors.Control;
             this.save3.Location = new System.Drawing.Point(209, 194);
             this.save3.Margin = new System.Windows.Forms.Padding(2);
@@ -430,7 +430,7 @@
             // isActive3
             // 
             this.isActive3.AutoSize = true;
-            this.isActive3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isActive3.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.isActive3.Location = new System.Drawing.Point(209, 146);
             this.isActive3.Margin = new System.Windows.Forms.Padding(2);
             this.isActive3.Name = "isActive3";
@@ -443,7 +443,7 @@
             // username3
             // 
             this.username3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username3.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username3.Location = new System.Drawing.Point(209, 110);
             this.username3.Margin = new System.Windows.Forms.Padding(2);
             this.username3.Name = "username3";
@@ -495,7 +495,7 @@
             // checkButton4
             // 
             this.checkButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
-            this.checkButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkButton4.Font = new System.Drawing.Font("HP Simplified Hans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkButton4.ForeColor = System.Drawing.SystemColors.Control;
             this.checkButton4.Location = new System.Drawing.Point(210, 155);
             this.checkButton4.Margin = new System.Windows.Forms.Padding(2);
@@ -509,7 +509,7 @@
             // username4
             // 
             this.username4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username4.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username4.Location = new System.Drawing.Point(210, 106);
             this.username4.Margin = new System.Windows.Forms.Padding(2);
             this.username4.Name = "username4";

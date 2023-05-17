@@ -22,79 +22,48 @@ namespace intial_form_1_
 
         SqlDataAdapter adapter;
 
-        string username;
+        string teacherUserName;
         string classroomID;
+        String teacherName;
 
         //private object assignmentList;
-
-
-        public TeacherPanel(string teacherUsername, string classroomID)
+        public TeacherPanel()
         {
             InitializeComponent();
-            this.username=teacherUsername;
+        }
+
+        public TeacherPanel(string teacherName, string teacherUsername, string classroomID)
+        {
+            InitializeComponent();
+            this.teacherUserName=teacherUsername;
             this.classroomID = classroomID;
+            this.teacherName = teacherName;
             cn = new SqlConnection(dbcon.MyConnection());
             this.KeyPreview = true;
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_3(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_4(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TeacherPanel_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void CreateAssignment_Click(object sender, EventArgs e)
         {
             string AssignmentDesc = txtAssDesc.Text;
-            string AssignmentDueDate = txtAssDueDate.Text;
-            string AssingmentFile = txtAssignmetFile.Text;
+            string AssignmentDueDate = txtAssDueDate.Value.ToString("yyyy-MM-dd");
+            string AssignmentFile = txtAssignmetFile.Text;
             string AssignmentPoints = txtAssPoints.Text;
-
 
             try {
                 cn.Open();
-                cm = new SqlCommand("insert into Assignment (assignmentDescription,assignmentPoints,assignmentDueDate,assignmentFile,classroomID,username_Teacher) values (@AssignmentDesc,@AssignmentPoints,@AssignmentDueDate,@AssingmentFile,@classroomID,@username)", cn);
+                cm = new SqlCommand("insert into Assignment (assignmentDescription,assignmentPoints,assignmentDueDate,assignmentFile,classroomID,username_Teacher) values (@AssignmentDesc,@AssignmentPoints,@AssignmentDueDate,@AssignmentFile,@classroomID,@username)", cn);
                 cm.Parameters.AddWithValue("@AssignmentDesc", AssignmentDesc);
                 cm.Parameters.AddWithValue("@AssignmentDueDate", AssignmentDueDate);
-                cm.Parameters.AddWithValue("@AssingmentFile", AssingmentFile);
+                cm.Parameters.AddWithValue("@AssignmentFile", AssignmentFile);
                 cm.Parameters.AddWithValue("@AssignmentPoints", AssignmentPoints);
                 cm.Parameters.AddWithValue("@classroomID", classroomID);
-                cm.Parameters.AddWithValue("@username", username);
+                cm.Parameters.AddWithValue("@username", teacherUserName);
                 cm.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("Assignment Added Successfully" , "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtAssDesc.Clear();
-                txtAssDueDate.Clear();
                 txtAssignmetFile.Clear();
                 txtAssPoints.Clear();
                 txtAssDesc.Focus();
@@ -105,48 +74,8 @@ namespace intial_form_1_
                 MessageBox.Show(ex.Message);
             }
 
-
         }
 
-        private void txtAssDesc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSetDeadline_Click(object sender, EventArgs e)
-        {
-            string AssignmentDueDate = txtAssDue.Text;
-            string AssignmentID = txtAssNo.Text;
-
-            try
-            {
-                cn.Open();
-                cm = new SqlCommand("update Assignment set assignmentDueDate=@AssignmentDueDate where assignmentID=@AssignmentID", cn);
-                cm.Parameters.AddWithValue("@AssignmentDueDate", AssignmentDueDate);
-                cm.Parameters.AddWithValue("@AssignmentID", AssignmentID);
-                cm.ExecuteNonQuery();
-                cn.Close();
-                MessageBox.Show("Assignment Deadline Updated Successfully");
-                txtAssDue.Clear();
-                txtAssNo.Clear();
-                txtAssDue.Focus();
-            }
-            catch (Exception ex)
-            {
-                cn.Close();
-                MessageBox.Show(ex.Message);
-            }
-        }
 
         private void viewProgressButton_Clicked(object sender, EventArgs e)
         {
@@ -169,32 +98,6 @@ namespace intial_form_1_
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_5(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void addCommentButton_Clicked(object sender, EventArgs e)
         {
             string CommentDesc = txtCommentDesc.Text;
@@ -223,31 +126,6 @@ namespace intial_form_1_
             }
         }
 
-        private void label1_Click_6(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_7(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_8(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_3(object sender, EventArgs e)
-        {
-
-        }
-
         private void DeleteCommentButton(object sender, EventArgs e)
         {
             string CommentID = txtCommentID.Text;
@@ -268,16 +146,6 @@ namespace intial_form_1_
                 cn.Close();
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_9(object sender, EventArgs e)
-        {
-
         }
 
         private void UpdateCOmmentButton(object sender, EventArgs e)
@@ -309,36 +177,6 @@ namespace intial_form_1_
                 cn.Close();
                 MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void textBox2_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_4(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCommetnIDUpdate_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -403,6 +241,7 @@ namespace intial_form_1_
                         // Execute the delete query using the assignment ID
                         cm = new SqlCommand("DELETE FROM Assignment WHERE AssignmentID = @assignmentID", cn);
                         cm.Parameters.AddWithValue("@assignmentID", assignmentID);
+                        cn.Open();
                         cm.ExecuteNonQuery();
                     }
 
@@ -483,7 +322,7 @@ namespace intial_form_1_
                 // Retrieve the modified values from the controls or fields
                 string assignmentDescription = modifyDescBox.Text;
                 string assignmentPoints = modifyAssignmentPointsBox.Text;
-                string assignmentDueDate = modifyDueDateBox.Text;
+                string assignmentDueDate = modifyDueDateBox.Value.ToString("yyyy-MM-dd");
                 string assignmentFile = modifyAssignmentFileBox.Text;
 
                 // Validate assignmentDescription and prompt user if it's empty
@@ -529,5 +368,11 @@ namespace intial_form_1_
             }
         }
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Class classForm = new Class(teacherName, teacherUserName, classroomID);
+            classForm.Show();
+        }
     }
 }

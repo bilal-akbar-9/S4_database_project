@@ -21,12 +21,17 @@ namespace intial_form_1_
         SqlDataReader dr;
         String teacherUsername;
         String teacherName;
+        public classroom()
+        {
+            InitializeComponent();
+        }
         public classroom(String teacherName, String teacherUsername)
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
             this.teacherName = teacherName;
             this.teacherUsername = teacherUsername;
+
         }
         private void classCode_TextChanged(object sender, EventArgs e)
         {
@@ -100,7 +105,7 @@ namespace intial_form_1_
                             //show in the message box, the id of the class
                             //MessageBox.Show(teacherName);
                             this.Hide();
-                            Class teacherClassroom = new Class(teacherName, panel.Name);
+                            Class teacherClassroom = new Class(teacherName, teacherUsername,panel.Name);
                             teacherClassroom.Show();
                         };
                     } while (dr.Read());
