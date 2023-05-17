@@ -166,7 +166,7 @@
             // 
             // txtAssDueDate
             // 
-            this.txtAssDueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssDueDate.Font = new System.Drawing.Font("HP Simplified Hans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAssDueDate.Location = new System.Drawing.Point(951, 155);
             this.txtAssDueDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAssDueDate.Name = "txtAssDueDate";
@@ -187,7 +187,7 @@
             this.CreateAssignment.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.CreateAssignment.FlatAppearance.BorderSize = 3;
             this.CreateAssignment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateAssignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAssignment.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAssignment.Location = new System.Drawing.Point(1131, 485);
             this.CreateAssignment.Name = "CreateAssignment";
             this.CreateAssignment.Size = new System.Drawing.Size(160, 62);
@@ -199,7 +199,7 @@
             // AssignmentDescription
             // 
             this.AssignmentDescription.AutoSize = true;
-            this.AssignmentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmentDescription.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssignmentDescription.Location = new System.Drawing.Point(39, 114);
             this.AssignmentDescription.Name = "AssignmentDescription";
             this.AssignmentDescription.Size = new System.Drawing.Size(266, 29);
@@ -208,7 +208,7 @@
             // 
             // txtAssPoints
             // 
-            this.txtAssPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssPoints.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAssPoints.Location = new System.Drawing.Point(951, 326);
             this.txtAssPoints.Name = "txtAssPoints";
             this.txtAssPoints.Size = new System.Drawing.Size(216, 35);
@@ -217,7 +217,7 @@
             // assPoints
             // 
             this.assPoints.AutoSize = true;
-            this.assPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assPoints.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assPoints.Location = new System.Drawing.Point(946, 277);
             this.assPoints.Name = "assPoints";
             this.assPoints.Size = new System.Drawing.Size(211, 29);
@@ -227,7 +227,7 @@
             // AssignmetFile
             // 
             this.AssignmetFile.AutoSize = true;
-            this.AssignmetFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmetFile.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssignmetFile.Location = new System.Drawing.Point(39, 449);
             this.AssignmetFile.Name = "AssignmetFile";
             this.AssignmetFile.Size = new System.Drawing.Size(185, 29);
@@ -237,7 +237,7 @@
             // AssignmentDueDate
             // 
             this.AssignmentDueDate.AutoSize = true;
-            this.AssignmentDueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmentDueDate.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssignmentDueDate.Location = new System.Drawing.Point(946, 114);
             this.AssignmentDueDate.Name = "AssignmentDueDate";
             this.AssignmentDueDate.Size = new System.Drawing.Size(238, 29);
@@ -246,7 +246,7 @@
             // 
             // txtAssignmetFile
             // 
-            this.txtAssignmetFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssignmetFile.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAssignmetFile.Location = new System.Drawing.Point(44, 497);
             this.txtAssignmetFile.Name = "txtAssignmetFile";
             this.txtAssignmetFile.Size = new System.Drawing.Size(314, 35);
@@ -256,7 +256,7 @@
             // 
             this.createNewAssingment.AutoSize = true;
             this.createNewAssingment.BackColor = System.Drawing.Color.Transparent;
-            this.createNewAssingment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createNewAssingment.Font = new System.Drawing.Font("HP Simplified Hans", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createNewAssingment.Location = new System.Drawing.Point(512, 23);
             this.createNewAssingment.Name = "createNewAssingment";
             this.createNewAssingment.Size = new System.Drawing.Size(383, 37);
@@ -282,7 +282,7 @@
             this.deleteAssigmentButton.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.deleteAssigmentButton.FlatAppearance.BorderSize = 3;
             this.deleteAssigmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteAssigmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAssigmentButton.Font = new System.Drawing.Font("HP Simplified Hans", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteAssigmentButton.Location = new System.Drawing.Point(1210, 543);
             this.deleteAssigmentButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.deleteAssigmentButton.Name = "deleteAssigmentButton";
@@ -326,7 +326,7 @@
             // 
             // modifyDueDateBox
             // 
-            this.modifyDueDateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyDueDateBox.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifyDueDateBox.Location = new System.Drawing.Point(826, 105);
             this.modifyDueDateBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.modifyDueDateBox.Name = "modifyDueDateBox";
@@ -341,7 +341,7 @@
             this.modifyButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.modifyButton.FlatAppearance.BorderSize = 3;
             this.modifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyButton.Font = new System.Drawing.Font("HP Simplified Hans", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifyButton.Location = new System.Drawing.Point(1210, 543);
             this.modifyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.modifyButton.Name = "modifyButton";
@@ -355,7 +355,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(824, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(211, 29);
@@ -366,7 +366,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(822, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 29);
@@ -377,7 +377,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(34, 360);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 29);
@@ -388,7 +388,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(34, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(266, 29);
@@ -471,7 +471,7 @@
             this.buttonViewProgress.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.buttonViewProgress.FlatAppearance.BorderSize = 3;
             this.buttonViewProgress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonViewProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonViewProgress.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonViewProgress.Location = new System.Drawing.Point(969, 109);
             this.buttonViewProgress.Name = "buttonViewProgress";
             this.buttonViewProgress.Size = new System.Drawing.Size(320, 57);
@@ -482,7 +482,7 @@
             // 
             // txtAssNo2
             // 
-            this.txtAssNo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssNo2.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAssNo2.Location = new System.Drawing.Point(331, 109);
             this.txtAssNo2.Name = "txtAssNo2";
             this.txtAssNo2.Size = new System.Drawing.Size(319, 39);
@@ -491,7 +491,7 @@
             // labelAssNo2
             // 
             this.labelAssNo2.AutoSize = true;
-            this.labelAssNo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAssNo2.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAssNo2.Location = new System.Drawing.Point(38, 109);
             this.labelAssNo2.Name = "labelAssNo2";
             this.labelAssNo2.Size = new System.Drawing.Size(270, 32);
@@ -501,7 +501,7 @@
             // labelViewProgress
             // 
             this.labelViewProgress.AutoSize = true;
-            this.labelViewProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelViewProgress.Font = new System.Drawing.Font("HP Simplified Hans", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelViewProgress.Location = new System.Drawing.Point(585, 52);
             this.labelViewProgress.Name = "labelViewProgress";
             this.labelViewProgress.Size = new System.Drawing.Size(236, 37);
@@ -550,7 +550,7 @@
             // 
             // txtAssignmentID
             // 
-            this.txtAssignmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssignmentID.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAssignmentID.Location = new System.Drawing.Point(897, 325);
             this.txtAssignmentID.Name = "txtAssignmentID";
             this.txtAssignmentID.Size = new System.Drawing.Size(232, 32);
@@ -559,7 +559,7 @@
             // AssignmentID
             // 
             this.AssignmentID.AutoSize = true;
-            this.AssignmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmentID.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssignmentID.Location = new System.Drawing.Point(892, 271);
             this.AssignmentID.Name = "AssignmentID";
             this.AssignmentID.Size = new System.Drawing.Size(155, 26);
@@ -572,7 +572,7 @@
             this.buttonAddComment.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.buttonAddComment.FlatAppearance.BorderSize = 3;
             this.buttonAddComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddComment.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddComment.Location = new System.Drawing.Point(897, 483);
             this.buttonAddComment.Name = "buttonAddComment";
             this.buttonAddComment.Size = new System.Drawing.Size(232, 49);
@@ -583,7 +583,7 @@
             // 
             // txtCommentDate
             // 
-            this.txtCommentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentDate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDate.Location = new System.Drawing.Point(897, 197);
             this.txtCommentDate.Name = "txtCommentDate";
             this.txtCommentDate.Size = new System.Drawing.Size(232, 32);
@@ -591,7 +591,7 @@
             // 
             // txtCommentDesc
             // 
-            this.txtCommentDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentDesc.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDesc.Location = new System.Drawing.Point(236, 197);
             this.txtCommentDesc.Multiline = true;
             this.txtCommentDesc.Name = "txtCommentDesc";
@@ -601,7 +601,7 @@
             // labelCOmmentDate
             // 
             this.labelCOmmentDate.AutoSize = true;
-            this.labelCOmmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCOmmentDate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCOmmentDate.Location = new System.Drawing.Point(892, 132);
             this.labelCOmmentDate.Name = "labelCOmmentDate";
             this.labelCOmmentDate.Size = new System.Drawing.Size(160, 26);
@@ -611,7 +611,7 @@
             // labelCommentDesc
             // 
             this.labelCommentDesc.AutoSize = true;
-            this.labelCommentDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCommentDesc.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCommentDesc.Location = new System.Drawing.Point(231, 132);
             this.labelCommentDesc.Name = "labelCommentDesc";
             this.labelCommentDesc.Size = new System.Drawing.Size(223, 26);
@@ -621,7 +621,7 @@
             // labelnewComment
             // 
             this.labelnewComment.AutoSize = true;
-            this.labelnewComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelnewComment.Font = new System.Drawing.Font("HP Simplified Hans", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelnewComment.Location = new System.Drawing.Point(561, 35);
             this.labelnewComment.Name = "labelnewComment";
             this.labelnewComment.Size = new System.Drawing.Size(240, 37);
@@ -648,7 +648,7 @@
             this.Deletebutton.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Deletebutton.FlatAppearance.BorderSize = 3;
             this.Deletebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Deletebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deletebutton.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Deletebutton.Location = new System.Drawing.Point(654, 289);
             this.Deletebutton.Name = "Deletebutton";
             this.Deletebutton.Size = new System.Drawing.Size(270, 48);
@@ -659,7 +659,7 @@
             // 
             // txtCommentID
             // 
-            this.txtCommentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentID.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentID.Location = new System.Drawing.Point(654, 185);
             this.txtCommentID.Name = "txtCommentID";
             this.txtCommentID.Size = new System.Drawing.Size(270, 39);
@@ -668,7 +668,7 @@
             // labelCommentID
             // 
             this.labelCommentID.AutoSize = true;
-            this.labelCommentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCommentID.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCommentID.Location = new System.Drawing.Point(426, 183);
             this.labelCommentID.Name = "labelCommentID";
             this.labelCommentID.Size = new System.Drawing.Size(170, 32);
@@ -678,7 +678,7 @@
             // labelDeleteComment
             // 
             this.labelDeleteComment.AutoSize = true;
-            this.labelDeleteComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeleteComment.Font = new System.Drawing.Font("HP Simplified Hans", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeleteComment.Location = new System.Drawing.Point(542, 37);
             this.labelDeleteComment.Name = "labelDeleteComment";
             this.labelDeleteComment.Size = new System.Drawing.Size(269, 37);
@@ -707,7 +707,7 @@
             // 
             // txtCOmmentIDUpdate
             // 
-            this.txtCOmmentIDUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCOmmentIDUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCOmmentIDUpdate.Location = new System.Drawing.Point(1068, 189);
             this.txtCOmmentIDUpdate.Name = "txtCOmmentIDUpdate";
             this.txtCOmmentIDUpdate.Size = new System.Drawing.Size(232, 32);
@@ -716,7 +716,7 @@
             // labelcommentIDUpdate
             // 
             this.labelcommentIDUpdate.AutoSize = true;
-            this.labelcommentIDUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcommentIDUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelcommentIDUpdate.Location = new System.Drawing.Point(1064, 125);
             this.labelcommentIDUpdate.Name = "labelcommentIDUpdate";
             this.labelcommentIDUpdate.Size = new System.Drawing.Size(136, 26);
@@ -725,7 +725,7 @@
             // 
             // txtAssIDUpdate
             // 
-            this.txtAssIDUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssIDUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAssIDUpdate.Location = new System.Drawing.Point(734, 331);
             this.txtAssIDUpdate.Name = "txtAssIDUpdate";
             this.txtAssIDUpdate.Size = new System.Drawing.Size(232, 32);
@@ -734,7 +734,7 @@
             // labelAssIDUpdate
             // 
             this.labelAssIDUpdate.AutoSize = true;
-            this.labelAssIDUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAssIDUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAssIDUpdate.Location = new System.Drawing.Point(732, 271);
             this.labelAssIDUpdate.Name = "labelAssIDUpdate";
             this.labelAssIDUpdate.Size = new System.Drawing.Size(155, 26);
@@ -747,7 +747,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.button1.FlatAppearance.BorderSize = 3;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(1068, 488);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(232, 49);
@@ -758,7 +758,7 @@
             // 
             // txtCommentDateUpdate
             // 
-            this.txtCommentDateUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentDateUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDateUpdate.Location = new System.Drawing.Point(734, 189);
             this.txtCommentDateUpdate.Name = "txtCommentDateUpdate";
             this.txtCommentDateUpdate.Size = new System.Drawing.Size(232, 32);
@@ -766,7 +766,7 @@
             // 
             // txtCommentDescUPDAtE
             // 
-            this.txtCommentDescUPDAtE.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentDescUPDAtE.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDescUPDAtE.Location = new System.Drawing.Point(106, 197);
             this.txtCommentDescUPDAtE.Multiline = true;
             this.txtCommentDescUPDAtE.Name = "txtCommentDescUPDAtE";
@@ -776,7 +776,7 @@
             // labelCommetnDate
             // 
             this.labelCommetnDate.AutoSize = true;
-            this.labelCommetnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCommetnDate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCommetnDate.Location = new System.Drawing.Point(726, 125);
             this.labelCommetnDate.Name = "labelCommetnDate";
             this.labelCommetnDate.Size = new System.Drawing.Size(160, 26);
@@ -786,7 +786,7 @@
             // labelCommentDescUpdate
             // 
             this.labelCommentDescUpdate.AutoSize = true;
-            this.labelCommentDescUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCommentDescUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCommentDescUpdate.Location = new System.Drawing.Point(100, 125);
             this.labelCommentDescUpdate.Name = "labelCommentDescUpdate";
             this.labelCommentDescUpdate.Size = new System.Drawing.Size(223, 26);
@@ -796,7 +796,7 @@
             // txtUpdateComment
             // 
             this.txtUpdateComment.AutoSize = true;
-            this.txtUpdateComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateComment.Font = new System.Drawing.Font("HP Simplified Hans", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUpdateComment.Location = new System.Drawing.Point(534, 43);
             this.txtUpdateComment.Name = "txtUpdateComment";
             this.txtUpdateComment.Size = new System.Drawing.Size(282, 37);
@@ -809,7 +809,7 @@
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButton.FlatAppearance.BorderSize = 3;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
             this.backButton.Location = new System.Drawing.Point(16, 714);
             this.backButton.Name = "backButton";

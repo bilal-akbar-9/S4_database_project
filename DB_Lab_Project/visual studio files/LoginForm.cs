@@ -72,6 +72,9 @@ namespace intial_form_1_
                         MessageBox.Show("Welcome(Student) " + _name + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         username.Clear();
                         password.Clear();
+                        this.Hide();
+                        studentClassroom form2 = new studentClassroom(_name, _username);
+                        form2.ShowDialog();
                     }
                     else if (_role == "Admin")
                     {

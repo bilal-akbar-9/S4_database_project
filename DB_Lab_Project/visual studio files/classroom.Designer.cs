@@ -80,7 +80,7 @@
             this.classroomName.AutoSize = true;
             this.classroomName.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.classroomName.Location = new System.Drawing.Point(18, 22);
+            this.classroomName.Location = new System.Drawing.Point(17, 19);
             this.classroomName.Name = "classroomName";
             this.classroomName.Size = new System.Drawing.Size(136, 31);
             this.classroomName.TabIndex = 0;
@@ -101,7 +101,7 @@
             this.teacherNameLabel.AutoSize = true;
             this.teacherNameLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teacherNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.teacherNameLabel.Location = new System.Drawing.Point(29, 55);
+            this.teacherNameLabel.Location = new System.Drawing.Point(28, 53);
             this.teacherNameLabel.Name = "teacherNameLabel";
             this.teacherNameLabel.Size = new System.Drawing.Size(50, 18);
             this.teacherNameLabel.TabIndex = 4;
@@ -112,7 +112,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(480, 474);
+            this.label1.Location = new System.Drawing.Point(473, 489);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 18);
             this.label1.TabIndex = 5;
@@ -149,9 +149,10 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 152);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1011, 238);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1011, 295);
             this.flowLayoutPanel1.TabIndex = 7;
             this.flowLayoutPanel1.Visible = false;
             // 

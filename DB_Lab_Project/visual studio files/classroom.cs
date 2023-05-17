@@ -33,10 +33,6 @@ namespace intial_form_1_
             this.teacherUsername = teacherUsername;
 
         }
-        private void classCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void classCode_GotFocus(object sender, EventArgs e)
         {
             if (classCodeField1.Text == "Enter class code here...")
@@ -53,6 +49,19 @@ namespace intial_form_1_
                 classCodeField1.ForeColor = Color.Gray;
                 classCodeField1.Text = "Enter class code here...";
             }
+        }
+        //create a random picker color function
+        private Color RandomColor(int classCounter)
+        {
+            //the colors: 138, 197, 255 ,, 209, 236, 241 ,, 233, 233, 233
+            if (classCounter > 3)
+                classCounter = 1;
+            if (classCounter == 0)
+                return Color.FromArgb(138, 197, 255);
+            else if (classCounter == 1)
+                return Color.FromArgb(209, 236, 241);
+            else
+                return Color.FromArgb(233, 233, 233);
         }
         private void classroom_Load(object sender, EventArgs e)
         {
@@ -77,24 +86,27 @@ namespace intial_form_1_
                 {
                     noClassLabel.Visible = false;
                     flowLayoutPanel1.Visible = true;
+                    int classCounter = 1;
                     do
                     {
                         Panel panel = new Panel();
                         panel.Size = new Size(200, 100);
-                        panel.BackColor = Color.White;
+                        panel.BackColor = RandomColor(classCounter);
                         panel.BorderStyle = BorderStyle.FixedSingle;
                         panel.Margin = new Padding(10, 10, 10, 10);
                         panel.Padding = new Padding(10, 10, 10, 10);
                         panel.Name = dr["classroomID"].ToString();
+                        //ClassName Label
                         Label className = new Label();
                         className.Text = dr["classroomName"].ToString();
-                        className.Font = new Font("Arial", 12, FontStyle.Bold);
+                        className.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
                         className.AutoSize = true;
                         className.Location = new Point(10, 10);
                         panel.Controls.Add(className);
+                        //ClassCode Label
                         Label classCode = new Label();
                         classCode.Text = dr["classroomCode"].ToString();
-                        classCode.Font = new Font("Arial", 12, FontStyle.Bold);
+                        classCode.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
                         classCode.AutoSize = true;
                         classCode.Location = new Point(10, 30);
                         panel.Controls.Add(classCode);
@@ -108,6 +120,7 @@ namespace intial_form_1_
                             Class teacherClassroom = new Class(teacherName, teacherUsername,panel.Name);
                             teacherClassroom.Show();
                         };
+                           classCounter++;
                     } while (dr.Read());
 
                 }

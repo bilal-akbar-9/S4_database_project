@@ -43,7 +43,7 @@ namespace intial_form_1_
             // assignmentButton
             // 
             this.assignmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
-            this.assignmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignmentButton.Font = new System.Drawing.Font("HP Simplified Hans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignmentButton.Location = new System.Drawing.Point(145, 236);
             this.assignmentButton.Name = "assignmentButton";
             this.assignmentButton.Size = new System.Drawing.Size(633, 68);
@@ -55,7 +55,7 @@ namespace intial_form_1_
             // Material
             // 
             this.Material.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.Material.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Material.Font = new System.Drawing.Font("HP Simplified Hans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Material.Location = new System.Drawing.Point(145, 342);
             this.Material.Name = "Material";
             this.Material.Size = new System.Drawing.Size(633, 68);
@@ -98,7 +98,7 @@ namespace intial_form_1_
             // announcementButton
             // 
             this.announcementButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            this.announcementButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.announcementButton.Font = new System.Drawing.Font("HP Simplified Hans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.announcementButton.Location = new System.Drawing.Point(145, 130);
             this.announcementButton.Name = "announcementButton";
             this.announcementButton.Size = new System.Drawing.Size(633, 68);
