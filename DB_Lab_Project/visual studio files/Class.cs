@@ -72,8 +72,11 @@ namespace intial_form_1_
         private void createAssignmentButton_Clicked(object sender, EventArgs e)
         {
             this.Hide();
-            TeacherPanel teacherPanel = new TeacherPanel(teacherName,teacherUsername,classroomID);
-            teacherPanel.Show();
+            //TeacherPanel teacherPanel = new TeacherPanel(teacherName,teacherUsername,classroomID);
+            //teacherPanel.Show();
+            MessageBox.Show(teacherName + " " + teacherUsername + " " + classroomID);
+            Assignments assignments = new Assignments(teacherUsername, classroomID);
+            assignments.Show();
 
         }
 
