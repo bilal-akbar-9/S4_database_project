@@ -32,8 +32,6 @@
             this.ViewProgressTab = new System.Windows.Forms.TabPage();
             this.ViewProgressDatagridView = new System.Windows.Forms.DataGridView();
             this.buttonViewProgress = new System.Windows.Forms.Button();
-            this.txtAssNo2 = new System.Windows.Forms.TextBox();
-            this.labelAssNo2 = new System.Windows.Forms.Label();
             this.labelViewProgress = new System.Windows.Forms.Label();
             this.CommentsTab = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -100,10 +98,9 @@
             // ViewProgressTab
             // 
             this.ViewProgressTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ViewProgressTab.Controls.Add(this.countlabel);
             this.ViewProgressTab.Controls.Add(this.ViewProgressDatagridView);
             this.ViewProgressTab.Controls.Add(this.buttonViewProgress);
-            this.ViewProgressTab.Controls.Add(this.txtAssNo2);
-            this.ViewProgressTab.Controls.Add(this.labelAssNo2);
             this.ViewProgressTab.Controls.Add(this.labelViewProgress);
             this.ViewProgressTab.Location = new System.Drawing.Point(4, 22);
             this.ViewProgressTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -143,26 +140,6 @@
             this.buttonViewProgress.Text = "Check";
             this.buttonViewProgress.UseVisualStyleBackColor = false;
             this.buttonViewProgress.Click += new System.EventHandler(this.viewProgressButton_Clicked);
-            // 
-            // txtAssNo2
-            // 
-            this.txtAssNo2.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssNo2.Location = new System.Drawing.Point(221, 71);
-            this.txtAssNo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtAssNo2.Name = "txtAssNo2";
-            this.txtAssNo2.Size = new System.Drawing.Size(214, 29);
-            this.txtAssNo2.TabIndex = 7;
-            // 
-            // labelAssNo2
-            // 
-            this.labelAssNo2.AutoSize = true;
-            this.labelAssNo2.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAssNo2.Location = new System.Drawing.Point(25, 71);
-            this.labelAssNo2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelAssNo2.Name = "labelAssNo2";
-            this.labelAssNo2.Size = new System.Drawing.Size(175, 22);
-            this.labelAssNo2.TabIndex = 6;
-            this.labelAssNo2.Text = "Assignment Number";
             // 
             // labelViewProgress
             // 
@@ -503,7 +480,7 @@
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButton.FlatAppearance.BorderSize = 3;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
             this.backButton.Location = new System.Drawing.Point(11, 464);
             this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -515,7 +492,18 @@
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // assDesTab
+            // countlabel
+            // 
+            this.countlabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.countlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countlabel.Location = new System.Drawing.Point(1032, 124);
+            this.countlabel.Name = "countlabel";
+            this.countlabel.Size = new System.Drawing.Size(208, 57);
+            this.countlabel.TabIndex = 10;
+            this.countlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.countlabel.Visible = false;
+            // 
+            // TeacherPanel
             // 
             this.assDesTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.assDesTab.Controls.Add(this.dueDateLabel);
@@ -677,8 +665,6 @@
         private System.Windows.Forms.TabControl TeacherTabs;
         private System.Windows.Forms.TabPage ViewProgressTab;
         private System.Windows.Forms.Button buttonViewProgress;
-        private System.Windows.Forms.TextBox txtAssNo2;
-        private System.Windows.Forms.Label labelAssNo2;
         private System.Windows.Forms.Label labelViewProgress;
         private System.Windows.Forms.TabPage CommentsTab;
         private System.Windows.Forms.TabControl tabControl1;
@@ -721,5 +707,6 @@
         private System.Windows.Forms.TextBox txtAssPoints;
         private System.Windows.Forms.TextBox txtAssignmetFile;
         private System.Windows.Forms.Label dueDateLabel;
+        private System.Windows.Forms.Label countlabel;
     }
 }

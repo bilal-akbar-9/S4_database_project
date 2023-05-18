@@ -35,6 +35,7 @@ namespace intial_form_1_
             InitializeComponent();
             this.teacherUsername = teacherUsername;
             this.classroomID = classroomID;
+            this.teacherName = teacherName;
             cn = new SqlConnection(dbcon.MyConnection());
         }
         private Color RandomColor(int assignmentCounter)
@@ -81,12 +82,13 @@ namespace intial_form_1_
                         panel.BackColor = RandomColor(assignmentCounter);
                         panel.BorderStyle = BorderStyle.FixedSingle;
                         panel.Name = dr["assignmentTitle"].ToString();
+                          panel.AutoScroll = true;
+                        panel.AutoSize = false;
 
                         //assignmentID Label
                         Label assignmentID = new Label();
                         assignmentID.Text = "Assignment ID: " + dr["assignmentID"].ToString();
                         assignmentID.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
-                        assignmentID.AutoSize = true;
                         assignmentID.Location = new Point(10, 10);
                         this.assignmentID = dr["assignmentID"].ToString();
                         
@@ -417,5 +419,6 @@ namespace intial_form_1_
             Class classForm = new Class(teacherName,teacherUsername,classroomID);
             classForm.Show();
         }
+
     }
 }
