@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Announcement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Announcement.Designer.cs">
+      <DependentUpon>Announcement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="announcementPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="announcementPanel.Designer.cs">
+      <DependentUpon>announcementPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Assignments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     <Compile Include="assignmentPanel.Designer.cs">
       <DependentUpon>assignmentPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Announcement.resx">
+      <DependentUpon>Announcement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="announcementPanel.resx">
+      <DependentUpon>announcementPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Assignments.resx">
       <DependentUpon>Assignments.cs</DependentUpon>
     </EmbeddedResource>

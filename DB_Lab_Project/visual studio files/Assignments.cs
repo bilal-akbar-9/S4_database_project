@@ -55,7 +55,6 @@ namespace intial_form_1_
             flowLayoutAssignment.Controls.Clear();
             flowLayoutAssignment.Controls.Add(new Label());
             flowLayoutAssignment.Visible = true;
-            string assignmentIDtempVar;
             try
             {
                 cn.Open();
@@ -125,21 +124,6 @@ namespace intial_form_1_
                 cn.Close();
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAssDesc_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void CreateAssignment_Click(object sender, EventArgs e)

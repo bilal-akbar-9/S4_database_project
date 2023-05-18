@@ -42,6 +42,7 @@ create table ClassroomAndStudent
 create table Announcement
 (
     announcementID int IDENTITY(1,1) not null,
+    announcementTitle varchar(100) not null,
     announcementDescription varchar(100) not null,
     announcementDate date not null,
     username_Teacher varchar(20) not null,
