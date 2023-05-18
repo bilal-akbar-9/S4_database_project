@@ -25,6 +25,10 @@ namespace intial_form_1_
         SqlDataAdapter adapter;
         String assignmentID;
 
+        String studentName;
+        String studentUsername;
+        String studentID;
+
         public Assignments()
         {
             InitializeComponent();
@@ -36,6 +40,15 @@ namespace intial_form_1_
             this.teacherUsername = teacherUsername;
             this.classroomID = classroomID;
             this.teacherName = teacherName;
+            cn = new SqlConnection(dbcon.MyConnection());
+        }
+
+        public Assignments(String studentName, String studentUsername, String classroomID, String random)
+        {
+            InitializeComponent();
+            this.studentUsername = studentUsername;
+            this.studentName = studentName;
+            this.classroomID = classroomID;
             cn = new SqlConnection(dbcon.MyConnection());
         }
         private Color RandomColor(int assignmentCounter)
@@ -55,7 +68,6 @@ namespace intial_form_1_
             flowLayoutAssignment.Controls.Clear();
             flowLayoutAssignment.Controls.Add(new Label());
             flowLayoutAssignment.Visible = true;
-            string assignmentIDtempVar;
             try
             {
                 cn.Open();
@@ -125,21 +137,6 @@ namespace intial_form_1_
                 cn.Close();
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAssDesc_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void CreateAssignment_Click(object sender, EventArgs e)

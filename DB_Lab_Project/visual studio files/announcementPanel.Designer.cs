@@ -1,6 +1,6 @@
 ﻿namespace intial_form_1_
 {
-    partial class assignmentPanel
+    partial class announcementPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -36,21 +36,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TeacherTabs = new System.Windows.Forms.TabControl();
             this.assDesTab = new System.Windows.Forms.TabPage();
-            this.dueDateLabel = new System.Windows.Forms.Label();
-            this.txtAssPoints = new System.Windows.Forms.TextBox();
             this.txtAssignmetFile = new System.Windows.Forms.TextBox();
             this.txtAssTitle = new System.Windows.Forms.TextBox();
             this.txtAssDesc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dueDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.assignmentTitle = new System.Windows.Forms.Label();
-            this.ViewProgressTab = new System.Windows.Forms.TabPage();
-            this.countlabel = new System.Windows.Forms.Label();
-            this.ViewProgressDatagridView = new System.Windows.Forms.DataGridView();
-            this.buttonViewProgress = new System.Windows.Forms.Button();
-            this.labelViewProgress = new System.Windows.Forms.Label();
             this.CommentsTab = new System.Windows.Forms.TabPage();
             this.commentTABS = new System.Windows.Forms.TabControl();
             this.viewCommentsTab = new System.Windows.Forms.TabPage();
@@ -77,8 +68,6 @@
             this.backButton = new System.Windows.Forms.Button();
             this.TeacherTabs.SuspendLayout();
             this.assDesTab.SuspendLayout();
-            this.ViewProgressTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewProgressDatagridView)).BeginInit();
             this.CommentsTab.SuspendLayout();
             this.commentTABS.SuspendLayout();
             this.viewCommentsTab.SuspendLayout();
@@ -93,7 +82,6 @@
             // TeacherTabs
             // 
             this.TeacherTabs.Controls.Add(this.assDesTab);
-            this.TeacherTabs.Controls.Add(this.ViewProgressTab);
             this.TeacherTabs.Controls.Add(this.CommentsTab);
             this.TeacherTabs.Location = new System.Drawing.Point(-1, 3);
             this.TeacherTabs.Margin = new System.Windows.Forms.Padding(2);
@@ -101,19 +89,14 @@
             this.TeacherTabs.SelectedIndex = 0;
             this.TeacherTabs.Size = new System.Drawing.Size(914, 456);
             this.TeacherTabs.TabIndex = 1;
-            this.TeacherTabs.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
             // 
             // assDesTab
             // 
             this.assDesTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.assDesTab.Controls.Add(this.dueDateLabel);
-            this.assDesTab.Controls.Add(this.txtAssPoints);
             this.assDesTab.Controls.Add(this.txtAssignmetFile);
             this.assDesTab.Controls.Add(this.txtAssTitle);
             this.assDesTab.Controls.Add(this.txtAssDesc);
             this.assDesTab.Controls.Add(this.label4);
-            this.assDesTab.Controls.Add(this.label3);
-            this.assDesTab.Controls.Add(this.dueDate);
             this.assDesTab.Controls.Add(this.label1);
             this.assDesTab.Controls.Add(this.assignmentTitle);
             this.assDesTab.Location = new System.Drawing.Point(4, 22);
@@ -122,30 +105,10 @@
             this.assDesTab.TabIndex = 4;
             this.assDesTab.Text = "Assignment";
             // 
-            // dueDateLabel
-            // 
-            this.dueDateLabel.AutoSize = true;
-            this.dueDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dueDateLabel.Location = new System.Drawing.Point(686, 62);
-            this.dueDateLabel.Name = "dueDateLabel";
-            this.dueDateLabel.Size = new System.Drawing.Size(51, 20);
-            this.dueDateLabel.TabIndex = 47;
-            this.dueDateLabel.Text = "label2";
-            // 
-            // txtAssPoints
-            // 
-            this.txtAssPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssPoints.Location = new System.Drawing.Point(605, 176);
-            this.txtAssPoints.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAssPoints.Name = "txtAssPoints";
-            this.txtAssPoints.ReadOnly = true;
-            this.txtAssPoints.Size = new System.Drawing.Size(145, 26);
-            this.txtAssPoints.TabIndex = 45;
-            // 
             // txtAssignmetFile
             // 
             this.txtAssignmetFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssignmetFile.Location = new System.Drawing.Point(605, 259);
+            this.txtAssignmetFile.Location = new System.Drawing.Point(625, 98);
             this.txtAssignmetFile.Margin = new System.Windows.Forms.Padding(2);
             this.txtAssignmetFile.Name = "txtAssignmetFile";
             this.txtAssignmetFile.ReadOnly = true;
@@ -171,41 +134,19 @@
             this.txtAssDesc.Name = "txtAssDesc";
             this.txtAssDesc.ReadOnly = true;
             this.txtAssDesc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssDesc.Size = new System.Drawing.Size(423, 181);
+            this.txtAssDesc.Size = new System.Drawing.Size(688, 181);
             this.txtAssDesc.TabIndex = 43;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(602, 225);
+            this.label4.Location = new System.Drawing.Point(622, 64);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 20);
             this.label4.TabIndex = 42;
             this.label4.Text = "File";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(602, 143);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 20);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Point";
-            // 
-            // dueDate
-            // 
-            this.dueDate.AutoSize = true;
-            this.dueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dueDate.Location = new System.Drawing.Point(602, 64);
-            this.dueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.dueDate.Name = "dueDate";
-            this.dueDate.Size = new System.Drawing.Size(86, 20);
-            this.dueDate.TabIndex = 40;
-            this.dueDate.Text = "DueDate:";
             // 
             // label1
             // 
@@ -228,74 +169,6 @@
             this.assignmentTitle.Size = new System.Drawing.Size(43, 20);
             this.assignmentTitle.TabIndex = 38;
             this.assignmentTitle.Text = "Title";
-            // 
-            // ViewProgressTab
-            // 
-            this.ViewProgressTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ViewProgressTab.Controls.Add(this.countlabel);
-            this.ViewProgressTab.Controls.Add(this.ViewProgressDatagridView);
-            this.ViewProgressTab.Controls.Add(this.buttonViewProgress);
-            this.ViewProgressTab.Controls.Add(this.labelViewProgress);
-            this.ViewProgressTab.Location = new System.Drawing.Point(4, 22);
-            this.ViewProgressTab.Margin = new System.Windows.Forms.Padding(2);
-            this.ViewProgressTab.Name = "ViewProgressTab";
-            this.ViewProgressTab.Padding = new System.Windows.Forms.Padding(2);
-            this.ViewProgressTab.Size = new System.Drawing.Size(906, 430);
-            this.ViewProgressTab.TabIndex = 2;
-            this.ViewProgressTab.Text = "View Progress";
-            // 
-            // countlabel
-            // 
-            this.countlabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.countlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countlabel.Location = new System.Drawing.Point(25, 62);
-            this.countlabel.Name = "countlabel";
-            this.countlabel.Size = new System.Drawing.Size(208, 57);
-            this.countlabel.TabIndex = 10;
-            this.countlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.countlabel.Visible = false;
-            // 
-            // ViewProgressDatagridView
-            // 
-            this.ViewProgressDatagridView.AllowUserToAddRows = false;
-            this.ViewProgressDatagridView.AllowUserToDeleteRows = false;
-            this.ViewProgressDatagridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ViewProgressDatagridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewProgressDatagridView.Location = new System.Drawing.Point(29, 128);
-            this.ViewProgressDatagridView.Margin = new System.Windows.Forms.Padding(2);
-            this.ViewProgressDatagridView.Name = "ViewProgressDatagridView";
-            this.ViewProgressDatagridView.ReadOnly = true;
-            this.ViewProgressDatagridView.RowHeadersWidth = 62;
-            this.ViewProgressDatagridView.RowTemplate.Height = 28;
-            this.ViewProgressDatagridView.Size = new System.Drawing.Size(830, 285);
-            this.ViewProgressDatagridView.TabIndex = 9;
-            // 
-            // buttonViewProgress
-            // 
-            this.buttonViewProgress.BackColor = System.Drawing.Color.White;
-            this.buttonViewProgress.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonViewProgress.FlatAppearance.BorderSize = 3;
-            this.buttonViewProgress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonViewProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewProgress.Location = new System.Drawing.Point(646, 72);
-            this.buttonViewProgress.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonViewProgress.Name = "buttonViewProgress";
-            this.buttonViewProgress.Size = new System.Drawing.Size(213, 37);
-            this.buttonViewProgress.TabIndex = 8;
-            this.buttonViewProgress.Text = "Check";
-            this.buttonViewProgress.UseVisualStyleBackColor = false;
-            this.buttonViewProgress.Click += new System.EventHandler(this.viewProgressButton_Clicked);
-            // 
-            // labelViewProgress
-            // 
-            this.labelViewProgress.AutoSize = true;
-            this.labelViewProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelViewProgress.Location = new System.Drawing.Point(390, 34);
-            this.labelViewProgress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelViewProgress.Name = "labelViewProgress";
-            this.labelViewProgress.Size = new System.Drawing.Size(166, 26);
-            this.labelViewProgress.TabIndex = 1;
-            this.labelViewProgress.Text = "View Progress";
             // 
             // CommentsTab
             // 
@@ -321,7 +194,6 @@
             this.commentTABS.SelectedIndex = 0;
             this.commentTABS.Size = new System.Drawing.Size(921, 431);
             this.commentTABS.TabIndex = 0;
-            this.commentTABS.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
             // 
             // viewCommentsTab
             // 
@@ -343,7 +215,6 @@
             this.noCommentToViewLabel.TabIndex = 27;
             this.noCommentToViewLabel.Text = "No comments to view";
             this.noCommentToViewLabel.Visible = false;
-            this.noCommentToViewLabel.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
             // 
             // allCommentsList
             // 
@@ -387,7 +258,6 @@
             this.buttonAddComment.TabIndex = 11;
             this.buttonAddComment.Text = "Post";
             this.buttonAddComment.UseVisualStyleBackColor = false;
-            this.buttonAddComment.Click += new System.EventHandler(this.addCommentButton_Clicked);
             // 
             // txtCommentDesc
             // 
@@ -464,7 +334,6 @@
             this.SelectButton.TabIndex = 25;
             this.SelectButton.Text = "Select";
             this.SelectButton.UseVisualStyleBackColor = false;
-            this.SelectButton.Click += new System.EventHandler(this.selectCommentsButtonClicked);
             // 
             // updateButton
             // 
@@ -481,7 +350,6 @@
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = false;
             this.updateButton.Visible = false;
-            this.updateButton.Click += new System.EventHandler(this.updateCommentButtonClicked);
             // 
             // txtCommentDescUPDAtE
             // 
@@ -632,7 +500,6 @@
             this.Deletebutton.Text = "Delete";
             this.Deletebutton.UseVisualStyleBackColor = false;
             this.Deletebutton.Visible = false;
-            this.Deletebutton.Click += new System.EventHandler(this.DeleteCommentButtonClicked);
             // 
             // labelDeleteComment
             // 
@@ -661,9 +528,8 @@
             this.backButton.Text = "←";
             this.backButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // assignmentPanel
+            // announcementPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -671,16 +537,12 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.TeacherTabs);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "assignmentPanel";
+            this.Name = "announcementPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Assignment Panel";
-            this.Load += new System.EventHandler(this.assignmentPanel_Load);
+            this.Text = "Announcement Panel";
             this.TeacherTabs.ResumeLayout(false);
             this.assDesTab.ResumeLayout(false);
             this.assDesTab.PerformLayout();
-            this.ViewProgressTab.ResumeLayout(false);
-            this.ViewProgressTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewProgressDatagridView)).EndInit();
             this.CommentsTab.ResumeLayout(false);
             this.commentTABS.ResumeLayout(false);
             this.viewCommentsTab.ResumeLayout(false);
@@ -701,9 +563,6 @@
         #endregion
 
         private System.Windows.Forms.TabControl TeacherTabs;
-        private System.Windows.Forms.TabPage ViewProgressTab;
-        private System.Windows.Forms.Button buttonViewProgress;
-        private System.Windows.Forms.Label labelViewProgress;
         private System.Windows.Forms.TabPage CommentsTab;
         private System.Windows.Forms.TabControl commentTABS;
         private System.Windows.Forms.TabPage addCommentTab;
@@ -721,19 +580,13 @@
         private System.Windows.Forms.Label txtUpdateComment;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.DataGridView ViewProgressDatagridView;
         private System.Windows.Forms.TabPage assDesTab;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label dueDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label assignmentTitle;
         private System.Windows.Forms.TextBox txtAssTitle;
         private System.Windows.Forms.TextBox txtAssDesc;
-        private System.Windows.Forms.TextBox txtAssPoints;
         private System.Windows.Forms.TextBox txtAssignmetFile;
-        private System.Windows.Forms.Label dueDateLabel;
-        private System.Windows.Forms.Label countlabel;
         private System.Windows.Forms.DataGridView commentListGridForDeletion;
         private System.Windows.Forms.Label noCommentToDelete_Label;
         private System.Windows.Forms.DataGridView commentListForUpdation;
