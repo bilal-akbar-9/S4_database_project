@@ -77,22 +77,18 @@ namespace intial_form_1_
         private void addCommentButton_Clicked(object sender, EventArgs e)
         {
             string CommentDesc = txtCommentDesc.Text;
-            string CommentDate = txtCommentDate.Text;
-            string AssignmentID = txtAssignmentID.Text;
-
+            string CommentDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             try
             {
                 cn.Open();
                 cm = new SqlCommand("insert into Comment (commentDescription,commentDate,assignmentID) values (@CommentDesc,@CommentDate,@AssignmentID)", cn);
                 cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
                 cm.Parameters.AddWithValue("@CommentDate", CommentDate);
-                cm.Parameters.AddWithValue("@AssignmentID", AssignmentID);
+                cm.Parameters.AddWithValue("@AssignmentID", this.assignmentID);
                 cm.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("Comment Added Successfully with ID: " + AssignmentID, "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Comment Added Successfully", "Comment", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtCommentDesc.Clear();
-                txtCommentDate.Clear();
-                txtAssignmentID.Clear();
                 txtCommentDesc.Focus();
             }
             catch (Exception ex)
@@ -102,54 +98,16 @@ namespace intial_form_1_
             }
         }
 
-  
-
-        
-
         // Global variable to store the selected assignment 
        
 
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Class classForm = new Class(teacherName, teacherUserName, classroomID);
-            classForm.Show();
+            Assignments assignments = new Assignments(teacherName, teacherUserName, classroomID);
+            assignments.Show();
         }
 
-        private void assignmentsList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void modifyDescBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void assignmentsListForModification_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtAssDesc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CreateAssignment_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void assDesTab_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void assignmentPanel_Load(object sender, EventArgs e)
         {
@@ -276,23 +234,17 @@ namespace intial_form_1_
             {
                 commentListForUpdation.Visible = false;
                 SelectButton.Visible = false;
-
                 txtCommentDescUPDAtE.Visible = true;
-                txtCommentDateUpdate.Visible = true;
                 updateButton.Visible = true;
                 labelCommentDescUpdate.Visible = true;
-                labelCommetnDateUpdate.Visible = true;
             }
             else
             {
                 commentListForUpdation.Visible = true;
                 SelectButton.Visible = true;
-
                 txtCommentDescUPDAtE.Visible = false;
-                txtCommentDateUpdate.Visible = false;
                 updateButton.Visible = false;
                 labelCommentDescUpdate.Visible = false;
-                labelCommetnDateUpdate.Visible = false;
             }
         }
         private void selectCommentsButtonClicked(object sender, EventArgs e)
@@ -310,7 +262,6 @@ namespace intial_form_1_
                 if (dr.HasRows)
                 {
                     txtCommentDescUPDAtE.Text = dr["commentDescription"].ToString();
-                    txtCommentDateUpdate.Text = dr["commentDate"].ToString();
                     toggleUpdateCommentTab();
                 }
                 dr.Close();
@@ -327,12 +278,11 @@ namespace intial_form_1_
             try
             {
             string CommentDesc = txtCommentDescUPDAtE.Text;
-            string CommentDate = txtCommentDateUpdate.Value.ToString("yyyy-MM-dd HH:mm");
-
+            string CommentDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             //store the comment id from the selected row
             int commentID = Convert.ToInt32(commentListForUpdation.SelectedRows[0].Cells["commentID"].Value);
             //handle null value with messagebox
-            if (CommentDesc == "" || CommentDate == "")
+            if (CommentDesc == "")
             {
                 MessageBox.Show("Please fill all the fields");
                 return;
@@ -347,7 +297,7 @@ namespace intial_form_1_
                 cm.ExecuteNonQuery();
                 cn.Close();
 
-                MessageBox.Show("Comment Updated Successfully with ID: " + commentID, "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Comment Updated Successfully with ID: ", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 loadCommentsToDeleteOrUpdate(sender, e);
                 toggleUpdateCommentTab();

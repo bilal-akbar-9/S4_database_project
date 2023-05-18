@@ -56,9 +56,9 @@ namespace intial_form_1_
             //the colors: 138, 197, 255 ,, 209, 236, 241 ,, 233, 233, 233
             if (classCounter > 3)
                 classCounter = 1;
-            if (classCounter == 0)
+            if (classCounter == 1)
                 return Color.FromArgb(138, 197, 255);
-            else if (classCounter == 1)
+            else if (classCounter == 2)
                 return Color.FromArgb(209, 236, 241);
             else
                 return Color.FromArgb(233, 233, 233);
@@ -120,8 +120,6 @@ namespace intial_form_1_
                         //create new form on a click of a class inside a panel and pass the id of class as a parameter
                         panel.Click += (s, ev) =>
                         {
-                            //show in the message box, the id of the class
-                            //MessageBox.Show(teacherName);
                             this.Hide();
                             Class teacherClassroom = new Class(teacherName, teacherUsername, panel.Name);
                             teacherClassroom.Show();
