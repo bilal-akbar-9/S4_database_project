@@ -1,4 +1,6 @@
-﻿namespace intial_form_1_
+﻿using System.Windows.Forms;
+
+namespace intial_form_1_
 {
     partial class Assignments
     {
@@ -29,10 +31,10 @@
         private void InitializeComponent()
         {
             this.UpdateAssTab = new System.Windows.Forms.TabPage();
+            this.modifyTitleBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.selectButton = new System.Windows.Forms.Button();
             this.modifyDescBox = new System.Windows.Forms.TextBox();
-            this.labelAssiID = new System.Windows.Forms.Label();
-            this.textBoxAssID = new System.Windows.Forms.TextBox();
             this.modifyDueDateBox = new System.Windows.Forms.DateTimePicker();
             this.modifyButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -56,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.AssignmentTab = new System.Windows.Forms.TabPage();
+            this.backButton = new System.Windows.Forms.Button();
             this.flowLayoutAssignment = new System.Windows.Forms.FlowLayoutPanel();
             this.noClassLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -64,6 +67,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.AssignmentTABS = new System.Windows.Forms.TabControl();
             this.AddAssignmentTab = new System.Windows.Forms.TabPage();
+            this.txtAssTitle = new System.Windows.Forms.TextBox();
+            this.assignmentTitle = new System.Windows.Forms.Label();
             this.txtAssDueDate = new System.Windows.Forms.DateTimePicker();
             this.txtAssDesc = new System.Windows.Forms.TextBox();
             this.CreateAssignment = new System.Windows.Forms.Button();
@@ -91,10 +96,10 @@
             // UpdateAssTab
             // 
             this.UpdateAssTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.UpdateAssTab.Controls.Add(this.modifyTitleBox);
+            this.UpdateAssTab.Controls.Add(this.label15);
             this.UpdateAssTab.Controls.Add(this.selectButton);
             this.UpdateAssTab.Controls.Add(this.modifyDescBox);
-            this.UpdateAssTab.Controls.Add(this.labelAssiID);
-            this.UpdateAssTab.Controls.Add(this.textBoxAssID);
             this.UpdateAssTab.Controls.Add(this.modifyDueDateBox);
             this.UpdateAssTab.Controls.Add(this.modifyButton);
             this.UpdateAssTab.Controls.Add(this.label11);
@@ -112,13 +117,34 @@
             this.UpdateAssTab.TabIndex = 3;
             this.UpdateAssTab.Text = "Update Assignment";
             // 
+            // modifyTitleBox
+            // 
+            this.modifyTitleBox.Location = new System.Drawing.Point(114, 147);
+            this.modifyTitleBox.Multiline = true;
+            this.modifyTitleBox.Name = "modifyTitleBox";
+            this.modifyTitleBox.Size = new System.Drawing.Size(322, 26);
+            this.modifyTitleBox.TabIndex = 40;
+            this.modifyTitleBox.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(112, 118);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(39, 18);
+            this.label15.TabIndex = 41;
+            this.label15.Text = "Title";
+            this.label15.Visible = false;
+            // 
             // selectButton
             // 
             this.selectButton.BackColor = System.Drawing.Color.White;
             this.selectButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.selectButton.FlatAppearance.BorderSize = 3;
             this.selectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selectButton.Location = new System.Drawing.Point(949, 438);
+            this.selectButton.Location = new System.Drawing.Point(949, 439);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(88, 42);
             this.selectButton.TabIndex = 39;
@@ -128,37 +154,19 @@
             // 
             // modifyDescBox
             // 
-            this.modifyDescBox.Location = new System.Drawing.Point(115, 147);
+            this.modifyDescBox.Location = new System.Drawing.Point(115, 212);
             this.modifyDescBox.Multiline = true;
             this.modifyDescBox.Name = "modifyDescBox";
-            this.modifyDescBox.Size = new System.Drawing.Size(322, 137);
+            this.modifyDescBox.Size = new System.Drawing.Size(322, 72);
             this.modifyDescBox.TabIndex = 27;
             this.modifyDescBox.Visible = false;
             // 
-            // labelAssiID
-            // 
-            this.labelAssiID.AutoSize = true;
-            this.labelAssiID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAssiID.Location = new System.Drawing.Point(638, 313);
-            this.labelAssiID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelAssiID.Name = "labelAssiID";
-            this.labelAssiID.Size = new System.Drawing.Size(114, 20);
-            this.labelAssiID.TabIndex = 37;
-            this.labelAssiID.Text = "Assignment ID";
-            this.labelAssiID.Visible = false;
-            // 
-            // textBoxAssID
-            // 
-            this.textBoxAssID.Location = new System.Drawing.Point(639, 357);
-            this.textBoxAssID.Name = "textBoxAssID";
-            this.textBoxAssID.Size = new System.Drawing.Size(199, 20);
-            this.textBoxAssID.TabIndex = 36;
-            this.textBoxAssID.Visible = false;
-            // 
             // modifyDueDateBox
             // 
-            this.modifyDueDateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyDueDateBox.Location = new System.Drawing.Point(639, 147);
+            this.modifyDueDateBox.CustomFormat = "MM/dd/yyyy hh:mm";
+            this.modifyDueDateBox.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyDueDateBox.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.modifyDueDateBox.Location = new System.Drawing.Point(113, 342);
             this.modifyDueDateBox.Name = "modifyDueDateBox";
             this.modifyDueDateBox.Size = new System.Drawing.Size(238, 23);
             this.modifyDueDateBox.TabIndex = 35;
@@ -171,8 +179,8 @@
             this.modifyButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.modifyButton.FlatAppearance.BorderSize = 3;
             this.modifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyButton.Location = new System.Drawing.Point(856, 438);
+            this.modifyButton.Font = new System.Drawing.Font("HP Simplified Hans", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyButton.Location = new System.Drawing.Point(949, 439);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(88, 42);
             this.modifyButton.TabIndex = 34;
@@ -184,11 +192,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(638, 231);
+            this.label11.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(636, 118);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(141, 20);
+            this.label11.Size = new System.Drawing.Size(136, 18);
             this.label11.TabIndex = 33;
             this.label11.Text = "Assignment Points";
             this.label11.Visible = false;
@@ -196,11 +204,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(637, 118);
+            this.label12.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(111, 313);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(162, 20);
+            this.label12.Size = new System.Drawing.Size(151, 18);
             this.label12.TabIndex = 32;
             this.label12.Text = "Assignment DueDate";
             this.label12.Visible = false;
@@ -208,11 +216,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(111, 313);
+            this.label13.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(639, 181);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 20);
+            this.label13.Size = new System.Drawing.Size(116, 18);
             this.label13.TabIndex = 31;
             this.label13.Text = "Assignment File";
             this.label13.Visible = false;
@@ -220,18 +228,18 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(111, 118);
+            this.label14.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(112, 181);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(177, 20);
+            this.label14.Size = new System.Drawing.Size(171, 18);
             this.label14.TabIndex = 30;
             this.label14.Text = "Assignment Description";
             this.label14.Visible = false;
             // 
             // modifyAssignmentFileBox
             // 
-            this.modifyAssignmentFileBox.Location = new System.Drawing.Point(115, 357);
+            this.modifyAssignmentFileBox.Location = new System.Drawing.Point(639, 212);
             this.modifyAssignmentFileBox.Name = "modifyAssignmentFileBox";
             this.modifyAssignmentFileBox.Size = new System.Drawing.Size(199, 20);
             this.modifyAssignmentFileBox.TabIndex = 29;
@@ -239,7 +247,7 @@
             // 
             // modifyAssignmentPointsBox
             // 
-            this.modifyAssignmentPointsBox.Location = new System.Drawing.Point(639, 264);
+            this.modifyAssignmentPointsBox.Location = new System.Drawing.Point(639, 147);
             this.modifyAssignmentPointsBox.Name = "modifyAssignmentPointsBox";
             this.modifyAssignmentPointsBox.Size = new System.Drawing.Size(199, 20);
             this.modifyAssignmentPointsBox.TabIndex = 28;
@@ -248,11 +256,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label10.Location = new System.Drawing.Point(480, 474);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 20);
+            this.label10.Size = new System.Drawing.Size(145, 18);
             this.label10.TabIndex = 7;
             this.label10.Text = "Made by BTI with 💓";
             this.label10.Visible = false;
@@ -270,11 +278,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(893, 48);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.Size = new System.Drawing.Size(50, 18);
             this.label6.TabIndex = 4;
             this.label6.Text = "label1";
             this.label6.Visible = false;
@@ -282,22 +290,22 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(18, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(251, 31);
+            this.label7.Size = new System.Drawing.Size(243, 31);
             this.label7.TabIndex = 0;
             this.label7.Text = "Update Assignment";
             // 
             // assignmentsListForModification
             // 
             this.assignmentsListForModification.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.assignmentsListForModification.Location = new System.Drawing.Point(7, 90);
+            this.assignmentsListForModification.Location = new System.Drawing.Point(60, 90);
             this.assignmentsListForModification.MultiSelect = false;
             this.assignmentsListForModification.Name = "assignmentsListForModification";
             this.assignmentsListForModification.RowHeadersWidth = 51;
-            this.assignmentsListForModification.Size = new System.Drawing.Size(1053, 342);
+            this.assignmentsListForModification.Size = new System.Drawing.Size(931, 342);
             this.assignmentsListForModification.TabIndex = 38;
             // 
             // RemoveAssignmentTab
@@ -319,7 +327,7 @@
             this.deleteAssigmentButton.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.deleteAssigmentButton.FlatAppearance.BorderSize = 3;
             this.deleteAssigmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteAssigmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAssigmentButton.Font = new System.Drawing.Font("HP Simplified Hans", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteAssigmentButton.Location = new System.Drawing.Point(879, 437);
             this.deleteAssigmentButton.Name = "deleteAssigmentButton";
             this.deleteAssigmentButton.Size = new System.Drawing.Size(88, 42);
@@ -336,16 +344,15 @@
             this.assignmentsList.RowHeadersWidth = 51;
             this.assignmentsList.Size = new System.Drawing.Size(904, 342);
             this.assignmentsList.TabIndex = 7;
-            this.assignmentsList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.assignmentsList_CellContentClick);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label9.Location = new System.Drawing.Point(480, 474);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 20);
+            this.label9.Size = new System.Drawing.Size(145, 18);
             this.label9.TabIndex = 6;
             this.label9.Text = "Made by BTI with 💓";
             this.label9.Visible = false;
@@ -363,11 +370,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(893, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(50, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "label1";
             this.label4.Visible = false;
@@ -375,22 +382,22 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(18, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(191, 31);
+            this.label5.Size = new System.Drawing.Size(174, 31);
             this.label5.TabIndex = 0;
             this.label5.Text = "Remove Class";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(893, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(50, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "label1";
             this.label2.Visible = false;
@@ -398,11 +405,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(18, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 31);
+            this.label3.Size = new System.Drawing.Size(204, 31);
             this.label3.TabIndex = 0;
             this.label3.Text = "Add Assignment";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -410,24 +417,45 @@
             // AssignmentTab
             // 
             this.AssignmentTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.AssignmentTab.Controls.Add(this.backButton);
             this.AssignmentTab.Controls.Add(this.flowLayoutAssignment);
             this.AssignmentTab.Controls.Add(this.noClassLabel);
             this.AssignmentTab.Controls.Add(this.panel1);
             this.AssignmentTab.Controls.Add(this.label1);
             this.AssignmentTab.Location = new System.Drawing.Point(4, 22);
             this.AssignmentTab.Name = "AssignmentTab";
-            this.AssignmentTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.AssignmentTab.Padding = new System.Windows.Forms.Padding(3);
             this.AssignmentTab.Size = new System.Drawing.Size(1066, 508);
             this.AssignmentTab.TabIndex = 0;
             this.AssignmentTab.Text = "Assignments";
             // 
+            // backButton
+            // 
+            this.backButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.backButton.FlatAppearance.BorderSize = 3;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.ForeColor = System.Drawing.Color.White;
+            this.backButton.Location = new System.Drawing.Point(20, 463);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(86, 40);
+            this.backButton.TabIndex = 28;
+            this.backButton.Text = "←";
+            this.backButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // flowLayoutAssignment
             // 
             this.flowLayoutAssignment.AutoScroll = true;
-            this.flowLayoutAssignment.Location = new System.Drawing.Point(20, 103);
+            this.flowLayoutAssignment.AutoSize = true;
+            this.flowLayoutAssignment.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutAssignment.Location = new System.Drawing.Point(197, 111);
             this.flowLayoutAssignment.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutAssignment.Name = "flowLayoutAssignment";
-            this.flowLayoutAssignment.Size = new System.Drawing.Size(1021, 354);
+            this.flowLayoutAssignment.Size = new System.Drawing.Size(699, 341);
             this.flowLayoutAssignment.TabIndex = 7;
             this.flowLayoutAssignment.Visible = false;
             this.flowLayoutAssignment.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
@@ -435,17 +463,17 @@
             // noClassLabel
             // 
             this.noClassLabel.AutoSize = true;
-            this.noClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noClassLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noClassLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.noClassLabel.Location = new System.Drawing.Point(16, 111);
             this.noClassLabel.Name = "noClassLabel";
-            this.noClassLabel.Size = new System.Drawing.Size(106, 20);
+            this.noClassLabel.Size = new System.Drawing.Size(98, 18);
             this.noClassLabel.TabIndex = 6;
             this.noClassLabel.Text = "No Class Text";
-            this.noClassLabel.Visible = false;
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Controls.Add(this.teacherNameLabel);
             this.panel1.Controls.Add(this.classroomName);
@@ -457,33 +485,33 @@
             // teacherNameLabel
             // 
             this.teacherNameLabel.AutoSize = true;
-            this.teacherNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teacherNameLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teacherNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.teacherNameLabel.Location = new System.Drawing.Point(29, 55);
             this.teacherNameLabel.Name = "teacherNameLabel";
-            this.teacherNameLabel.Size = new System.Drawing.Size(51, 20);
+            this.teacherNameLabel.Size = new System.Drawing.Size(50, 18);
             this.teacherNameLabel.TabIndex = 4;
             this.teacherNameLabel.Text = "label1";
             // 
             // classroomName
             // 
             this.classroomName.AutoSize = true;
-            this.classroomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classroomName.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.classroomName.Location = new System.Drawing.Point(18, 22);
             this.classroomName.Name = "classroomName";
-            this.classroomName.Size = new System.Drawing.Size(170, 31);
+            this.classroomName.Size = new System.Drawing.Size(164, 31);
             this.classroomName.TabIndex = 0;
             this.classroomName.Text = "Assignments";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(480, 474);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 20);
+            this.label1.Size = new System.Drawing.Size(145, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Made by BTI with 💓";
             this.label1.Visible = false;
@@ -501,14 +529,16 @@
             this.AssignmentTABS.SelectedIndex = 0;
             this.AssignmentTABS.Size = new System.Drawing.Size(1074, 534);
             this.AssignmentTABS.TabIndex = 7;
-            this.AssignmentTABS.SelectedIndexChanged += new System.EventHandler(this.load_Assignments);
-            this.AssignmentTABS.Click += new System.EventHandler(this.Assignments_Load);
-            this.AssignmentTABS.Enter += new System.EventHandler(this.Assignments_Load);
-            this.AssignmentTABS.ImeModeChanged += new System.EventHandler(this.load_Assignments);
+            this.AssignmentTABS.SelectedIndexChanged += new System.EventHandler(this.AssignmentloadForUpdateDelete);
+            this.AssignmentTABS.Click += new System.EventHandler(this.loadAssignmentAtStartPage);
+            this.AssignmentTABS.Enter += new System.EventHandler(this.loadAssignmentAtStartPage);
+            this.AssignmentTABS.ImeModeChanged += new System.EventHandler(this.AssignmentloadForUpdateDelete);
             // 
             // AddAssignmentTab
             // 
             this.AddAssignmentTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.AddAssignmentTab.Controls.Add(this.txtAssTitle);
+            this.AddAssignmentTab.Controls.Add(this.assignmentTitle);
             this.AddAssignmentTab.Controls.Add(this.txtAssDueDate);
             this.AddAssignmentTab.Controls.Add(this.txtAssDesc);
             this.AddAssignmentTab.Controls.Add(this.CreateAssignment);
@@ -522,26 +552,48 @@
             this.AddAssignmentTab.Controls.Add(this.panel2);
             this.AddAssignmentTab.Location = new System.Drawing.Point(4, 22);
             this.AddAssignmentTab.Name = "AddAssignmentTab";
-            this.AddAssignmentTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.AddAssignmentTab.Padding = new System.Windows.Forms.Padding(3);
             this.AddAssignmentTab.Size = new System.Drawing.Size(1066, 508);
             this.AddAssignmentTab.TabIndex = 1;
             this.AddAssignmentTab.Text = "Add Assignment";
             // 
+            // txtAssTitle
+            // 
+            this.txtAssTitle.Location = new System.Drawing.Point(81, 172);
+            this.txtAssTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAssTitle.Multiline = true;
+            this.txtAssTitle.Name = "txtAssTitle";
+            this.txtAssTitle.Size = new System.Drawing.Size(423, 31);
+            this.txtAssTitle.TabIndex = 36;
+            // 
+            // assignmentTitle
+            // 
+            this.assignmentTitle.AutoSize = true;
+            this.assignmentTitle.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignmentTitle.Location = new System.Drawing.Point(78, 145);
+            this.assignmentTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.assignmentTitle.Name = "assignmentTitle";
+            this.assignmentTitle.Size = new System.Drawing.Size(39, 18);
+            this.assignmentTitle.TabIndex = 37;
+            this.assignmentTitle.Text = "Title";
+            // 
             // txtAssDueDate
             // 
-            this.txtAssDueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssDueDate.Location = new System.Drawing.Point(724, 172);
+            this.txtAssDueDate.CustomFormat = "MM/dd/yyyy hh:mm";
+            this.txtAssDueDate.Font = new System.Drawing.Font("HP Simplified Hans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtAssDueDate.Location = new System.Drawing.Point(81, 394);
             this.txtAssDueDate.Name = "txtAssDueDate";
             this.txtAssDueDate.Size = new System.Drawing.Size(229, 22);
             this.txtAssDueDate.TabIndex = 35;
             // 
             // txtAssDesc
             // 
-            this.txtAssDesc.Location = new System.Drawing.Point(117, 172);
-            this.txtAssDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAssDesc.Location = new System.Drawing.Point(81, 252);
+            this.txtAssDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtAssDesc.Multiline = true;
             this.txtAssDesc.Name = "txtAssDesc";
-            this.txtAssDesc.Size = new System.Drawing.Size(332, 137);
+            this.txtAssDesc.Size = new System.Drawing.Size(423, 88);
             this.txtAssDesc.TabIndex = 27;
             this.txtAssDesc.TextChanged += new System.EventHandler(this.txtAssDesc_TextChanged);
             // 
@@ -551,9 +603,9 @@
             this.CreateAssignment.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.CreateAssignment.FlatAppearance.BorderSize = 3;
             this.CreateAssignment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateAssignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateAssignment.Location = new System.Drawing.Point(844, 386);
-            this.CreateAssignment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CreateAssignment.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAssignment.Location = new System.Drawing.Point(837, 386);
+            this.CreateAssignment.Margin = new System.Windows.Forms.Padding(2);
             this.CreateAssignment.Name = "CreateAssignment";
             this.CreateAssignment.Size = new System.Drawing.Size(107, 40);
             this.CreateAssignment.TabIndex = 34;
@@ -564,19 +616,19 @@
             // AssignmentDescription
             // 
             this.AssignmentDescription.AutoSize = true;
-            this.AssignmentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssignmentDescription.Location = new System.Drawing.Point(116, 145);
+            this.AssignmentDescription.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmentDescription.Location = new System.Drawing.Point(78, 226);
             this.AssignmentDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AssignmentDescription.Name = "AssignmentDescription";
-            this.AssignmentDescription.Size = new System.Drawing.Size(177, 20);
+            this.AssignmentDescription.Size = new System.Drawing.Size(87, 18);
             this.AssignmentDescription.TabIndex = 30;
-            this.AssignmentDescription.Text = "Assignment Description";
+            this.AssignmentDescription.Text = "Description";
             // 
             // txtAssPoints
             // 
-            this.txtAssPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssPoints.Location = new System.Drawing.Point(724, 283);
-            this.txtAssPoints.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAssPoints.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssPoints.Location = new System.Drawing.Point(722, 172);
+            this.txtAssPoints.Margin = new System.Windows.Forms.Padding(2);
             this.txtAssPoints.Name = "txtAssPoints";
             this.txtAssPoints.Size = new System.Drawing.Size(145, 26);
             this.txtAssPoints.TabIndex = 28;
@@ -584,53 +636,53 @@
             // assPoints
             // 
             this.assPoints.AutoSize = true;
-            this.assPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assPoints.Location = new System.Drawing.Point(721, 251);
+            this.assPoints.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assPoints.Location = new System.Drawing.Point(719, 145);
             this.assPoints.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.assPoints.Name = "assPoints";
-            this.assPoints.Size = new System.Drawing.Size(141, 20);
+            this.assPoints.Size = new System.Drawing.Size(136, 18);
             this.assPoints.TabIndex = 32;
             this.assPoints.Text = "Assignment Points";
             // 
             // AssignmetFile
             // 
             this.AssignmetFile.AutoSize = true;
-            this.AssignmetFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssignmetFile.Location = new System.Drawing.Point(116, 363);
+            this.AssignmetFile.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmetFile.Location = new System.Drawing.Point(719, 226);
             this.AssignmetFile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AssignmetFile.Name = "AssignmetFile";
-            this.AssignmetFile.Size = new System.Drawing.Size(122, 20);
+            this.AssignmetFile.Size = new System.Drawing.Size(116, 18);
             this.AssignmetFile.TabIndex = 33;
             this.AssignmetFile.Text = "Assignment File";
             // 
             // AssignmentDueDate
             // 
             this.AssignmentDueDate.AutoSize = true;
-            this.AssignmentDueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssignmentDueDate.Location = new System.Drawing.Point(721, 145);
+            this.AssignmentDueDate.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmentDueDate.Location = new System.Drawing.Point(78, 365);
             this.AssignmentDueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AssignmentDueDate.Name = "AssignmentDueDate";
-            this.AssignmentDueDate.Size = new System.Drawing.Size(162, 20);
+            this.AssignmentDueDate.Size = new System.Drawing.Size(151, 18);
             this.AssignmentDueDate.TabIndex = 31;
             this.AssignmentDueDate.Text = "Assignment DueDate";
             // 
             // txtAssignmetFile
             // 
-            this.txtAssignmetFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssignmetFile.Location = new System.Drawing.Point(119, 394);
-            this.txtAssignmetFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAssignmetFile.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssignmetFile.Location = new System.Drawing.Point(722, 252);
+            this.txtAssignmetFile.Margin = new System.Windows.Forms.Padding(2);
             this.txtAssignmetFile.Name = "txtAssignmetFile";
-            this.txtAssignmetFile.Size = new System.Drawing.Size(211, 26);
+            this.txtAssignmetFile.Size = new System.Drawing.Size(145, 26);
             this.txtAssignmetFile.TabIndex = 29;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label8.Location = new System.Drawing.Point(480, 474);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 20);
+            this.label8.Size = new System.Drawing.Size(145, 18);
             this.label8.TabIndex = 6;
             this.label8.Text = "Made by BTI with 💓";
             this.label8.Visible = false;
@@ -651,7 +703,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 534);
             this.Controls.Add(this.AssignmentTABS);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Assignments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Assignments";
@@ -725,7 +777,10 @@
         private System.Windows.Forms.TextBox modifyDescBox;
         private System.Windows.Forms.DataGridView assignmentsListForModification;
         private System.Windows.Forms.Button selectButton;
-        private System.Windows.Forms.Label labelAssiID;
-        private System.Windows.Forms.TextBox textBoxAssID;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.TextBox txtAssTitle;
+        private System.Windows.Forms.Label assignmentTitle;
+        private System.Windows.Forms.TextBox modifyTitleBox;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -1,8 +1,6 @@
 ﻿create database DBLabProject
 use DBLabProject;
 
-
-
 create table tblUser
 (
     username varchar(20) not null,
@@ -27,8 +25,6 @@ create table Classroom
     foreign key (teacherUsername) references tblUser(username)
 
 )
-
-select * from Classroom
 
 create table ClassroomAndStudent
 (
@@ -70,13 +66,13 @@ create table Material
     foreign key (username_Teacher) references tblUser(username),
     foreign key (classroomID) references Classroom(classroomID)
 )
-
 create table Assignment
 (
     assignmentID int IDENTITY(1,1) not null,
-    assignmentDescription varchar(100) not null,
+    assignmentTitle varchar(100) not null,
+    assignmentDescription varchar(255) not null,
     assignmentPoints int not null,
-    assignmentDueDate date,
+    assignmentDueDate DATETIME,
     assignmentFile varchar(100),
     classroomID int not null,
     username_Teacher varchar(20) not null,
@@ -86,12 +82,6 @@ create table Assignment
     foreign key (username_Teacher) references tblUser(username),
     foreign key (classroomID) references Classroom(classroomID)
 )
-
--- insertion
-insert into Assignment(assignmentDescription, assignmentPoints, assignmentDueDate, assignmentFile, classroomID, username_Teacher)
-values ('Assignment 1 with alot of questions', 10, '2021-05-01', 1, 3, 'teach')
-select * from Assignment
-
 CREATE TABLE Submissions
 (
     -- username from User

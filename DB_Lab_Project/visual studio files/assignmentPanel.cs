@@ -12,7 +12,7 @@ using MyApplication;
 
 namespace intial_form_1_
 {
-    public partial class TeacherPanel : Form
+    public partial class assignmentPanel : Form
     {
 
         SqlConnection cn = new SqlConnection();
@@ -25,27 +25,25 @@ namespace intial_form_1_
         string teacherUserName;
         string classroomID;
         String teacherName;
+        String assignmentID;
 
         //private object assignmentList;
-        public TeacherPanel()
+        public assignmentPanel()
         {
             InitializeComponent();
         }
 
-        public TeacherPanel(string teacherName, string teacherUsername, string classroomID)
+        public assignmentPanel(string teacherName, string teacherUsername, string classroomID, string assignmentID)
         {
             InitializeComponent();
             this.teacherUserName = teacherUsername;
             this.classroomID = classroomID;
             this.teacherName = teacherName;
+            this.assignmentID = assignmentID;
             cn = new SqlConnection(dbcon.MyConnection());
             this.KeyPreview = true;
 
         }
-
-
-
-
         private void viewProgressButton_Clicked(object sender, EventArgs e)
         {
             // string StudentID = txtStudentsID.Text;
@@ -152,14 +150,6 @@ namespace intial_form_1_
 
         }
 
-
-
-
-
-
-
-
-
         // Global variable to store the selected assignment 
        
 
@@ -183,6 +173,54 @@ namespace intial_form_1_
         private void assignmentsListForModification_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtAssDesc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateAssignment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void assDesTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void assignmentPanel_Load(object sender, EventArgs e)
+        {
+            //get the assignmentData from the database
+            try
+            {
+                cn.Open();
+                cm = new SqlCommand("select * from Assignment where assignmentID=@AssignmentID", cn);
+                cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                dr = cm.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    txtAssTitle.Text = dr["assignmentTitle"].ToString();
+                    txtAssDesc.Text = dr["assignmentDescription"].ToString();
+                    txtAssPoints.Text = dr["assignmentPoints"].ToString();
+                    txtAssignmetFile.Text = dr["assignmentFile"].ToString();
+                    dueDateLabel.Text = dr["assignmentDueDate"].ToString();
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

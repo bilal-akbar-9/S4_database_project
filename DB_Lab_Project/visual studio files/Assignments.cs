@@ -19,16 +19,18 @@ namespace intial_form_1_
         SqlCommand cm = new SqlCommand();
         DBConnection dbcon = new DBConnection();
         SqlDataReader dr;
+        String teacherName;
         String teacherUsername;
         String classroomID;
         SqlDataAdapter adapter;
+        String assignmentID;
 
         public Assignments()
         {
             InitializeComponent();
         }
 
-        public Assignments(String teacherUsername, String classroomID)
+        public Assignments(String teacherName, String teacherUsername, String classroomID)
         {
             InitializeComponent();
             this.teacherUsername = teacherUsername;
@@ -47,7 +49,7 @@ namespace intial_form_1_
             else
                 return Color.FromArgb(233, 233, 233);
         }
-        private void Assignments_Load(object sender, EventArgs e)
+        private void loadAssignmentAtStartPage(object sender, EventArgs e)
         {
             flowLayoutAssignment.Controls.Clear();
             flowLayoutAssignment.Controls.Add(new Label());
@@ -68,16 +70,17 @@ namespace intial_form_1_
                 }
                 else
                 {
+                    noClassLabel.Visible = false;
                     int assignmentCounter = 1;
                     Debug.WriteLine("Assignments found");
                     while (dr.Read())
                     {
                         //Panel
                         Panel panel = new Panel();
-                        panel.Size = new Size(200, 100);
+                        panel.Size = new Size(691, 100);
                         panel.BackColor = RandomColor(assignmentCounter);
                         panel.BorderStyle = BorderStyle.FixedSingle;
-                        panel.Name = dr["assignmentID"].ToString();
+                        panel.Name = dr["assignmentTitle"].ToString();
 
                         //assignmentID Label
                         Label assignmentID = new Label();
@@ -85,21 +88,30 @@ namespace intial_form_1_
                         assignmentID.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
                         assignmentID.AutoSize = true;
                         assignmentID.Location = new Point(10, 10);
-
+                        this.assignmentID = dr["assignmentID"].ToString();
+                        
                         //assignmentDescription Label
                         Label assignmentDescription = new Label();
                         assignmentDescription.Text = dr["assignmentDescription"].ToString();
-                        assignmentDescription.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
+                        assignmentDescription.Font = new Font("HP Simplified Hans", 12);
                         assignmentDescription.AutoSize = true;
-                        assignmentDescription.Location = new Point(10, 30);
+                        assignmentDescription.Location = new Point(10, 40);
+
+                        Label DueDate = new Label();
+                        DueDate.Text = "Due Date: " + dr["assignmentDueDate"].ToString();
+                        DueDate.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
+                        DueDate.AutoSize = true;
+                        //DueDate should be at the bottom right of the panel
+                        DueDate.Location = new Point(415, 70);
 
                         panel.Controls.Add(assignmentDescription);
                         panel.Controls.Add(assignmentID);
+                        panel.Controls.Add(DueDate);
                         flowLayoutAssignment.Controls.Add(panel);
                         panel.Click += (s, ev) =>
                         {
-                            TeacherPanel teacherPanel = new TeacherPanel();
-                            teacherPanel.Show();
+                            assignmentPanel assignmentPanel = new assignmentPanel(teacherName, teacherUsername, classroomID, this.assignmentID);
+                            assignmentPanel.Show();
                         };
                     }
                 }
@@ -130,8 +142,9 @@ namespace intial_form_1_
 
         private void CreateAssignment_Click(object sender, EventArgs e)
         {
+            string AssignmentTitle = txtAssTitle.Text;
             string AssignmentDesc = txtAssDesc.Text;
-            string AssignmentDueDate = txtAssDueDate.Value.ToString("yyyy-MM-dd");
+            string AssignmentDueDate = txtAssDueDate.Value.ToString("yyyy-MM-dd HH:mm");
             //should not allow due date to be before today
             if (txtAssDueDate.Value < DateTime.Today)
             {
@@ -144,13 +157,14 @@ namespace intial_form_1_
             try
             {
                 cn.Open();
-                cm = new SqlCommand("insert into Assignment (assignmentDescription,assignmentPoints,assignmentDueDate,assignmentFile,classroomID,username_Teacher) values (@AssignmentDesc,@AssignmentPoints,@AssignmentDueDate,@AssignmentFile,@classroomID,@username)", cn);
+                cm = new SqlCommand("insert into Assignment (assignmentDescription,assignmentPoints,assignmentDueDate,assignmentFile,classroomID,username_Teacher,assignmentTitle) values (@AssignmentDesc,@AssignmentPoints,@AssignmentDueDate,@AssignmentFile,@classroomID,@username,@assignmentTitle)", cn);
                 cm.Parameters.AddWithValue("@AssignmentDesc", AssignmentDesc);
                 cm.Parameters.AddWithValue("@AssignmentDueDate", AssignmentDueDate);
                 cm.Parameters.AddWithValue("@AssignmentFile", AssignmentFile);
                 cm.Parameters.AddWithValue("@AssignmentPoints", AssignmentPoints);
                 cm.Parameters.AddWithValue("@classroomID", classroomID);
                 cm.Parameters.AddWithValue("@username", teacherUsername);
+                cm.Parameters.AddWithValue("@assignmentTitle", AssignmentTitle);
                 cm.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("Assignment Added Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -210,12 +224,7 @@ namespace intial_form_1_
             }
         }
 
-        private void assignmentsList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void load_Assignments(object sender, EventArgs e)
+        private void AssignmentloadForUpdateDelete(object sender, EventArgs e)
         {
             try
             {
@@ -254,18 +263,23 @@ namespace intial_form_1_
             try
             {
                 // Retrieve the modified values from the controls or fields
+                string assignmentTitle = modifyTitleBox.Text;
                 string assignmentDescription = modifyDescBox.Text;
                 string assignmentPoints = modifyAssignmentPointsBox.Text;
-                string assignmentDueDate = modifyDueDateBox.Value.ToString("yyyy-MM-dd");
+                string assignmentDueDate = modifyDueDateBox.Value.ToString("yyyy-MM-dd HH:mm");
                 string assignmentFile = modifyAssignmentFileBox.Text;
-                string assignmentID = textBoxAssID.Text;
                 //dont allow due date to be before today
                 if (modifyDueDateBox.Value < DateTime.Today)
                 {
                     MessageBox.Show("Due date cannot be before today");
                     return;
                 }
-
+                //Validate assignmentTitle and prompt user if it's empty
+                if (string.IsNullOrEmpty(assignmentTitle))
+                {
+                    MessageBox.Show("Please enter a value for Assignment Title.");
+                    return; // Stop further execution
+                }
                 // Validate assignmentDescription and prompt user if it's empty
                 if (string.IsNullOrEmpty(assignmentDescription))
                 {
@@ -285,23 +299,31 @@ namespace intial_form_1_
                     assignmentDueDate = null;
                     cm.Parameters.AddWithValue("@assignmentDueDate", DBNull.Value);
                 }
+                //if file is empty, set it to null
+                if (string.IsNullOrEmpty(assignmentFile))
+                {
+                    assignmentFile = null;
+                    cm.Parameters.AddWithValue("@assignmentFile", DBNull.Value);
+                }
 
                 // Execute the necessary SQL query to update the record in the database
                 cn.Open();
                 //if data is empty, set it to null run query with dat
 
-                cm = new SqlCommand("UPDATE Assignment SET assignmentDescription = @assignmentDescription, assignmentPoints = @assignmentPoints, assignmentDueDate = @assignmentDueDate, assignmentFile = @assignmentFile WHERE assignmentID = @assignmentID", cn);
+                cm = new SqlCommand("UPDATE Assignment SET assignmentTitle = @assignmentTitle,  assignmentDescription = @assignmentDescription, assignmentPoints = @assignmentPoints, assignmentDueDate = @assignmentDueDate, assignmentFile = @assignmentFile WHERE assignmentID = @assignmentID", cn);
                 cm.Parameters.AddWithValue("@assignmentDescription", assignmentDescription);
                 cm.Parameters.AddWithValue("@assignmentPoints", assignmentPoints);
                 cm.Parameters.AddWithValue("@assignmentDueDate", assignmentDueDate);
                 cm.Parameters.AddWithValue("@assignmentFile", assignmentFile);
-                cm.Parameters.AddWithValue("@assignmentID", assignmentID);
+                cm.Parameters.AddWithValue("@assignmentTitle", assignmentTitle);
+                cm.Parameters.AddWithValue("@assignmentID", this.assignmentID);
                 cm.ExecuteNonQuery();
                 cn.Close();
 
                 // Display a success message or perform any other action upon successful modification
                 MessageBox.Show("Assignment modified successfully.");
-
+                AssignmentloadForUpdateDelete(sender, e);
+                toggleUpdateAssignmentTab();
             }
             catch (Exception ex)
             {
@@ -315,6 +337,7 @@ namespace intial_form_1_
             {
                 //get the assignment ID from the selected row
                 int assignmentID = Convert.ToInt32(assignmentsListForModification.SelectedRows[0].Cells["AssignmentID"].Value);
+                this.assignmentID = assignmentID.ToString();
                 //fetch the data from the database using the assignment ID
                 cn.Open();
                 cm = new SqlCommand("select * from Assignment where assignmentID=@assignmentID", cn);
@@ -328,8 +351,8 @@ namespace intial_form_1_
                     modifyAssignmentPointsBox.Text = dr["assignmentPoints"].ToString();
                     modifyDueDateBox.Text = dr["assignmentDueDate"].ToString();
                     modifyAssignmentFileBox.Text = dr["assignmentFile"].ToString();
-
-                    changeModifyAssignmentTab();
+                    modifyTitleBox.Text = dr["assignmentTitle"].ToString();
+                    toggleUpdateAssignmentTab();
                 }
                 cn.Close();
 
@@ -339,8 +362,9 @@ namespace intial_form_1_
                 MessageBox.Show(ex.Message);
             }
         }
-        private void changeModifyAssignmentTab()
+        private void toggleUpdateAssignmentTab()
         {
+            if (assignmentsListForModification.Visible == true){
             //make the assignmentsList invisible
             assignmentsListForModification.Visible = false;
             //delete selectButton
@@ -350,15 +374,48 @@ namespace intial_form_1_
             modifyAssignmentPointsBox.Visible = true;
             modifyDueDateBox.Visible = true;
             modifyAssignmentFileBox.Visible = true;
+            modifyTitleBox.Visible = true;
             //make all labels visible
             label14.Visible = true;
             label13.Visible = true;
             label12.Visible = true;
             label11.Visible = true;
-            labelAssiID.Visible = true;
-            textBoxAssID.Visible = true;
+            label15.Visible = true;
+            // labelAssiID.Visible = true;
+            // textBoxAssID.Visible = true;
             //make the modify button visible
             modifyButton.Visible = true;
+            }
+            else if (assignmentsListForModification.Visible == false)
+            {
+                //make the assignmentsList visible
+                assignmentsListForModification.Visible = true;
+                //make the selectButton visible
+                selectButton.Visible = true;
+                //make all textboxes invisible
+                modifyDescBox.Visible = false;
+                modifyAssignmentPointsBox.Visible = false;
+                modifyDueDateBox.Visible = false;
+                modifyAssignmentFileBox.Visible = false;
+                modifyTitleBox.Visible = false;
+                //make all labels invisible
+                label14.Visible = false;
+                label13.Visible = false;
+                label12.Visible = false;
+                label11.Visible = false;
+                label15.Visible = false;
+                // labelAssiID.Visible = false;
+                // textBoxAssID.Visible = false;
+                //make the modify button invisible
+                modifyButton.Visible = false;
+            }
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Class classForm = new Class(teacherName,teacherUsername,classroomID);
+            classForm.Show();
         }
     }
 }

@@ -86,11 +86,11 @@
     <Compile Include="studentClassroom.Designer.cs">
       <DependentUpon>studentClassroom.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherPanel.cs">
+    <Compile Include="assignmentPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherPanel.Designer.cs">
-      <DependentUpon>TeacherPanel.cs</DependentUpon>
+    <Compile Include="assignmentPanel.Designer.cs">
+      <DependentUpon>assignmentPanel.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Assignments.resx">
       <DependentUpon>Assignments.cs</DependentUpon>
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="studentClassroom.resx">
       <DependentUpon>studentClassroom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherPanel.resx">
-      <DependentUpon>TeacherPanel.cs</DependentUpon>
+    <EmbeddedResource Include="assignmentPanel.resx">
+      <DependentUpon>assignmentPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
