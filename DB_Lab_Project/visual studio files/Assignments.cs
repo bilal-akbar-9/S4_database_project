@@ -43,9 +43,9 @@ namespace intial_form_1_
             //the colors: 138, 197, 255 ,, 209, 236, 241 ,, 233, 233, 233
             if (assignmentCounter > 3)
                 assignmentCounter = 1;
-            if (assignmentCounter == 0)
+            if (assignmentCounter == 1)
                 return Color.FromArgb(138, 197, 255);
-            else if (assignmentCounter == 1)
+            else if (assignmentCounter == 2)
                 return Color.FromArgb(209, 236, 241);
             else
                 return Color.FromArgb(233, 233, 233);
@@ -55,12 +55,11 @@ namespace intial_form_1_
             flowLayoutAssignment.Controls.Clear();
             flowLayoutAssignment.Controls.Add(new Label());
             flowLayoutAssignment.Visible = true;
-
+            string assignmentIDtempVar;
             try
             {
                 cn.Open();
                 cm = new SqlCommand("SELECT * FROM Assignment WHERE classroomID = @classroomID AND username_Teacher = @teacherUsername", cn);
-                // cm = new SqlCommand("SELECT * FROM Classroom", cn);
                 cm.Parameters.AddWithValue("@classroomID", classroomID);
                 cm.Parameters.AddWithValue("@teacherUsername", teacherUsername);
                 dr = cm.ExecuteReader();
@@ -81,19 +80,17 @@ namespace intial_form_1_
                         Panel panel = new Panel();
                         panel.Size = new Size(691, 100);
                         panel.BackColor = RandomColor(assignmentCounter);
+                        assignmentCounter++;
                         panel.BorderStyle = BorderStyle.FixedSingle;
-                        panel.Name = dr["assignmentTitle"].ToString();
-                          panel.AutoScroll = true;
-                        panel.AutoSize = false;
+                        panel.Name = dr["assignmentID"].ToString();
 
                         //assignmentID Label
-                        Label assignmentID = new Label();
-                        assignmentID.Text = "Assignment ID: " + dr["assignmentID"].ToString();
-                        assignmentID.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
-                        assignmentID.Location = new Point(10, 10);
-                        this.assignmentID = dr["assignmentID"].ToString();
-                        //
-                        
+                        Label assignmentTitle = new Label();
+                        assignmentTitle.Text = dr["assignmentTitle"].ToString();
+                        assignmentTitle.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
+                        assignmentTitle.Location = new Point(10, 10);
+                        assignmentTitle.Size = new Size(300, 20);
+                                                
                         //assignmentDescription Label
                         Label assignmentDescription = new Label();
                         assignmentDescription.Text = dr["assignmentDescription"].ToString();
@@ -109,13 +106,13 @@ namespace intial_form_1_
                         DueDate.Location = new Point(400, 60);
 
                         panel.Controls.Add(assignmentDescription);
-                        panel.Controls.Add(assignmentID);
+                        panel.Controls.Add(assignmentTitle);
                         panel.Controls.Add(DueDate);
                         flowLayoutAssignment.Controls.Add(panel);
                         panel.Click += (s, ev) =>
                         {
-
-                            assignmentPanel assignmentPanel = new assignmentPanel(teacherName, teacherUsername, classroomID, this.assignmentID);
+                            this.Hide();
+                            assignmentPanel assignmentPanel = new assignmentPanel(teacherName, teacherUsername, classroomID, panel.Name);
                             assignmentPanel.Show();
                         };
                     }

@@ -30,6 +30,13 @@ namespace intial_form_1_
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UpdateAssTab = new System.Windows.Forms.TabPage();
             this.modifyTitleBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -145,7 +152,7 @@ namespace intial_form_1_
             this.selectButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.selectButton.FlatAppearance.BorderSize = 3;
             this.selectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selectButton.Location = new System.Drawing.Point(915, 406);
+            this.selectButton.Location = new System.Drawing.Point(895, 452);
             this.selectButton.Margin = new System.Windows.Forms.Padding(2);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(88, 42);
@@ -184,7 +191,7 @@ namespace intial_form_1_
             this.modifyButton.FlatAppearance.BorderSize = 3;
             this.modifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyButton.Location = new System.Drawing.Point(915, 406);
+            this.modifyButton.Location = new System.Drawing.Point(895, 452);
             this.modifyButton.Margin = new System.Windows.Forms.Padding(2);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(88, 42);
@@ -307,13 +314,44 @@ namespace intial_form_1_
             // 
             // assignmentsListForModification
             // 
+            this.assignmentsListForModification.AllowUserToAddRows = false;
+            this.assignmentsListForModification.AllowUserToDeleteRows = false;
+            this.assignmentsListForModification.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.assignmentsListForModification.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.assignmentsListForModification.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(84)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.assignmentsListForModification.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.assignmentsListForModification.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.assignmentsListForModification.Location = new System.Drawing.Point(55, 99);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.assignmentsListForModification.DefaultCellStyle = dataGridViewCellStyle2;
+            this.assignmentsListForModification.EnableHeadersVisualStyles = false;
+            this.assignmentsListForModification.Location = new System.Drawing.Point(73, 88);
             this.assignmentsListForModification.Margin = new System.Windows.Forms.Padding(2);
             this.assignmentsListForModification.MultiSelect = false;
             this.assignmentsListForModification.Name = "assignmentsListForModification";
+            this.assignmentsListForModification.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.assignmentsListForModification.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.assignmentsListForModification.RowHeadersWidth = 51;
-            this.assignmentsListForModification.Size = new System.Drawing.Size(948, 349);
+            this.assignmentsListForModification.Size = new System.Drawing.Size(898, 349);
             this.assignmentsListForModification.TabIndex = 38;
             // 
             // RemoveAssignmentTab
@@ -347,10 +385,47 @@ namespace intial_form_1_
             // 
             // assignmentsList
             // 
+            this.assignmentsList.AllowUserToAddRows = false;
+            this.assignmentsList.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.assignmentsList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.assignmentsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.assignmentsList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.assignmentsList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.assignmentsList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.assignmentsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.assignmentsList.DefaultCellStyle = dataGridViewCellStyle6;
+            this.assignmentsList.EnableHeadersVisualStyles = false;
+            this.assignmentsList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
             this.assignmentsList.Location = new System.Drawing.Point(72, 91);
             this.assignmentsList.Name = "assignmentsList";
+            this.assignmentsList.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.assignmentsList.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.assignmentsList.RowHeadersWidth = 51;
+            this.assignmentsList.RowTemplate.Height = 40;
+            this.assignmentsList.RowTemplate.ReadOnly = true;
             this.assignmentsList.Size = new System.Drawing.Size(904, 342);
             this.assignmentsList.TabIndex = 7;
             // 
@@ -395,9 +470,9 @@ namespace intial_form_1_
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(18, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(191, 31);
+            this.label5.Size = new System.Drawing.Size(264, 31);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Remove Class";
+            this.label5.Text = "Remove Assignment";
             // 
             // label2
             // 
