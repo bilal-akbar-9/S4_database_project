@@ -66,6 +66,12 @@
       <DependentUpon>classroom.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material.Designer.cs">
+      <DependentUpon>Material.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
