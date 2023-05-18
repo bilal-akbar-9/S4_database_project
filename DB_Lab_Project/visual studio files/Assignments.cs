@@ -132,6 +132,12 @@ namespace intial_form_1_
         {
             string AssignmentDesc = txtAssDesc.Text;
             string AssignmentDueDate = txtAssDueDate.Value.ToString("yyyy-MM-dd");
+            //should not allow due date to be before today
+            if (txtAssDueDate.Value < DateTime.Today)
+            {
+                MessageBox.Show("Due date cannot be before today");
+                return;
+            }
             string AssignmentFile = txtAssignmetFile.Text;
             string AssignmentPoints = txtAssPoints.Text;
 
@@ -253,6 +259,12 @@ namespace intial_form_1_
                 string assignmentDueDate = modifyDueDateBox.Value.ToString("yyyy-MM-dd");
                 string assignmentFile = modifyAssignmentFileBox.Text;
                 string assignmentID = textBoxAssID.Text;
+                //dont allow due date to be before today
+                if (modifyDueDateBox.Value < DateTime.Today)
+                {
+                    MessageBox.Show("Due date cannot be before today");
+                    return;
+                }
 
                 // Validate assignmentDescription and prompt user if it's empty
                 if (string.IsNullOrEmpty(assignmentDescription))
