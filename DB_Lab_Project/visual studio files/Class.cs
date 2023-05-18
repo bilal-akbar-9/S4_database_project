@@ -93,8 +93,8 @@ namespace intial_form_1_
             }
             else
             {
-                Assignments assignments = new Assignments(studentName, studentUsername, classroomID, "student");
-                assignments.Show();
+                StudentAssignments studentAssignments = new StudentAssignments(studentName, studentUsername, classroomID, teacherName, teacherUsername);
+                studentAssignments.Show();
             }
         }
 

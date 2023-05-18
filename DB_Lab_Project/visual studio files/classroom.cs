@@ -206,5 +206,10 @@ namespace intial_form_1_
         {
 
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
