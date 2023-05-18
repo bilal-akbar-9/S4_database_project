@@ -72,7 +72,7 @@ namespace intial_form_1_
         private void createAssignmentButton_Clicked(object sender, EventArgs e)
         {
             this.Hide();
-            Assignments assignments = new Assignments(teacherUsername, classroomID);
+            Assignments assignments = new Assignments(teacherName,teacherUsername, classroomID);
             assignments.Show();
         }
 

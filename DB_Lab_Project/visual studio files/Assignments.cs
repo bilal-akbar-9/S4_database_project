@@ -21,6 +21,7 @@ namespace intial_form_1_
         SqlDataReader dr;
         String teacherUsername;
         String classroomID;
+        String teacherName;
         SqlDataAdapter adapter;
 
         public Assignments()
@@ -28,11 +29,12 @@ namespace intial_form_1_
             InitializeComponent();
         }
 
-        public Assignments(String teacherUsername, String classroomID)
+        public Assignments(String teacherName,String teacherUsername, String classroomID)
         {
             InitializeComponent();
             this.teacherUsername = teacherUsername;
             this.classroomID = classroomID;
+            this.teacherName = teacherName;
             cn = new SqlConnection(dbcon.MyConnection());
         }
         private Color RandomColor(int assignmentCounter)
@@ -78,27 +80,37 @@ namespace intial_form_1_
                         panel.BackColor = RandomColor(assignmentCounter);
                         panel.BorderStyle = BorderStyle.FixedSingle;
                         panel.Name = dr["assignmentID"].ToString();
+                        panel.AutoScroll = true;
+                        panel.AutoSize = false;
 
                         //assignmentID Label
                         Label assignmentID = new Label();
                         assignmentID.Text = "Assignment ID: " + dr["assignmentID"].ToString();
                         assignmentID.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
-                        assignmentID.AutoSize = true;
                         assignmentID.Location = new Point(10, 10);
+                        assignmentID.Size = new Size(180, 20);
+                        //scrollbar
+                        assignmentID.AutoEllipsis = true;
+                        assignmentID.AutoSize = true;
+                        assignmentID.TextAlign = ContentAlignment.TopLeft;
 
                         //assignmentDescription Label
                         Label assignmentDescription = new Label();
-                        assignmentDescription.Text = dr["assignmentDescription"].ToString();
+                        assignmentDescription.Text = "Assignment Description: " + dr["assignmentDescription"].ToString();
                         assignmentDescription.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
-                        assignmentDescription.AutoSize = true;
                         assignmentDescription.Location = new Point(10, 30);
+                        assignmentDescription.Size = new Size(180, 50);
+                        //scrollbar
+                        assignmentDescription.AutoEllipsis = true;
+                        assignmentDescription.AutoSize = true;
+                        assignmentDescription.TextAlign = ContentAlignment.TopLeft;
 
                         panel.Controls.Add(assignmentDescription);
                         panel.Controls.Add(assignmentID);
                         flowLayoutAssignment.Controls.Add(panel);
                         panel.Click += (s, ev) =>
                         {
-                            TeacherPanel teacherPanel = new TeacherPanel();
+                            TeacherPanel teacherPanel = new TeacherPanel("", teacherUsername, classroomID);
                             teacherPanel.Show();
                         };
                     }
@@ -359,6 +371,13 @@ namespace intial_form_1_
             textBoxAssID.Visible = true;
             //make the modify button visible
             modifyButton.Visible = true;
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Class classForm = new Class(teacherName,teacherUsername,classroomID);
+            classForm.Show();
         }
     }
 }
