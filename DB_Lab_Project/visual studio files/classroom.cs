@@ -96,19 +96,25 @@ namespace intial_form_1_
                         panel.Margin = new Padding(10, 10, 10, 10);
                         panel.Padding = new Padding(10, 10, 10, 10);
                         panel.Name = dr["classroomID"].ToString();
+                        panel.AutoScroll = true;
+                        panel.AutoSize = false;
                         //ClassName Label
                         Label className = new Label();
                         className.Text = dr["classroomName"].ToString();
                         className.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
                         className.AutoSize = true;
                         className.Location = new Point(10, 10);
+                        className.Size = new Size(180, 50);
+                        className.AutoEllipsis = true;
+                        className.AutoSize = true;
                         panel.Controls.Add(className);
                         //ClassCode Label
                         Label classCode = new Label();
                         classCode.Text = dr["classroomCode"].ToString();
                         classCode.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
-                        classCode.AutoSize = true;
                         classCode.Location = new Point(10, 30);
+                        classCode.Size = new Size(180, 50);
+                        classCode.AutoSize = true;
                         panel.Controls.Add(classCode);
                         flowLayoutPanel1.Controls.Add(panel);
                         //create new form on a click of a class inside a panel and pass the id of class as a parameter
@@ -117,10 +123,10 @@ namespace intial_form_1_
                             //show in the message box, the id of the class
                             //MessageBox.Show(teacherName);
                             this.Hide();
-                            Class teacherClassroom = new Class(teacherName, teacherUsername,panel.Name);
+                            Class teacherClassroom = new Class(teacherName, teacherUsername, panel.Name);
                             teacherClassroom.Show();
                         };
-                           classCounter++;
+                        classCounter++;
                     } while (dr.Read());
 
                 }

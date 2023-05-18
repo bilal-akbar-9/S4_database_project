@@ -29,11 +29,21 @@
         private void InitializeComponent()
         {
             this.TeacherTabs = new System.Windows.Forms.TabControl();
+            this.assDesTab = new System.Windows.Forms.TabPage();
+            this.dueDateLabel = new System.Windows.Forms.Label();
+            this.txtAssPoints = new System.Windows.Forms.TextBox();
+            this.txtAssignmetFile = new System.Windows.Forms.TextBox();
+            this.txtAssTitle = new System.Windows.Forms.TextBox();
+            this.txtAssDesc = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dueDate = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.assignmentTitle = new System.Windows.Forms.Label();
             this.ViewProgressTab = new System.Windows.Forms.TabPage();
+            this.countlabel = new System.Windows.Forms.Label();
             this.ViewProgressDatagridView = new System.Windows.Forms.DataGridView();
             this.buttonViewProgress = new System.Windows.Forms.Button();
-            this.txtAssNo2 = new System.Windows.Forms.TextBox();
-            this.labelAssNo2 = new System.Windows.Forms.Label();
             this.labelViewProgress = new System.Windows.Forms.Label();
             this.CommentsTab = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -63,18 +73,8 @@
             this.labelCommentDescUpdate = new System.Windows.Forms.Label();
             this.txtUpdateComment = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
-            this.assDesTab = new System.Windows.Forms.TabPage();
-            this.assignmentTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dueDate = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtAssTitle = new System.Windows.Forms.TextBox();
-            this.txtAssDesc = new System.Windows.Forms.TextBox();
-            this.txtAssPoints = new System.Windows.Forms.TextBox();
-            this.txtAssignmetFile = new System.Windows.Forms.TextBox();
-            this.dueDateLabel = new System.Windows.Forms.Label();
             this.TeacherTabs.SuspendLayout();
+            this.assDesTab.SuspendLayout();
             this.ViewProgressTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewProgressDatagridView)).BeginInit();
             this.CommentsTab.SuspendLayout();
@@ -82,7 +82,6 @@
             this.addCommentTab.SuspendLayout();
             this.deleteCommentTab.SuspendLayout();
             this.updateCommentTab.SuspendLayout();
-            this.assDesTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // TeacherTabs
@@ -91,27 +90,164 @@
             this.TeacherTabs.Controls.Add(this.ViewProgressTab);
             this.TeacherTabs.Controls.Add(this.CommentsTab);
             this.TeacherTabs.Location = new System.Drawing.Point(-1, 3);
-            this.TeacherTabs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TeacherTabs.Margin = new System.Windows.Forms.Padding(2);
             this.TeacherTabs.Name = "TeacherTabs";
             this.TeacherTabs.SelectedIndex = 0;
             this.TeacherTabs.Size = new System.Drawing.Size(914, 456);
             this.TeacherTabs.TabIndex = 1;
             // 
+            // assDesTab
+            // 
+            this.assDesTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.assDesTab.Controls.Add(this.dueDateLabel);
+            this.assDesTab.Controls.Add(this.txtAssPoints);
+            this.assDesTab.Controls.Add(this.txtAssignmetFile);
+            this.assDesTab.Controls.Add(this.txtAssTitle);
+            this.assDesTab.Controls.Add(this.txtAssDesc);
+            this.assDesTab.Controls.Add(this.label4);
+            this.assDesTab.Controls.Add(this.label3);
+            this.assDesTab.Controls.Add(this.dueDate);
+            this.assDesTab.Controls.Add(this.label1);
+            this.assDesTab.Controls.Add(this.assignmentTitle);
+            this.assDesTab.Location = new System.Drawing.Point(4, 22);
+            this.assDesTab.Name = "assDesTab";
+            this.assDesTab.Size = new System.Drawing.Size(906, 430);
+            this.assDesTab.TabIndex = 4;
+            this.assDesTab.Text = "Assignment";
+            this.assDesTab.Click += new System.EventHandler(this.assDesTab_Click);
+            // 
+            // dueDateLabel
+            // 
+            this.dueDateLabel.AutoSize = true;
+            this.dueDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dueDateLabel.Location = new System.Drawing.Point(686, 62);
+            this.dueDateLabel.Name = "dueDateLabel";
+            this.dueDateLabel.Size = new System.Drawing.Size(51, 20);
+            this.dueDateLabel.TabIndex = 47;
+            this.dueDateLabel.Text = "label2";
+            // 
+            // txtAssPoints
+            // 
+            this.txtAssPoints.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssPoints.Location = new System.Drawing.Point(605, 176);
+            this.txtAssPoints.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAssPoints.Name = "txtAssPoints";
+            this.txtAssPoints.ReadOnly = true;
+            this.txtAssPoints.Size = new System.Drawing.Size(145, 26);
+            this.txtAssPoints.TabIndex = 45;
+            // 
+            // txtAssignmetFile
+            // 
+            this.txtAssignmetFile.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssignmetFile.Location = new System.Drawing.Point(605, 259);
+            this.txtAssignmetFile.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAssignmetFile.Name = "txtAssignmetFile";
+            this.txtAssignmetFile.ReadOnly = true;
+            this.txtAssignmetFile.Size = new System.Drawing.Size(145, 26);
+            this.txtAssignmetFile.TabIndex = 46;
+            // 
+            // txtAssTitle
+            // 
+            this.txtAssTitle.Location = new System.Drawing.Point(82, 95);
+            this.txtAssTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAssTitle.Multiline = true;
+            this.txtAssTitle.Name = "txtAssTitle";
+            this.txtAssTitle.ReadOnly = true;
+            this.txtAssTitle.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAssTitle.Size = new System.Drawing.Size(423, 31);
+            this.txtAssTitle.TabIndex = 44;
+            // 
+            // txtAssDesc
+            // 
+            this.txtAssDesc.Location = new System.Drawing.Point(82, 176);
+            this.txtAssDesc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAssDesc.Multiline = true;
+            this.txtAssDesc.Name = "txtAssDesc";
+            this.txtAssDesc.ReadOnly = true;
+            this.txtAssDesc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAssDesc.Size = new System.Drawing.Size(423, 181);
+            this.txtAssDesc.TabIndex = 43;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(602, 225);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 18);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "File";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(602, 143);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 18);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Point";
+            // 
+            // dueDate
+            // 
+            this.dueDate.AutoSize = true;
+            this.dueDate.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dueDate.Location = new System.Drawing.Point(602, 64);
+            this.dueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dueDate.Name = "dueDate";
+            this.dueDate.Size = new System.Drawing.Size(79, 18);
+            this.dueDate.TabIndex = 40;
+            this.dueDate.Text = "DueDate:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(79, 143);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 18);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Description";
+            // 
+            // assignmentTitle
+            // 
+            this.assignmentTitle.AutoSize = true;
+            this.assignmentTitle.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignmentTitle.Location = new System.Drawing.Point(79, 64);
+            this.assignmentTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.assignmentTitle.Name = "assignmentTitle";
+            this.assignmentTitle.Size = new System.Drawing.Size(44, 18);
+            this.assignmentTitle.TabIndex = 38;
+            this.assignmentTitle.Text = "Title";
+            // 
             // ViewProgressTab
             // 
             this.ViewProgressTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ViewProgressTab.Controls.Add(this.countlabel);
             this.ViewProgressTab.Controls.Add(this.ViewProgressDatagridView);
             this.ViewProgressTab.Controls.Add(this.buttonViewProgress);
-            this.ViewProgressTab.Controls.Add(this.txtAssNo2);
-            this.ViewProgressTab.Controls.Add(this.labelAssNo2);
             this.ViewProgressTab.Controls.Add(this.labelViewProgress);
             this.ViewProgressTab.Location = new System.Drawing.Point(4, 22);
-            this.ViewProgressTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewProgressTab.Margin = new System.Windows.Forms.Padding(2);
             this.ViewProgressTab.Name = "ViewProgressTab";
-            this.ViewProgressTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewProgressTab.Padding = new System.Windows.Forms.Padding(2);
             this.ViewProgressTab.Size = new System.Drawing.Size(906, 430);
             this.ViewProgressTab.TabIndex = 2;
             this.ViewProgressTab.Text = "View Progress";
+            // 
+            // countlabel
+            // 
+            this.countlabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.countlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countlabel.Location = new System.Drawing.Point(25, 62);
+            this.countlabel.Name = "countlabel";
+            this.countlabel.Size = new System.Drawing.Size(208, 57);
+            this.countlabel.TabIndex = 10;
+            this.countlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.countlabel.Visible = false;
             // 
             // ViewProgressDatagridView
             // 
@@ -120,7 +256,7 @@
             this.ViewProgressDatagridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.ViewProgressDatagridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ViewProgressDatagridView.Location = new System.Drawing.Point(29, 128);
-            this.ViewProgressDatagridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewProgressDatagridView.Margin = new System.Windows.Forms.Padding(2);
             this.ViewProgressDatagridView.Name = "ViewProgressDatagridView";
             this.ViewProgressDatagridView.ReadOnly = true;
             this.ViewProgressDatagridView.RowHeadersWidth = 62;
@@ -135,34 +271,14 @@
             this.buttonViewProgress.FlatAppearance.BorderSize = 3;
             this.buttonViewProgress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonViewProgress.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewProgress.Location = new System.Drawing.Point(646, 71);
-            this.buttonViewProgress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonViewProgress.Location = new System.Drawing.Point(646, 72);
+            this.buttonViewProgress.Margin = new System.Windows.Forms.Padding(2);
             this.buttonViewProgress.Name = "buttonViewProgress";
             this.buttonViewProgress.Size = new System.Drawing.Size(213, 37);
             this.buttonViewProgress.TabIndex = 8;
             this.buttonViewProgress.Text = "Check";
             this.buttonViewProgress.UseVisualStyleBackColor = false;
             this.buttonViewProgress.Click += new System.EventHandler(this.viewProgressButton_Clicked);
-            // 
-            // txtAssNo2
-            // 
-            this.txtAssNo2.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssNo2.Location = new System.Drawing.Point(221, 71);
-            this.txtAssNo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtAssNo2.Name = "txtAssNo2";
-            this.txtAssNo2.Size = new System.Drawing.Size(214, 29);
-            this.txtAssNo2.TabIndex = 7;
-            // 
-            // labelAssNo2
-            // 
-            this.labelAssNo2.AutoSize = true;
-            this.labelAssNo2.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAssNo2.Location = new System.Drawing.Point(25, 71);
-            this.labelAssNo2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelAssNo2.Name = "labelAssNo2";
-            this.labelAssNo2.Size = new System.Drawing.Size(175, 22);
-            this.labelAssNo2.TabIndex = 6;
-            this.labelAssNo2.Text = "Assignment Number";
             // 
             // labelViewProgress
             // 
@@ -180,9 +296,9 @@
             this.CommentsTab.BackColor = System.Drawing.SystemColors.HotTrack;
             this.CommentsTab.Controls.Add(this.tabControl1);
             this.CommentsTab.Location = new System.Drawing.Point(4, 22);
-            this.CommentsTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CommentsTab.Margin = new System.Windows.Forms.Padding(2);
             this.CommentsTab.Name = "CommentsTab";
-            this.CommentsTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CommentsTab.Padding = new System.Windows.Forms.Padding(2);
             this.CommentsTab.Size = new System.Drawing.Size(906, 430);
             this.CommentsTab.TabIndex = 3;
             this.CommentsTab.Text = "Comments";
@@ -193,7 +309,7 @@
             this.tabControl1.Controls.Add(this.deleteCommentTab);
             this.tabControl1.Controls.Add(this.updateCommentTab);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(921, 431);
@@ -211,9 +327,9 @@
             this.addCommentTab.Controls.Add(this.labelCommentDesc);
             this.addCommentTab.Controls.Add(this.labelnewComment);
             this.addCommentTab.Location = new System.Drawing.Point(4, 22);
-            this.addCommentTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCommentTab.Margin = new System.Windows.Forms.Padding(2);
             this.addCommentTab.Name = "addCommentTab";
-            this.addCommentTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCommentTab.Padding = new System.Windows.Forms.Padding(2);
             this.addCommentTab.Size = new System.Drawing.Size(913, 405);
             this.addCommentTab.TabIndex = 0;
             this.addCommentTab.Text = "Add Comment";
@@ -222,7 +338,7 @@
             // 
             this.txtAssignmentID.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAssignmentID.Location = new System.Drawing.Point(598, 211);
-            this.txtAssignmentID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAssignmentID.Margin = new System.Windows.Forms.Padding(2);
             this.txtAssignmentID.Name = "txtAssignmentID";
             this.txtAssignmentID.Size = new System.Drawing.Size(156, 24);
             this.txtAssignmentID.TabIndex = 13;
@@ -246,7 +362,7 @@
             this.buttonAddComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddComment.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddComment.Location = new System.Drawing.Point(598, 314);
-            this.buttonAddComment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAddComment.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddComment.Name = "buttonAddComment";
             this.buttonAddComment.Size = new System.Drawing.Size(155, 32);
             this.buttonAddComment.TabIndex = 11;
@@ -258,7 +374,7 @@
             // 
             this.txtCommentDate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDate.Location = new System.Drawing.Point(598, 128);
-            this.txtCommentDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCommentDate.Margin = new System.Windows.Forms.Padding(2);
             this.txtCommentDate.Name = "txtCommentDate";
             this.txtCommentDate.Size = new System.Drawing.Size(156, 24);
             this.txtCommentDate.TabIndex = 10;
@@ -267,7 +383,7 @@
             // 
             this.txtCommentDesc.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDesc.Location = new System.Drawing.Point(157, 128);
-            this.txtCommentDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCommentDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtCommentDesc.Multiline = true;
             this.txtCommentDesc.Name = "txtCommentDesc";
             this.txtCommentDesc.Size = new System.Drawing.Size(347, 166);
@@ -314,9 +430,9 @@
             this.deleteCommentTab.Controls.Add(this.labelCommentID);
             this.deleteCommentTab.Controls.Add(this.labelDeleteComment);
             this.deleteCommentTab.Location = new System.Drawing.Point(4, 22);
-            this.deleteCommentTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteCommentTab.Margin = new System.Windows.Forms.Padding(2);
             this.deleteCommentTab.Name = "deleteCommentTab";
-            this.deleteCommentTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteCommentTab.Padding = new System.Windows.Forms.Padding(2);
             this.deleteCommentTab.Size = new System.Drawing.Size(913, 405);
             this.deleteCommentTab.TabIndex = 1;
             this.deleteCommentTab.Text = "Delete Comment";
@@ -329,7 +445,7 @@
             this.Deletebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Deletebutton.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Deletebutton.Location = new System.Drawing.Point(436, 188);
-            this.Deletebutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Deletebutton.Margin = new System.Windows.Forms.Padding(2);
             this.Deletebutton.Name = "Deletebutton";
             this.Deletebutton.Size = new System.Drawing.Size(180, 31);
             this.Deletebutton.TabIndex = 16;
@@ -341,7 +457,7 @@
             // 
             this.txtCommentID.Font = new System.Drawing.Font("HP Simplified Hans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentID.Location = new System.Drawing.Point(436, 120);
-            this.txtCommentID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCommentID.Margin = new System.Windows.Forms.Padding(2);
             this.txtCommentID.Name = "txtCommentID";
             this.txtCommentID.Size = new System.Drawing.Size(181, 29);
             this.txtCommentID.TabIndex = 15;
@@ -382,9 +498,9 @@
             this.updateCommentTab.Controls.Add(this.labelCommentDescUpdate);
             this.updateCommentTab.Controls.Add(this.txtUpdateComment);
             this.updateCommentTab.Location = new System.Drawing.Point(4, 22);
-            this.updateCommentTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateCommentTab.Margin = new System.Windows.Forms.Padding(2);
             this.updateCommentTab.Name = "updateCommentTab";
-            this.updateCommentTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateCommentTab.Padding = new System.Windows.Forms.Padding(2);
             this.updateCommentTab.Size = new System.Drawing.Size(913, 405);
             this.updateCommentTab.TabIndex = 2;
             this.updateCommentTab.Text = "Update Comment";
@@ -393,7 +509,7 @@
             // 
             this.txtCOmmentIDUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCOmmentIDUpdate.Location = new System.Drawing.Point(712, 123);
-            this.txtCOmmentIDUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCOmmentIDUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.txtCOmmentIDUpdate.Name = "txtCOmmentIDUpdate";
             this.txtCOmmentIDUpdate.Size = new System.Drawing.Size(156, 24);
             this.txtCOmmentIDUpdate.TabIndex = 23;
@@ -413,7 +529,7 @@
             // 
             this.txtAssIDUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAssIDUpdate.Location = new System.Drawing.Point(489, 215);
-            this.txtAssIDUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAssIDUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.txtAssIDUpdate.Name = "txtAssIDUpdate";
             this.txtAssIDUpdate.Size = new System.Drawing.Size(156, 24);
             this.txtAssIDUpdate.TabIndex = 21;
@@ -437,7 +553,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(712, 317);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 32);
             this.button1.TabIndex = 19;
@@ -449,7 +565,7 @@
             // 
             this.txtCommentDateUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDateUpdate.Location = new System.Drawing.Point(489, 123);
-            this.txtCommentDateUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCommentDateUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.txtCommentDateUpdate.Name = "txtCommentDateUpdate";
             this.txtCommentDateUpdate.Size = new System.Drawing.Size(156, 24);
             this.txtCommentDateUpdate.TabIndex = 18;
@@ -458,7 +574,7 @@
             // 
             this.txtCommentDescUPDAtE.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDescUPDAtE.Location = new System.Drawing.Point(71, 128);
-            this.txtCommentDescUPDAtE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCommentDescUPDAtE.Margin = new System.Windows.Forms.Padding(2);
             this.txtCommentDescUPDAtE.Multiline = true;
             this.txtCommentDescUPDAtE.Name = "txtCommentDescUPDAtE";
             this.txtCommentDescUPDAtE.Size = new System.Drawing.Size(347, 166);
@@ -503,10 +619,10 @@
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButton.FlatAppearance.BorderSize = 3;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
             this.backButton.Location = new System.Drawing.Point(11, 464);
-            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(86, 40);
             this.backButton.TabIndex = 26;
@@ -515,133 +631,6 @@
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // assDesTab
-            // 
-            this.assDesTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.assDesTab.Controls.Add(this.dueDateLabel);
-            this.assDesTab.Controls.Add(this.txtAssPoints);
-            this.assDesTab.Controls.Add(this.txtAssignmetFile);
-            this.assDesTab.Controls.Add(this.txtAssTitle);
-            this.assDesTab.Controls.Add(this.txtAssDesc);
-            this.assDesTab.Controls.Add(this.label4);
-            this.assDesTab.Controls.Add(this.label3);
-            this.assDesTab.Controls.Add(this.dueDate);
-            this.assDesTab.Controls.Add(this.label1);
-            this.assDesTab.Controls.Add(this.assignmentTitle);
-            this.assDesTab.Location = new System.Drawing.Point(4, 22);
-            this.assDesTab.Name = "assDesTab";
-            this.assDesTab.Size = new System.Drawing.Size(906, 430);
-            this.assDesTab.TabIndex = 4;
-            this.assDesTab.Text = "Assignment";
-            this.assDesTab.Click += new System.EventHandler(this.assDesTab_Click);
-            // 
-            // assignmentTitle
-            // 
-            this.assignmentTitle.AutoSize = true;
-            this.assignmentTitle.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assignmentTitle.Location = new System.Drawing.Point(79, 64);
-            this.assignmentTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.assignmentTitle.Name = "assignmentTitle";
-            this.assignmentTitle.Size = new System.Drawing.Size(44, 18);
-            this.assignmentTitle.TabIndex = 38;
-            this.assignmentTitle.Text = "Title";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 143);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 18);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Description";
-            // 
-            // dueDate
-            // 
-            this.dueDate.AutoSize = true;
-            this.dueDate.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dueDate.Location = new System.Drawing.Point(602, 64);
-            this.dueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.dueDate.Name = "dueDate";
-            this.dueDate.Size = new System.Drawing.Size(79, 18);
-            this.dueDate.TabIndex = 40;
-            this.dueDate.Text = "DueDate:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(602, 143);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 18);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Point";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(602, 225);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 18);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "File";
-            // 
-            // txtAssTitle
-            // 
-            this.txtAssTitle.Location = new System.Drawing.Point(82, 95);
-            this.txtAssTitle.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAssTitle.Multiline = true;
-            this.txtAssTitle.Name = "txtAssTitle";
-            this.txtAssTitle.ReadOnly = true;
-            this.txtAssTitle.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssTitle.Size = new System.Drawing.Size(423, 31);
-            this.txtAssTitle.TabIndex = 44;
-            // 
-            // txtAssDesc
-            // 
-            this.txtAssDesc.Location = new System.Drawing.Point(82, 176);
-            this.txtAssDesc.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAssDesc.Multiline = true;
-            this.txtAssDesc.Name = "txtAssDesc";
-            this.txtAssDesc.ReadOnly = true;
-            this.txtAssDesc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssDesc.Size = new System.Drawing.Size(423, 181);
-            this.txtAssDesc.TabIndex = 43;
-            // 
-            // txtAssPoints
-            // 
-            this.txtAssPoints.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssPoints.Location = new System.Drawing.Point(605, 176);
-            this.txtAssPoints.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAssPoints.Name = "txtAssPoints";
-            this.txtAssPoints.ReadOnly = true;
-            this.txtAssPoints.Size = new System.Drawing.Size(145, 26);
-            this.txtAssPoints.TabIndex = 45;
-            // 
-            // txtAssignmetFile
-            // 
-            this.txtAssignmetFile.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssignmetFile.Location = new System.Drawing.Point(605, 259);
-            this.txtAssignmetFile.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAssignmetFile.Name = "txtAssignmetFile";
-            this.txtAssignmetFile.ReadOnly = true;
-            this.txtAssignmetFile.Size = new System.Drawing.Size(145, 26);
-            this.txtAssignmetFile.TabIndex = 46;
-            // 
-            // dueDateLabel
-            // 
-            this.dueDateLabel.AutoSize = true;
-            this.dueDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dueDateLabel.Location = new System.Drawing.Point(686, 62);
-            this.dueDateLabel.Name = "dueDateLabel";
-            this.dueDateLabel.Size = new System.Drawing.Size(51, 20);
-            this.dueDateLabel.TabIndex = 47;
-            this.dueDateLabel.Text = "label2";
-            // 
             // assignmentPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -649,12 +638,14 @@
             this.ClientSize = new System.Drawing.Size(913, 512);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.TeacherTabs);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "assignmentPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeacherPanel";
             this.Load += new System.EventHandler(this.assignmentPanel_Load);
             this.TeacherTabs.ResumeLayout(false);
+            this.assDesTab.ResumeLayout(false);
+            this.assDesTab.PerformLayout();
             this.ViewProgressTab.ResumeLayout(false);
             this.ViewProgressTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewProgressDatagridView)).EndInit();
@@ -666,8 +657,6 @@
             this.deleteCommentTab.PerformLayout();
             this.updateCommentTab.ResumeLayout(false);
             this.updateCommentTab.PerformLayout();
-            this.assDesTab.ResumeLayout(false);
-            this.assDesTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -677,8 +666,6 @@
         private System.Windows.Forms.TabControl TeacherTabs;
         private System.Windows.Forms.TabPage ViewProgressTab;
         private System.Windows.Forms.Button buttonViewProgress;
-        private System.Windows.Forms.TextBox txtAssNo2;
-        private System.Windows.Forms.Label labelAssNo2;
         private System.Windows.Forms.Label labelViewProgress;
         private System.Windows.Forms.TabPage CommentsTab;
         private System.Windows.Forms.TabControl tabControl1;
@@ -721,5 +708,6 @@
         private System.Windows.Forms.TextBox txtAssPoints;
         private System.Windows.Forms.TextBox txtAssignmetFile;
         private System.Windows.Forms.Label dueDateLabel;
+        private System.Windows.Forms.Label countlabel;
     }
 }

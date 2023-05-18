@@ -46,27 +46,33 @@ namespace intial_form_1_
         }
         private void viewProgressButton_Clicked(object sender, EventArgs e)
         {
-            // string StudentID = txtStudentsID.Text;
-            string AssignmentNumber = txtAssNo2.Text;
-
-
-            // get all the assignments submission for a specific assignment
+            // get all the assignments submission for this classroom
             try
             {
+                SqlConnection cn = new SqlConnection();
+                cn = new SqlConnection(dbcon.MyConnection());
                 cn.Open();
-                cm = new SqlCommand("select * from Submissions where assignmentID=@AssignmentNumber", cn);
-                cm.Parameters.AddWithValue("@AssignmentNumber", AssignmentNumber);
+                cm = new SqlCommand("select * from submissions where assignmentID in (select assignmentID from assignment where classroomID = @classroomID)", cn);
+                cm.Parameters.AddWithValue("@classroomID", classroomID);
                 adapter = new SqlDataAdapter(cm);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 ViewProgressDatagridView.DataSource = dt;
-                cn.Close();
+
+                // add total count of assignments to the label
+                cm = new SqlCommand("select count(*) from submissions where assignmentID in (select assignmentID from assignment where classroomID = @classroomID)", cn);
+                cm.Parameters.AddWithValue("@classroomID", classroomID);
+                int count = (int)cm.ExecuteScalar();
+                countlabel.Visible = true;
+                countlabel.Text = "Total Count: " + count.ToString();
+
             }
             catch (Exception ex)
             {
                 cn.Close();
                 MessageBox.Show(ex.Message);
             }
+            cn.Close();
         }
         private void addCommentButton_Clicked(object sender, EventArgs e)
         {
