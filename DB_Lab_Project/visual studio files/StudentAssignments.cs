@@ -29,6 +29,11 @@ namespace intial_form_1_
         String Studentusername;
         String studentID;
 
+
+        String assignmentDescription;
+
+        String assignmentTitleSubmission;
+
         public StudentAssignments()
         {
             InitializeComponent();
@@ -107,11 +112,18 @@ namespace intial_form_1_
                         panel.Controls.Add(assignmentTitle);
                         panel.Controls.Add(DueDate);
                         flowLayoutStudentAssignment.Controls.Add(panel);
+
+                        string assignmentDescriptionString = assignmentDescription.Text;
+                        string assignmentTitleString = assignmentTitle.Text;
+                        string DueDateString = DueDate.Text;
+                        string assignmentIDString = panel.Name;
+                        string submissionPoints = dr["assignmentPoints"].ToString();
+                        
                         panel.Click += (s, ev) =>
                         {
                             this.Hide();
-                            assignmentPanel assignmentPanel = new assignmentPanel(teacherName, teacherUsername, classroomID, panel.Name);
-                            assignmentPanel.Show();
+                            Submission submission = new Submission(Studentusername,assignmentIDString,submissionPoints,assignmentTitleString,assignmentDescriptionString,DueDateString);
+                            submission.Show();
                         };
                     }
                 }
@@ -126,6 +138,11 @@ namespace intial_form_1_
         }
 
         private void backButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutStudentAssignment_Paint(object sender, PaintEventArgs e)
         {
 
         }
