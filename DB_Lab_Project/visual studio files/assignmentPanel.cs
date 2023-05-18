@@ -102,59 +102,9 @@ namespace intial_form_1_
             }
         }
 
-        private void DeleteCommentButton(object sender, EventArgs e)
-        {
-            string CommentID = txtCommentID.Text;
+  
 
-            try
-            {
-                cn.Open();
-                cm = new SqlCommand("delete from Comment where commentID=@CommentID", cn);
-                cm.Parameters.AddWithValue("@CommentID", CommentID);
-                cm.ExecuteNonQuery();
-                cn.Close();
-                MessageBox.Show("Comment Deleted Successfully with ID: " + CommentID, "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtCommentID.Clear();
-                txtCommentID.Focus();
-            }
-            catch (Exception ex)
-            {
-                cn.Close();
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void UpdateCOmmentButton(object sender, EventArgs e)
-        {
-            string CommentDesc = txtCommentDescUPDAtE.Text;
-            string CommentDate = txtCommentDateUpdate.Text;
-            string AssignmentID = txtAssIDUpdate.Text;
-            string CommentID = txtCOmmentIDUpdate.Text;
-
-            try
-            {
-                cn.Open();
-                cm = new SqlCommand("update Comment set commentDescription=@CommentDesc,commentDate=@CommentDate,assignmentID=@AssignmentID where commentID=@CommentID", cn);
-                cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
-                cm.Parameters.AddWithValue("@CommentDate", CommentDate);
-                cm.Parameters.AddWithValue("@AssignmentID", AssignmentID);
-                cm.Parameters.AddWithValue("@CommentID", CommentID);
-                cm.ExecuteNonQuery();
-                cn.Close();
-                MessageBox.Show("Comment Updated Successfully with ID: " + CommentID, "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtCommentDescUPDAtE.Clear();
-                txtCommentDateUpdate.Clear();
-                txtAssIDUpdate.Clear();
-                txtCOmmentIDUpdate.Clear();
-                txtCommentDescUPDAtE.Focus();
-            }
-            catch (Exception ex)
-            {
-                cn.Close();
-                MessageBox.Show(ex.Message);
-            }
-
-        }
+        
 
         // Global variable to store the selected assignment 
        
@@ -227,6 +177,187 @@ namespace intial_form_1_
                 cn.Close();
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void loadCommentsToDeleteOrUpdate(object sender, EventArgs e)
+        {
+
+                try
+                {
+                    if(commentTABS.SelectedTab.Name == "deleteCommentTab") {
+
+                        DataTable dt = new DataTable();
+                        cn.Open();
+                        cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
+                        cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                        //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
+                        if (cm.ExecuteScalar() == null)
+                        {
+                            noCommentToDelete_Label.Visible = true;
+                            noCommentToDelete_Label.Text = "No Comments for this assignment";
+                            noCommentToDelete_Label.ForeColor = Color.Red;  
+                        }
+                        else
+                        {
+                            noCommentToDelete_Label.Visible = false;
+                            adapter = new SqlDataAdapter(cm);
+                            adapter.Fill(dt);
+                            //make delete button and grid visible
+                            Deletebutton.Visible = true;
+                            commentListGridForDeletion.Visible = true;
+                            commentListGridForDeletion.DataSource = dt;
+                        }
+                        //close the connection
+                        cn.Close();
+                    } 
+                    else if(commentTABS.SelectedTab.Name == "updateCommentTab")
+                    {
+                        DataTable dt = new DataTable();
+                        cn.Open();
+                        cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
+                        cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                        adapter = new SqlDataAdapter(cm);
+                        adapter.Fill(dt);
+                        commentListForUpdation.DataSource = dt;
+                        cn.Close();
+                    }
+                        
+                }
+                catch (Exception ex)
+                {
+                    cn.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            
+        }
+
+        private void DeleteCommentButtonClicked(object sender, EventArgs e)
+        {
+            //check if the comment is selected or not
+            if (commentListGridForDeletion.SelectedRows.Count == 0 || commentListGridForDeletion.SelectedRows[0].IsNewRow)
+            {
+                MessageBox.Show("Please select a comment to delete");
+                return;
+            }
+            //ask for confirmation
+            DialogResult result = MessageBox.Show("Are you sure you want to delete the selected comment(s)?", "Confirmation", MessageBoxButtons.YesNo);
+            //delete all the select comments
+            if (result == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow row in commentListGridForDeletion.SelectedRows)
+                {
+                    try
+                    {   
+                        int commentID = Convert.ToInt32(row.Cells["commentID"].Value);
+                        cm = new SqlCommand("delete from Comment where commentID=@CommentID", cn);
+                        cm.Parameters.AddWithValue("@CommentID", commentID);
+                        cn.Open();
+                        cm.ExecuteNonQuery();
+                        cm.Dispose(); // add this line
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        cn.Close();
+                    }
+                }
+                DataTable dt = (DataTable)commentListGridForDeletion.DataSource;
+                dt.Clear();
+                adapter.Fill(dt);
+                cn.Close();
+            }
+        }
+
+        private void toggleUpdateCommentTab() {
+            if(commentListForUpdation.Visible == true)
+            {
+                commentListForUpdation.Visible = false;
+                SelectButton.Visible = false;
+
+                txtCommentDescUPDAtE.Visible = true;
+                txtCommentDateUpdate.Visible = true;
+                updateButton.Visible = true;
+                labelCommentDescUpdate.Visible = true;
+                labelCommetnDateUpdate.Visible = true;
+            }
+            else
+            {
+                commentListForUpdation.Visible = true;
+                SelectButton.Visible = true;
+
+                txtCommentDescUPDAtE.Visible = false;
+                txtCommentDateUpdate.Visible = false;
+                updateButton.Visible = false;
+                labelCommentDescUpdate.Visible = false;
+                labelCommetnDateUpdate.Visible = false;
+            }
+        }
+        private void selectCommentsButtonClicked(object sender, EventArgs e)
+        {
+            try {
+                //get the comment id from the selected row
+                int commentID = Convert.ToInt32(commentListForUpdation.SelectedRows[0].Cells["commentID"].Value);
+
+                //get the comment data from the database
+                cn.Open();
+                cm = new SqlCommand("select * from Comment where commentID=@CommentID", cn);
+                cm.Parameters.AddWithValue("@CommentID", commentID);
+                dr = cm.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    txtCommentDescUPDAtE.Text = dr["commentDescription"].ToString();
+                    txtCommentDateUpdate.Text = dr["commentDate"].ToString();
+                    toggleUpdateCommentTab();
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void updateCommentButtonClicked(object sender, EventArgs e)
+        {
+            try
+            {
+            string CommentDesc = txtCommentDescUPDAtE.Text;
+            string CommentDate = txtCommentDateUpdate.Value.ToString("yyyy-MM-dd HH:mm");
+
+            //store the comment id from the selected row
+            int commentID = Convert.ToInt32(commentListForUpdation.SelectedRows[0].Cells["commentID"].Value);
+            //handle null value with messagebox
+            if (CommentDesc == "" || CommentDate == "")
+            {
+                MessageBox.Show("Please fill all the fields");
+                return;
+            }
+
+            
+                cn.Open();
+                cm = new SqlCommand("update Comment set commentDescription=@CommentDesc, commentDate=@CommentDate where commentID=@CommentID", cn);
+                cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
+                cm.Parameters.AddWithValue("@CommentDate", CommentDate);
+                cm.Parameters.AddWithValue("@CommentID", commentID);
+                cm.ExecuteNonQuery();
+                cn.Close();
+
+                MessageBox.Show("Comment Updated Successfully with ID: " + commentID, "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                loadCommentsToDeleteOrUpdate(sender, e);
+                toggleUpdateCommentTab();
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

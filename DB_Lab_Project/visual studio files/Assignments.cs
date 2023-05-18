@@ -76,6 +76,7 @@ namespace intial_form_1_
                     Debug.WriteLine("Assignments found");
                     while (dr.Read())
                     {
+                        teacherNameLabel.Text = teacherName;
                         //Panel
                         Panel panel = new Panel();
                         panel.Size = new Size(691, 100);
@@ -91,6 +92,7 @@ namespace intial_form_1_
                         assignmentID.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
                         assignmentID.Location = new Point(10, 10);
                         this.assignmentID = dr["assignmentID"].ToString();
+                        //
                         
                         //assignmentDescription Label
                         Label assignmentDescription = new Label();
@@ -104,7 +106,7 @@ namespace intial_form_1_
                         DueDate.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
                         DueDate.AutoSize = true;
                         //DueDate should be at the bottom right of the panel
-                        DueDate.Location = new Point(415, 70);
+                        DueDate.Location = new Point(400, 60);
 
                         panel.Controls.Add(assignmentDescription);
                         panel.Controls.Add(assignmentID);
@@ -112,6 +114,7 @@ namespace intial_form_1_
                         flowLayoutAssignment.Controls.Add(panel);
                         panel.Click += (s, ev) =>
                         {
+
                             assignmentPanel assignmentPanel = new assignmentPanel(teacherName, teacherUsername, classroomID, this.assignmentID);
                             assignmentPanel.Show();
                         };

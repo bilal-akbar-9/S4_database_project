@@ -44,7 +44,7 @@ namespace intial_form_1_
                 cm.Parameters.AddWithValue("@password", password.Text);
                 dr = cm.ExecuteReader();
                 dr.Read();
-                if (dr.HasRows)
+                if (dr.HasRows) //dr.hasrows is true if there is a row in the table
                 {
                     found = true;
                     _username = dr["username"].ToString();
