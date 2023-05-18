@@ -141,6 +141,11 @@ namespace intial_form_1_
         }
         private void studentClassroom_Load(object sender, EventArgs e)
         {
+            String teacherName;
+            String teacherUsername;
+            String classroomID;
+
+
             //Clear the flowLayoutPanel1
             flowLayoutPanel1.Controls.Clear();
             try
@@ -186,6 +191,15 @@ namespace intial_form_1_
                         classCode.Location = new Point(10, 30);
                         panel.Controls.Add(classCode);
                         flowLayoutPanel1.Controls.Add(panel);
+
+                        //Click event
+                        panel.Click += (s, ev) =>
+                        {
+                            //Open the classroom
+                            this.Hide();
+                            Class classForm = new Class(studentName, studentUsername, panel.Name,1);
+                            classForm.Show();
+                        };
                     } while (dr.Read());
 
                 }
