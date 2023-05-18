@@ -21,6 +21,11 @@ namespace intial_form_1_
         String teacherUsername;
         String teacherName;
         String classroomID;
+
+        string studentUsername;
+        String studentName;
+
+        int studentClassPanelFlag = 0;
         public Class()
         {
             InitializeComponent();
@@ -34,33 +39,42 @@ namespace intial_form_1_
             this.classroomID = classroomID;
             this.teacherName = teacherName;
         }
-        
+
+        public Class(String studentName, String studentUsername, String classroomID, int studentClassPanelFlag)
+        {
+            InitializeComponent();
+            this.studentUsername = studentUsername;
+            this.studentName = studentName;
+            this.classroomID = classroomID;
+            this.studentClassPanelFlag = studentClassPanelFlag;
+        }
+
 
         private void Class_Load(object sender, EventArgs e)
         {
-         //change the name of the classroom to the class name of the class code received
+            //change the name of the classroom to the class name of the class code received
             try
             {
                 //MessageBox.Show("Class code is " + classCode);
-                 cn = new SqlConnection(dbcon.MyConnection());
-                 cn.Open();
-                 cm = new SqlCommand("select * from Classroom where classroomID = @classroomID", cn);
-                 cm.Parameters.AddWithValue("@classroomID", classroomID); //this is the class code received
-                 dr = cm.ExecuteReader();
-                 dr.Read();
-                 if (dr.HasRows)
-                 {
-                     classroomName.Text = dr["classroomName"].ToString();
-                     teacherNameLabel.Text = "Name: " + teacherName;
-                     //
-                 }
-                 else
-                 {
-                     MessageBox.Show("No class found");
-                     this.Close();
-                 }
-                 dr.Close();
-                 cn.Close();
+                cn = new SqlConnection(dbcon.MyConnection());
+                cn.Open();
+                cm = new SqlCommand("select * from Classroom where classroomID = @classroomID", cn);
+                cm.Parameters.AddWithValue("@classroomID", classroomID); //this is the class code received
+                dr = cm.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    classroomName.Text = dr["classroomName"].ToString();
+                    teacherNameLabel.Text = "Name: " + teacherName;
+                    //
+                }
+                else
+                {
+                    MessageBox.Show("No class found");
+                    this.Close();
+                }
+                dr.Close();
+                cn.Close();
             }
             catch (Exception ex)
             {
@@ -72,8 +86,16 @@ namespace intial_form_1_
         private void createAssignmentButton_Clicked(object sender, EventArgs e)
         {
             this.Hide();
-            Assignments assignments = new Assignments(teacherName, teacherUsername, classroomID);
-            assignments.Show();
+            if (studentClassPanelFlag == 0)
+            {
+                Assignments assignments = new Assignments(teacherName, teacherUsername, classroomID);
+                assignments.Show();
+            }
+            else
+            {
+                Assignments assignments = new Assignments(studentName, studentUsername, classroomID, "student");
+                assignments.Show();
+            }
         }
 
         private void Class_FormClosed(object sender, FormClosedEventArgs e)
