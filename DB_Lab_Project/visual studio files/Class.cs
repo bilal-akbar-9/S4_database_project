@@ -118,6 +118,13 @@ namespace intial_form_1_
             }
 
         }
+
+        private void createMaterialButton_Clicked(object sender, EventArgs e)
+        {
+            this.Hide();
+            Material material = new Material(teacherName, teacherUsername, classroomID);
+            material.Show();
+        }
         //function that changes the name of classroom to the clas name of class code received
 
 
