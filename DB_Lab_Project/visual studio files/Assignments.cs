@@ -25,6 +25,10 @@ namespace intial_form_1_
         SqlDataAdapter adapter;
         String assignmentID;
 
+        String studentName;
+        String studentUsername;
+        String studentID;
+
         public Assignments()
         {
             InitializeComponent();
@@ -36,6 +40,15 @@ namespace intial_form_1_
             this.teacherUsername = teacherUsername;
             this.classroomID = classroomID;
             this.teacherName = teacherName;
+            cn = new SqlConnection(dbcon.MyConnection());
+        }
+
+        public Assignments(String studentName, String studentUsername, String classroomID, String random)
+        {
+            InitializeComponent();
+            this.studentUsername = studentUsername;
+            this.studentName = studentName;
+            this.classroomID = classroomID;
             cn = new SqlConnection(dbcon.MyConnection());
         }
         private Color RandomColor(int assignmentCounter)
