@@ -71,6 +71,10 @@
             this.Deletebutton = new System.Windows.Forms.Button();
             this.labelDeleteComment = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
+            this.noCommentToUpdateLabel = new System.Windows.Forms.Label();
+            this.viewCommentsTab = new System.Windows.Forms.TabPage();
+            this.allCommentsList = new System.Windows.Forms.DataGridView();
+            this.noCommentToViewLabel = new System.Windows.Forms.Label();
             this.TeacherTabs.SuspendLayout();
             this.assDesTab.SuspendLayout();
             this.ViewProgressTab.SuspendLayout();
@@ -82,6 +86,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.commentListForUpdation)).BeginInit();
             this.deleteCommentTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commentListGridForDeletion)).BeginInit();
+            this.viewCommentsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allCommentsList)).BeginInit();
             this.SuspendLayout();
             // 
             // TeacherTabs
@@ -95,6 +101,8 @@
             this.TeacherTabs.SelectedIndex = 0;
             this.TeacherTabs.Size = new System.Drawing.Size(914, 456);
             this.TeacherTabs.TabIndex = 1;
+            //on click of CommentsTab of TeacherTabs, call loadCommentsToDeleteOrUpdate
+            this.TeacherTabs.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
             // 
             // assDesTab
             // 
@@ -304,6 +312,7 @@
             // 
             // commentTABS
             // 
+            this.commentTABS.Controls.Add(this.viewCommentsTab);
             this.commentTABS.Controls.Add(this.addCommentTab);
             this.commentTABS.Controls.Add(this.updateCommentTab);
             this.commentTABS.Controls.Add(this.deleteCommentTab);
@@ -382,6 +391,7 @@
             // updateCommentTab
             // 
             this.updateCommentTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.updateCommentTab.Controls.Add(this.noCommentToUpdateLabel);
             this.updateCommentTab.Controls.Add(this.SelectButton);
             this.updateCommentTab.Controls.Add(this.updateButton);
             this.updateCommentTab.Controls.Add(this.txtCommentDescUPDAtE);
@@ -533,7 +543,7 @@
             this.commentListGridForDeletion.AllowUserToDeleteRows = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("HP Simplified Hans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.commentListGridForDeletion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.commentListGridForDeletion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -609,6 +619,46 @@
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // noCommentToUpdateLabel
+            // 
+            this.noCommentToUpdateLabel.AutoSize = true;
+            this.noCommentToUpdateLabel.Location = new System.Drawing.Point(395, 200);
+            this.noCommentToUpdateLabel.Name = "noCommentToUpdateLabel";
+            this.noCommentToUpdateLabel.Size = new System.Drawing.Size(120, 13);
+            this.noCommentToUpdateLabel.TabIndex = 26;
+            this.noCommentToUpdateLabel.Text = "No comments to update";
+            this.noCommentToUpdateLabel.Visible = false;
+            // 
+            // viewCommentsTab
+            // 
+            this.viewCommentsTab.Controls.Add(this.noCommentToViewLabel);
+            this.viewCommentsTab.Controls.Add(this.allCommentsList);
+            this.viewCommentsTab.Location = new System.Drawing.Point(4, 22);
+            this.viewCommentsTab.Name = "viewCommentsTab";
+            this.viewCommentsTab.Size = new System.Drawing.Size(913, 405);
+            this.viewCommentsTab.TabIndex = 3;
+            this.viewCommentsTab.Text = "Comments";
+            this.viewCommentsTab.UseVisualStyleBackColor = true;
+            // 
+            // allCommentsList
+            // 
+            this.allCommentsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.allCommentsList.Location = new System.Drawing.Point(5, 12);
+            this.allCommentsList.Name = "allCommentsList";
+            this.allCommentsList.Size = new System.Drawing.Size(892, 390);
+            this.allCommentsList.TabIndex = 0;
+            // 
+            // noCommentToViewLabel
+            // 
+            this.noCommentToViewLabel.AutoSize = true;
+            this.noCommentToViewLabel.Location = new System.Drawing.Point(396, 196);
+            this.noCommentToViewLabel.Name = "noCommentToViewLabel";
+            this.noCommentToViewLabel.Size = new System.Drawing.Size(109, 13);
+            this.noCommentToViewLabel.TabIndex = 27;
+            this.noCommentToViewLabel.Text = "No comments to view";
+            this.noCommentToViewLabel.Visible = false;
+            this.noCommentToViewLabel.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
+            // 
             // assignmentPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,6 +687,9 @@
             this.deleteCommentTab.ResumeLayout(false);
             this.deleteCommentTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commentListGridForDeletion)).EndInit();
+            this.viewCommentsTab.ResumeLayout(false);
+            this.viewCommentsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allCommentsList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -681,5 +734,9 @@
         private System.Windows.Forms.Label noCommentToDelete_Label;
         private System.Windows.Forms.DataGridView commentListForUpdation;
         private System.Windows.Forms.Button SelectButton;
+        private System.Windows.Forms.Label noCommentToUpdateLabel;
+        private System.Windows.Forms.TabPage viewCommentsTab;
+        private System.Windows.Forms.DataGridView allCommentsList;
+        private System.Windows.Forms.Label noCommentToViewLabel;
     }
 }

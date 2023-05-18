@@ -143,20 +143,22 @@ namespace intial_form_1_
                 try
                 {
                     if(commentTABS.SelectedTab.Name == "deleteCommentTab") {
-
                         DataTable dt = new DataTable();
                         cn.Open();
                         cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
                         cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                        int commentCount = Convert.ToInt32(cm.ExecuteScalar());
                         //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
-                        if (cm.ExecuteScalar() == null)
+                        if (commentCount == 0)
                         {
                             noCommentToDelete_Label.Visible = true;
-                            noCommentToDelete_Label.Text = "No Comments for this assignment";
-                            noCommentToDelete_Label.ForeColor = Color.Red;  
+                            noCommentToDelete_Label.Text = "No comments for this assignment";
+                            noCommentToDelete_Label.ForeColor = Color.Red;
+
                         }
                         else
                         {
+                            
                             noCommentToDelete_Label.Visible = false;
                             adapter = new SqlDataAdapter(cm);
                             adapter.Fill(dt);
@@ -168,15 +170,58 @@ namespace intial_form_1_
                         //close the connection
                         cn.Close();
                     } 
-                    else if(commentTABS.SelectedTab.Name == "updateCommentTab")
+                     else if(commentTABS.SelectedTab.Name == "updateCommentTab")
                     {
                         DataTable dt = new DataTable();
                         cn.Open();
                         cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
                         cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
-                        adapter = new SqlDataAdapter(cm);
-                        adapter.Fill(dt);
-                        commentListForUpdation.DataSource = dt;
+                        int commentCount = Convert.ToInt32(cm.ExecuteScalar());
+                        //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
+                        if (commentCount == 0)
+                        {
+                            noCommentToUpdateLabel.Visible = true;
+                            noCommentToUpdateLabel.Text = "No Comments for this assignment";
+                            noCommentToUpdateLabel.ForeColor = Color.Red;
+                        //select button and grid will be hidden
+                            SelectButton.Visible = false;
+                            commentListForUpdation.Visible = false;
+                        }
+                        else
+                        {
+                            SelectButton.Visible = true;
+                            commentListForUpdation.Visible = true;
+                            noCommentToUpdateLabel.Visible = false;
+                            adapter = new SqlDataAdapter(cm);
+                            adapter.Fill(dt);
+                            commentListForUpdation.DataSource = dt;
+                        }
+                        
+                        cn.Close();
+                    }
+                    else if(commentTABS.SelectedTab.Name == "viewCommentsTab") {
+                        //if no row is selected then commentslist
+                         DataTable dt = new DataTable();
+                        cn.Open();
+                        cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
+                        cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                        int commentCount = Convert.ToInt32(cm.ExecuteScalar());
+                        //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
+                        if (commentCount == 0)
+                        {
+                            noCommentToViewLabel.Visible = true;
+                            noCommentToViewLabel.Text = "No comments to view";
+                            noCommentToViewLabel.ForeColor = Color.Red;
+                            allCommentsList.Visible = false;
+                        }
+                        else
+                        {
+                            allCommentsList.Visible = true;
+                            noCommentToViewLabel.Visible = false;
+                            adapter = new SqlDataAdapter(cm);
+                            adapter.Fill(dt);
+                            allCommentsList.DataSource = dt;
+                        }
                         cn.Close();
                     }
                         
@@ -226,6 +271,15 @@ namespace intial_form_1_
                 dt.Clear();
                 adapter.Fill(dt);
                 cn.Close();
+               //if grid is empty then hide the delete button
+                if (dt.Rows.Count == 0)
+                {
+                    Deletebutton.Visible = false;
+                    commentListGridForDeletion.Visible = false;
+                    noCommentToDelete_Label.Visible = true;
+                    noCommentToDelete_Label.Text = "No comments for this assignment";
+                    noCommentToDelete_Label.ForeColor = Color.Red;
+                }
             }
         }
 
