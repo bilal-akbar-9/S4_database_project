@@ -51,6 +51,19 @@ namespace intial_form_1_
             cn = new SqlConnection(dbcon.MyConnection());
         }
 
+          private Color RandomColor(int announcementCounter)
+        {
+            //the colors: 138, 197, 255 ,, 209, 236, 241 ,, 233, 233, 233
+            if (announcementCounter > 3)
+                announcementCounter = 1;
+            if (announcementCounter == 1)
+                return Color.FromArgb(138, 197, 255);
+            else if (announcementCounter == 2)
+                return Color.FromArgb(209, 236, 241);
+            else
+                return Color.FromArgb(233, 233, 233);
+        }
+
         private void loadAssignmentAtStartPageStudentClas(object sender, EventArgs e)
         {
             flowLayoutStudentAssignment.Controls.Clear();
@@ -81,7 +94,7 @@ namespace intial_form_1_
 
                         Panel panel = new Panel();
                         panel.Size = new Size(691, 100);
-                        //panel.BackColor = RandomColor(assignmentCounter);
+                        panel.BackColor = RandomColor(assignmentCounter);
                         assignmentCounter++;
                         panel.BorderStyle = BorderStyle.FixedSingle;
                         panel.Name = dr["assignmentID"].ToString();
@@ -138,7 +151,9 @@ namespace intial_form_1_
 
         private void backButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Class classForm = new Class(studentName, Studentusername, classroomID, 1);
+            classForm.Show();
         }
 
         private void flowLayoutStudentAssignment_Paint(object sender, PaintEventArgs e)

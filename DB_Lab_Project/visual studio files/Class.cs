@@ -35,6 +35,8 @@ namespace intial_form_1_
         {
             InitializeComponent();
             //Set the teacher's username and class code
+            
+
             this.teacherUsername = teacherUsername;
             this.classroomID = classroomID;
             this.teacherName = teacherName;
@@ -48,9 +50,63 @@ namespace intial_form_1_
             this.classroomID = classroomID;
             this.studentClassPanelFlag = studentClassPanelFlag;
             this.generateReportButton.Visible = false;
+            this.getTeacherInfo();
         }
 
-
+        private void getTeacherInfo() {
+            try
+            {
+                cn = new SqlConnection(dbcon.MyConnection());
+                cn.Open();
+                cm = new SqlCommand("select * from Classroom where classroomID = @classroomID", cn);
+                cm.Parameters.AddWithValue("@classroomID", classroomID); //this is the class code received
+                dr = cm.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    teacherUsername = dr["teacherUsername"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No class found");
+                    this.Close();
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                //Show the error message
+                MessageBox.Show(ex.Message);
+            }   
+            //get the teacher's name using the teacher's username
+            try
+            {
+                cn = new SqlConnection(dbcon.MyConnection());
+                cn.Open();
+                cm = new SqlCommand("select * from tblUser where username = @username", cn);
+                cm.Parameters.AddWithValue("@username", teacherUsername); //this is the class code received
+                dr = cm.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    teacherName = dr["name"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No class found");
+                    this.Close();
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                //Show the error message
+                MessageBox.Show(ex.Message);
+                cn.Close();
+            }
+        }
         private void Class_Load(object sender, EventArgs e)
         {
             //change the name of the classroom to the class name of the class code received
@@ -97,6 +153,7 @@ namespace intial_form_1_
             else
             {
                 studentAssignments studentAssignments = new studentAssignments(studentName, studentUsername, classroomID, teacherName, teacherUsername);
+               // MessageBox.Show("Student name is " + studentName + " and student username is " + studentUsername + " and classroomID is " + classroomID + " and teacher name is " + teacherName + " and teacher username is " + teacherUsername);
                 studentAssignments.Show();
             }
         }
@@ -138,9 +195,23 @@ namespace intial_form_1_
 
         private void createMaterialButton_Clicked(object sender, EventArgs e)
         {
-            this.Hide();
-            Material material = new Material(teacherName, teacherUsername, classroomID);
-            material.Show();
+            if(studentClassPanelFlag == 0)
+            {
+                this.Hide();
+                Material material = new Material(teacherName, teacherUsername, classroomID);
+                material.Show();
+            }
+            else
+            {
+                this.Hide();
+                StudentMaterial studentMaterial = new StudentMaterial(studentName, studentUsername, classroomID, teacherName, teacherUsername);
+                //MessageBox.Show("Student name is " + studentName + " and student username is " + studentUsername + " and classroomID is " + classroomID + " and teacher name is " + teacherName + " and teacher username is " + teacherUsername);
+                studentMaterial.Show();
+            }
+
+
+            // Material material = new Material(teacherName, teacherUsername, classroomID);
+
         }
 
         private void generateReportButton_Click(object sender, EventArgs e)

@@ -1,6 +1,8 @@
 ﻿create database DBLabProject
 use DBLabProject;
 
+
+
 create table tblUser
 (
     username varchar(20) not null,
@@ -35,7 +37,7 @@ create table ClassroomAndStudent
     -- Primary key
     primary key (studentusername, classroomID),
     -- Foreign key
-    foreign key (studentusername) references tblUser(username) on DELETE CASCADE,
+    foreign key (studentusername) references tblUser(username),
     foreign key (classroomID) references Classroom(classroomID) on delete cascade
 )
 
@@ -51,7 +53,7 @@ create table Announcement
     -- Primary key
     primary key (announcementID),
     -- Foreign key
-    foreign key (username_Teacher) references tblUser(username) on delete cascade,
+    foreign key (username_Teacher) references tblUser(username),
     foreign key (classroomID) references Classroom(classroomID) on delete cascade
 )
 
@@ -70,7 +72,7 @@ create table Material
     -- Primary key
     primary key (materialID),
     -- Foreign key
-    foreign key (username_Teacher) references tblUser(username) on delete cascade,
+    foreign key (username_Teacher) references tblUser(username),
     foreign key (classroomID) references Classroom(classroomID) on delete cascade
 )
 
@@ -87,7 +89,7 @@ create table Assignment
     -- Primary key 
     primary key (assignmentID),
     -- Foreign key
-    foreign key (username_Teacher) references tblUser(username) on delete cascade,
+    foreign key (username_Teacher) references tblUser(username),
     foreign key (classroomID) references Classroom(classroomID) on delete cascade
 )
 

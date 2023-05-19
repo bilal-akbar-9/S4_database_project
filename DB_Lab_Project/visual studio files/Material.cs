@@ -381,5 +381,12 @@ namespace intial_form_1_
                     MessageBox.Show(ex.Message);
                 }
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+                this.Hide();
+                Class classForm = new Class(teacherName, teacherUsername, classroomID);
+                classForm.Show();
+        }
     }
 }

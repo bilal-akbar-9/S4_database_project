@@ -152,6 +152,12 @@
     <Compile Include="assignmentPanel.Designer.cs">
       <DependentUpon>assignmentPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMaterial.Designer.cs">
+      <DependentUpon>StudentMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Submission.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StudentMaterial.resx">
+      <DependentUpon>StudentMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="studentReport.rdlc" />
     <EmbeddedResource Include="studentAnnouncement.resx">
       <DependentUpon>studentAnnouncement.cs</DependentUpon>

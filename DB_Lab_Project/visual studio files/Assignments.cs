@@ -239,6 +239,7 @@ namespace intial_form_1_
                 }
                 else if (AssignmentTABS.SelectedTab.Name == "UpdateAssTab")
                 {
+                    toggleUpdateAssignmentToSelection();
                     DataTable dt = new DataTable();
                     cn.Open();
                     cm = new SqlCommand("select * from Assignment where classroomID=@classroomID", cn);
@@ -325,11 +326,12 @@ namespace intial_form_1_
                 // Display a success message or perform any other action upon successful modification
                 MessageBox.Show("Assignment modified successfully.");
                 AssignmentloadForUpdateDelete(sender, e);
-                toggleUpdateAssignmentTab();
+                toggleUpdateAssignmentToSelection();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                cn.Close();
             }
         }
 
@@ -354,7 +356,7 @@ namespace intial_form_1_
                     modifyDueDateBox.Text = dr["assignmentDueDate"].ToString();
                     modifyAssignmentFileBox.Text = dr["assignmentFile"].ToString();
                     modifyTitleBox.Text = dr["assignmentTitle"].ToString();
-                    toggleUpdateAssignmentTab();
+                    toggleUpdateAssignmentToEditable();
                 }
                 cn.Close();
 
@@ -362,36 +364,12 @@ namespace intial_form_1_
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                cn.Close();
             }
         }
-        private void toggleUpdateAssignmentTab()
-        {
-            if (assignmentsListForModification.Visible == true){
-            //make the assignmentsList invisible
-            assignmentsListForModification.Visible = false;
-            //delete selectButton
-            selectButton.Visible = false;
-            //make all textboxes visible
-            modifyDescBox.Visible = true;
-            modifyAssignmentPointsBox.Visible = true;
-            modifyDueDateBox.Visible = true;
-            modifyAssignmentFileBox.Visible = true;
-            modifyTitleBox.Visible = true;
-            //make all labels visible
-            label14.Visible = true;
-            label13.Visible = true;
-            label12.Visible = true;
-            label11.Visible = true;
-            label15.Visible = true;
-            // labelAssiID.Visible = true;
-            // textBoxAssID.Visible = true;
-            //make the modify button visible
-            modifyButton.Visible = true;
-            }
-            else if (assignmentsListForModification.Visible == false)
-            {
-                //make the assignmentsList visible
-                assignmentsListForModification.Visible = true;
+
+        private void toggleUpdateAssignmentToSelection() {
+             assignmentsListForModification.Visible = true;
                 //make the selectButton visible
                 selectButton.Visible = true;
                 //make all textboxes invisible
@@ -410,7 +388,27 @@ namespace intial_form_1_
                 // textBoxAssID.Visible = false;
                 //make the modify button invisible
                 modifyButton.Visible = false;
-            }
+        }
+        private void toggleUpdateAssignmentToEditable() {
+             assignmentsListForModification.Visible = false;
+            //delete selectButton
+            selectButton.Visible = false;
+            //make all textboxes visible
+            modifyDescBox.Visible = true;
+            modifyAssignmentPointsBox.Visible = true;
+            modifyDueDateBox.Visible = true;
+            modifyAssignmentFileBox.Visible = true;
+            modifyTitleBox.Visible = true;
+            //make all labels visible
+            label14.Visible = true;
+            label13.Visible = true;
+            label12.Visible = true;
+            label11.Visible = true;
+            label15.Visible = true;
+            // labelAssiID.Visible = true;
+            // textBoxAssID.Visible = true;
+            //make the modify button visible
+            modifyButton.Visible = true;
         }
 
         private void backButton_Click(object sender, EventArgs e)

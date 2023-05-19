@@ -171,6 +171,7 @@ namespace intial_form_1_
                 }
                 else if (commentTABS.SelectedTab.Name == "updateCommentTab")
                 {
+                    toggleUpdateCommentTabToSelection();
                     DataTable dt = new DataTable();
                     cn.Open();
                     cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
@@ -283,24 +284,20 @@ namespace intial_form_1_
             }
         }
 
-        private void toggleUpdateCommentTab()
-        {
-            if (commentListForUpdation.Visible == true)
-            {
-                commentListForUpdation.Visible = false;
-                SelectButton.Visible = false;
-                txtCommentDescUPDAtE.Visible = true;
-                updateButton.Visible = true;
-                labelCommentDescUpdate.Visible = true;
-            }
-            else
-            {
+        private void toggleUpdateCommentTabToSelection() {
+                
                 commentListForUpdation.Visible = true;
                 SelectButton.Visible = true;
                 txtCommentDescUPDAtE.Visible = false;
                 updateButton.Visible = false;
                 labelCommentDescUpdate.Visible = false;
-            }
+        }
+        private void toggleUpdateCommentTabToEditable() {
+                commentListForUpdation.Visible = false;
+                SelectButton.Visible = false;
+                txtCommentDescUPDAtE.Visible = true;
+                updateButton.Visible = true;
+                labelCommentDescUpdate.Visible = true;
         }
         private void selectCommentsButtonClicked(object sender, EventArgs e)
         {
@@ -322,7 +319,7 @@ namespace intial_form_1_
                 if (dr.HasRows)
                 {
                     txtCommentDescUPDAtE.Text = dr["commentDescription"].ToString();
-                    toggleUpdateCommentTab();
+                    toggleUpdateCommentTabToEditable();
                 }
                 dr.Close();
                 cn.Close();
@@ -360,7 +357,6 @@ namespace intial_form_1_
                 MessageBox.Show("Comment Updated Successfully with ID: ", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 loadCommentsToDeleteOrUpdate(sender, e);
-                toggleUpdateCommentTab();
             }
             catch (Exception ex)
             {
