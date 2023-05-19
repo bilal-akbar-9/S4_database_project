@@ -47,6 +47,7 @@ namespace intial_form_1_
             this.studentName = studentName;
             this.classroomID = classroomID;
             this.studentClassPanelFlag = studentClassPanelFlag;
+            this.generateReportButton.Visible = false;
         }
 
 

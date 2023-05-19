@@ -139,7 +139,9 @@ namespace intial_form_1_
 
         private void classroom_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();  
+            loginForm.Show();
         }
 
         private void Add_Click(object sender, EventArgs e)
