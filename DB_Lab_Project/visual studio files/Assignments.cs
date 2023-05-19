@@ -24,7 +24,6 @@ namespace intial_form_1_
         String classroomID;
         SqlDataAdapter adapter;
         String assignmentID;
-
         String studentName;
         String studentUsername;
         String studentID;
@@ -248,6 +247,10 @@ namespace intial_form_1_
                     adapter.Fill(dt);
                     assignmentsListForModification.DataSource = dt;
                     cn.Close();
+                }
+                else if (AssignmentTABS.SelectedTab.Name == "AssignmentTab")
+                {
+                    loadAssignmentAtStartPage(sender, e);
                 }
             }
             catch (Exception ex)

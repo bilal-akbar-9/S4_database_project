@@ -44,10 +44,9 @@ namespace intial_form_1_
             // 
             this.assignmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
             this.assignmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assignmentButton.Location = new System.Drawing.Point(218, 363);
-            this.assignmentButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.assignmentButton.Location = new System.Drawing.Point(145, 236);
             this.assignmentButton.Name = "assignmentButton";
-            this.assignmentButton.Size = new System.Drawing.Size(950, 105);
+            this.assignmentButton.Size = new System.Drawing.Size(633, 68);
             this.assignmentButton.TabIndex = 0;
             this.assignmentButton.Text = "Assignment";
             this.assignmentButton.UseVisualStyleBackColor = false;
@@ -57,10 +56,9 @@ namespace intial_form_1_
             // 
             this.Material.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.Material.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Material.Location = new System.Drawing.Point(218, 526);
-            this.Material.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Material.Location = new System.Drawing.Point(145, 342);
             this.Material.Name = "Material";
-            this.Material.Size = new System.Drawing.Size(950, 105);
+            this.Material.Size = new System.Drawing.Size(633, 68);
             this.Material.TabIndex = 1;
             this.Material.Text = "Material";
             this.Material.UseVisualStyleBackColor = false;
@@ -70,10 +68,9 @@ namespace intial_form_1_
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Controls.Add(this.teacherNameLabel);
             this.panel1.Controls.Add(this.classroomName);
-            this.panel1.Location = new System.Drawing.Point(-3, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1372, 128);
+            this.panel1.Size = new System.Drawing.Size(915, 83);
             this.panel1.TabIndex = 0;
             // 
             // teacherNameLabel
@@ -81,10 +78,9 @@ namespace intial_form_1_
             this.teacherNameLabel.AutoSize = true;
             this.teacherNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teacherNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.teacherNameLabel.Location = new System.Drawing.Point(39, 77);
-            this.teacherNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.teacherNameLabel.Location = new System.Drawing.Point(26, 50);
             this.teacherNameLabel.Name = "teacherNameLabel";
-            this.teacherNameLabel.Size = new System.Drawing.Size(174, 29);
+            this.teacherNameLabel.Size = new System.Drawing.Size(113, 20);
             this.teacherNameLabel.TabIndex = 5;
             this.teacherNameLabel.Text = "Teacher Name";
             // 
@@ -93,10 +89,9 @@ namespace intial_form_1_
             this.classroomName.AutoSize = true;
             this.classroomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.classroomName.Location = new System.Drawing.Point(34, 29);
-            this.classroomName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.classroomName.Location = new System.Drawing.Point(23, 19);
             this.classroomName.Name = "classroomName";
-            this.classroomName.Size = new System.Drawing.Size(329, 47);
+            this.classroomName.Size = new System.Drawing.Size(216, 31);
             this.classroomName.TabIndex = 1;
             this.classroomName.Text = "ClassroomName";
             // 
@@ -104,13 +99,13 @@ namespace intial_form_1_
             // 
             this.announcementButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
             this.announcementButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.announcementButton.Location = new System.Drawing.Point(218, 200);
-            this.announcementButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.announcementButton.Location = new System.Drawing.Point(145, 130);
             this.announcementButton.Name = "announcementButton";
-            this.announcementButton.Size = new System.Drawing.Size(950, 105);
+            this.announcementButton.Size = new System.Drawing.Size(633, 68);
             this.announcementButton.TabIndex = 2;
             this.announcementButton.Text = "Announcement";
             this.announcementButton.UseVisualStyleBackColor = false;
+            this.announcementButton.Click += new System.EventHandler(this.announcementButton_Click);
             // 
             // backButton
             // 
@@ -120,9 +115,10 @@ namespace intial_form_1_
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
-            this.backButton.Location = new System.Drawing.Point(39, 689);
+            this.backButton.Location = new System.Drawing.Point(26, 448);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(129, 62);
+            this.backButton.Size = new System.Drawing.Size(86, 40);
             this.backButton.TabIndex = 27;
             this.backButton.Text = "←";
             this.backButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -131,17 +127,16 @@ namespace intial_form_1_
             // 
             // Class
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 788);
+            this.ClientSize = new System.Drawing.Size(913, 512);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.announcementButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Material);
             this.Controls.Add(this.assignmentButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Class";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Class";

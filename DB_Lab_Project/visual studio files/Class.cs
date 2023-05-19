@@ -97,6 +97,20 @@ namespace intial_form_1_
                 assignments.Show();
             }
         }
+        private void announcementButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (studentClassPanelFlag == 0)
+            {
+                Announcement announcements = new Announcement(teacherName, teacherUsername, classroomID);
+                announcements.Show();
+            }
+            else
+            {
+                // Announcement announcements = new Announcement(studentName, studentUsername, classroomID, "student");
+                // announcements.Show();
+            }
+        }
 
         private void Class_FormClosed(object sender, FormClosedEventArgs e)
         {

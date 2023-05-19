@@ -22,7 +22,7 @@ create table Classroom
     -- Primary key
     primary key (classroomID),
     -- Foreign key
-    foreign key (teacherUsername) references tblUser(username)
+    foreign key (teacherUsername) references tblUser(username) on delete cascade
 
 )
 
@@ -35,8 +35,8 @@ create table ClassroomAndStudent
     -- Primary key
     primary key (studentusername, classroomID),
     -- Foreign key
-    foreign key (studentusername) references tblUser(username),
-    foreign key (classroomID) references Classroom(classroomID)
+    foreign key (studentusername) references tblUser(username) on DELETE CASCADE,
+    foreign key (classroomID) references Classroom(classroomID) on delete cascade
 )
 
 create table Announcement
@@ -44,14 +44,15 @@ create table Announcement
     announcementID int IDENTITY(1,1) not null,
     announcementTitle varchar(100) not null,
     announcementDescription varchar(100) not null,
-    announcementDate date not null,
+    announcementDate DATETIME not null,
     username_Teacher varchar(20) not null,
+    announcementFile varchar(100),
     classroomID int not null,
     -- Primary key
     primary key (announcementID),
     -- Foreign key
-    foreign key (username_Teacher) references tblUser(username),
-    foreign key (classroomID) references Classroom(classroomID)
+    foreign key (username_Teacher) references tblUser(username) on delete cascade,
+    foreign key (classroomID) references Classroom(classroomID) on delete cascade
 )
 
 create table Material
@@ -64,9 +65,10 @@ create table Material
     -- Primary key
     primary key (materialID),
     -- Foreign key
-    foreign key (username_Teacher) references tblUser(username),
-    foreign key (classroomID) references Classroom(classroomID)
+    foreign key (username_Teacher) references tblUser(username) on delete cascade,
+    foreign key (classroomID) references Classroom(classroomID) on delete cascade
 )
+
 create table Assignment
 (
     assignmentID int IDENTITY(1,1) not null,
@@ -80,9 +82,10 @@ create table Assignment
     -- Primary key 
     primary key (assignmentID),
     -- Foreign key
-    foreign key (username_Teacher) references tblUser(username),
-    foreign key (classroomID) references Classroom(classroomID)
+    foreign key (username_Teacher) references tblUser(username) on delete cascade,
+    foreign key (classroomID) references Classroom(classroomID) on delete cascade
 )
+
 CREATE TABLE Submissions
 (
     -- username from User
@@ -96,7 +99,7 @@ CREATE TABLE Submissions
     primary key (studentusername, assignmentID),
     -- Foreign key
     foreign key (studentusername) references tblUser(username),
-    foreign key (assignmentID) references Assignment(assignmentID),
+    foreign key (assignmentID) references Assignment(assignmentID) on DELETE CASCADE
 )
 
 create table Comment
@@ -108,7 +111,16 @@ create table Comment
     -- Primary key
     primary key (commentID),
     -- Foreign key
-    foreign key (assignmentID) references Assignment(assignmentID)
+    foreign key (assignmentID) references Assignment(assignmentID) on delete cascade
 )
 
-
+create table announcementComment
+(
+    announcementCommentID int identity(1,1) not null,
+    announcementID int not null,
+    commentDescription varchar(100) not null,
+    commentDate date not null,
+    -- Primary key
+    primary key (announcementCommentID),
+    foreign key (announcementID) references Announcement(announcementID) on DELETE CASCADE
+)

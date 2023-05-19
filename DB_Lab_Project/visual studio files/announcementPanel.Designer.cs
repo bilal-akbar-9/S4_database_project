@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TeacherTabs = new System.Windows.Forms.TabControl();
-            this.assDesTab = new System.Windows.Forms.TabPage();
-            this.txtAssignmetFile = new System.Windows.Forms.TextBox();
-            this.txtAssTitle = new System.Windows.Forms.TextBox();
-            this.txtAssDesc = new System.Windows.Forms.TextBox();
+            this.announceDesTab = new System.Windows.Forms.TabPage();
+            this.txtAnnounceFile = new System.Windows.Forms.TextBox();
+            this.txtAnnounceTitle = new System.Windows.Forms.TextBox();
+            this.txtAnnounceDesc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.assignmentTitle = new System.Windows.Forms.Label();
@@ -56,7 +57,7 @@
             this.noCommentToUpdateLabel = new System.Windows.Forms.Label();
             this.SelectButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
-            this.txtCommentDescUPDAtE = new System.Windows.Forms.TextBox();
+            this.txtCommentDescUpdate = new System.Windows.Forms.TextBox();
             this.labelCommentDescUpdate = new System.Windows.Forms.Label();
             this.txtUpdateComment = new System.Windows.Forms.Label();
             this.commentListForUpdation = new System.Windows.Forms.DataGridView();
@@ -67,7 +68,7 @@
             this.labelDeleteComment = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.TeacherTabs.SuspendLayout();
-            this.assDesTab.SuspendLayout();
+            this.announceDesTab.SuspendLayout();
             this.CommentsTab.SuspendLayout();
             this.commentTABS.SuspendLayout();
             this.viewCommentsTab.SuspendLayout();
@@ -81,7 +82,7 @@
             // 
             // TeacherTabs
             // 
-            this.TeacherTabs.Controls.Add(this.assDesTab);
+            this.TeacherTabs.Controls.Add(this.announceDesTab);
             this.TeacherTabs.Controls.Add(this.CommentsTab);
             this.TeacherTabs.Location = new System.Drawing.Point(-1, 3);
             this.TeacherTabs.Margin = new System.Windows.Forms.Padding(2);
@@ -89,53 +90,54 @@
             this.TeacherTabs.SelectedIndex = 0;
             this.TeacherTabs.Size = new System.Drawing.Size(914, 456);
             this.TeacherTabs.TabIndex = 1;
+            this.TeacherTabs.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
             // 
-            // assDesTab
+            // announceDesTab
             // 
-            this.assDesTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.assDesTab.Controls.Add(this.txtAssignmetFile);
-            this.assDesTab.Controls.Add(this.txtAssTitle);
-            this.assDesTab.Controls.Add(this.txtAssDesc);
-            this.assDesTab.Controls.Add(this.label4);
-            this.assDesTab.Controls.Add(this.label1);
-            this.assDesTab.Controls.Add(this.assignmentTitle);
-            this.assDesTab.Location = new System.Drawing.Point(4, 22);
-            this.assDesTab.Name = "assDesTab";
-            this.assDesTab.Size = new System.Drawing.Size(906, 430);
-            this.assDesTab.TabIndex = 4;
-            this.assDesTab.Text = "Assignment";
+            this.announceDesTab.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.announceDesTab.Controls.Add(this.txtAnnounceFile);
+            this.announceDesTab.Controls.Add(this.txtAnnounceTitle);
+            this.announceDesTab.Controls.Add(this.txtAnnounceDesc);
+            this.announceDesTab.Controls.Add(this.label4);
+            this.announceDesTab.Controls.Add(this.label1);
+            this.announceDesTab.Controls.Add(this.assignmentTitle);
+            this.announceDesTab.Location = new System.Drawing.Point(4, 22);
+            this.announceDesTab.Name = "announceDesTab";
+            this.announceDesTab.Size = new System.Drawing.Size(906, 430);
+            this.announceDesTab.TabIndex = 4;
+            this.announceDesTab.Text = "Annuoncement";
             // 
-            // txtAssignmetFile
+            // txtAnnounceFile
             // 
-            this.txtAssignmetFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssignmetFile.Location = new System.Drawing.Point(625, 98);
-            this.txtAssignmetFile.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAssignmetFile.Name = "txtAssignmetFile";
-            this.txtAssignmetFile.ReadOnly = true;
-            this.txtAssignmetFile.Size = new System.Drawing.Size(145, 26);
-            this.txtAssignmetFile.TabIndex = 46;
+            this.txtAnnounceFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnnounceFile.Location = new System.Drawing.Point(625, 98);
+            this.txtAnnounceFile.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAnnounceFile.Name = "txtAnnounceFile";
+            this.txtAnnounceFile.ReadOnly = true;
+            this.txtAnnounceFile.Size = new System.Drawing.Size(145, 26);
+            this.txtAnnounceFile.TabIndex = 46;
             // 
-            // txtAssTitle
+            // txtAnnounceTitle
             // 
-            this.txtAssTitle.Location = new System.Drawing.Point(82, 95);
-            this.txtAssTitle.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAssTitle.Multiline = true;
-            this.txtAssTitle.Name = "txtAssTitle";
-            this.txtAssTitle.ReadOnly = true;
-            this.txtAssTitle.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssTitle.Size = new System.Drawing.Size(423, 31);
-            this.txtAssTitle.TabIndex = 44;
+            this.txtAnnounceTitle.Location = new System.Drawing.Point(82, 95);
+            this.txtAnnounceTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAnnounceTitle.Multiline = true;
+            this.txtAnnounceTitle.Name = "txtAnnounceTitle";
+            this.txtAnnounceTitle.ReadOnly = true;
+            this.txtAnnounceTitle.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAnnounceTitle.Size = new System.Drawing.Size(423, 31);
+            this.txtAnnounceTitle.TabIndex = 44;
             // 
-            // txtAssDesc
+            // txtAnnounceDesc
             // 
-            this.txtAssDesc.Location = new System.Drawing.Point(82, 176);
-            this.txtAssDesc.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAssDesc.Multiline = true;
-            this.txtAssDesc.Name = "txtAssDesc";
-            this.txtAssDesc.ReadOnly = true;
-            this.txtAssDesc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssDesc.Size = new System.Drawing.Size(688, 181);
-            this.txtAssDesc.TabIndex = 43;
+            this.txtAnnounceDesc.Location = new System.Drawing.Point(82, 176);
+            this.txtAnnounceDesc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAnnounceDesc.Multiline = true;
+            this.txtAnnounceDesc.Name = "txtAnnounceDesc";
+            this.txtAnnounceDesc.ReadOnly = true;
+            this.txtAnnounceDesc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAnnounceDesc.Size = new System.Drawing.Size(688, 181);
+            this.txtAnnounceDesc.TabIndex = 43;
             // 
             // label4
             // 
@@ -194,6 +196,7 @@
             this.commentTABS.SelectedIndex = 0;
             this.commentTABS.Size = new System.Drawing.Size(921, 431);
             this.commentTABS.TabIndex = 0;
+            this.commentTABS.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
             // 
             // viewCommentsTab
             // 
@@ -224,6 +227,14 @@
             this.allCommentsList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.allCommentsList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
             this.allCommentsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.allCommentsList.DefaultCellStyle = dataGridViewCellStyle1;
             this.allCommentsList.Location = new System.Drawing.Point(5, 12);
             this.allCommentsList.Name = "allCommentsList";
             this.allCommentsList.Size = new System.Drawing.Size(892, 390);
@@ -258,6 +269,7 @@
             this.buttonAddComment.TabIndex = 11;
             this.buttonAddComment.Text = "Post";
             this.buttonAddComment.UseVisualStyleBackColor = false;
+            this.buttonAddComment.Click += new System.EventHandler(this.addCommentButton_Clicked);
             // 
             // txtCommentDesc
             // 
@@ -298,7 +310,7 @@
             this.updateCommentTab.Controls.Add(this.noCommentToUpdateLabel);
             this.updateCommentTab.Controls.Add(this.SelectButton);
             this.updateCommentTab.Controls.Add(this.updateButton);
-            this.updateCommentTab.Controls.Add(this.txtCommentDescUPDAtE);
+            this.updateCommentTab.Controls.Add(this.txtCommentDescUpdate);
             this.updateCommentTab.Controls.Add(this.labelCommentDescUpdate);
             this.updateCommentTab.Controls.Add(this.txtUpdateComment);
             this.updateCommentTab.Controls.Add(this.commentListForUpdation);
@@ -334,6 +346,7 @@
             this.SelectButton.TabIndex = 25;
             this.SelectButton.Text = "Select";
             this.SelectButton.UseVisualStyleBackColor = false;
+            this.SelectButton.Click += new System.EventHandler(this.selectCommentsButtonClicked);
             // 
             // updateButton
             // 
@@ -350,17 +363,18 @@
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = false;
             this.updateButton.Visible = false;
+            this.updateButton.Click += new System.EventHandler(this.updateCommentButtonClicked);
             // 
-            // txtCommentDescUPDAtE
+            // txtCommentDescUpdate
             // 
-            this.txtCommentDescUPDAtE.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommentDescUPDAtE.Location = new System.Drawing.Point(105, 135);
-            this.txtCommentDescUPDAtE.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCommentDescUPDAtE.Multiline = true;
-            this.txtCommentDescUPDAtE.Name = "txtCommentDescUPDAtE";
-            this.txtCommentDescUPDAtE.Size = new System.Drawing.Size(681, 166);
-            this.txtCommentDescUPDAtE.TabIndex = 17;
-            this.txtCommentDescUPDAtE.Visible = false;
+            this.txtCommentDescUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentDescUpdate.Location = new System.Drawing.Point(105, 135);
+            this.txtCommentDescUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCommentDescUpdate.Multiline = true;
+            this.txtCommentDescUpdate.Name = "txtCommentDescUpdate";
+            this.txtCommentDescUpdate.Size = new System.Drawing.Size(681, 166);
+            this.txtCommentDescUpdate.TabIndex = 17;
+            this.txtCommentDescUpdate.Visible = false;
             // 
             // labelCommentDescUpdate
             // 
@@ -392,35 +406,35 @@
             this.commentListForUpdation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commentListForUpdation.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.commentListForUpdation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(84)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.commentListForUpdation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(84)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.commentListForUpdation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.commentListForUpdation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.commentListForUpdation.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.commentListForUpdation.DefaultCellStyle = dataGridViewCellStyle3;
             this.commentListForUpdation.EnableHeadersVisualStyles = false;
             this.commentListForUpdation.Location = new System.Drawing.Point(7, 43);
             this.commentListForUpdation.MultiSelect = false;
             this.commentListForUpdation.Name = "commentListForUpdation";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.commentListForUpdation.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.commentListForUpdation.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.commentListForUpdation.Size = new System.Drawing.Size(887, 315);
             this.commentListForUpdation.TabIndex = 24;
             // 
@@ -453,31 +467,31 @@
             // 
             this.commentListGridForDeletion.AllowUserToAddRows = false;
             this.commentListGridForDeletion.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.commentListGridForDeletion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.commentListGridForDeletion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.commentListGridForDeletion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commentListGridForDeletion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.commentListGridForDeletion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.commentListGridForDeletion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.commentListGridForDeletion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.commentListGridForDeletion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.commentListGridForDeletion.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.commentListGridForDeletion.DefaultCellStyle = dataGridViewCellStyle7;
             this.commentListGridForDeletion.EnableHeadersVisualStyles = false;
             this.commentListGridForDeletion.Location = new System.Drawing.Point(12, 41);
             this.commentListGridForDeletion.Name = "commentListGridForDeletion";
@@ -500,6 +514,7 @@
             this.Deletebutton.Text = "Delete";
             this.Deletebutton.UseVisualStyleBackColor = false;
             this.Deletebutton.Visible = false;
+            this.Deletebutton.Click += new System.EventHandler(this.DeleteCommentButtonClicked);
             // 
             // labelDeleteComment
             // 
@@ -528,6 +543,7 @@
             this.backButton.Text = "←";
             this.backButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // announcementPanel
             // 
@@ -540,9 +556,10 @@
             this.Name = "announcementPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Announcement Panel";
+            this.Load += new System.EventHandler(this.announcementPanel_Load);
             this.TeacherTabs.ResumeLayout(false);
-            this.assDesTab.ResumeLayout(false);
-            this.assDesTab.PerformLayout();
+            this.announceDesTab.ResumeLayout(false);
+            this.announceDesTab.PerformLayout();
             this.CommentsTab.ResumeLayout(false);
             this.commentTABS.ResumeLayout(false);
             this.viewCommentsTab.ResumeLayout(false);
@@ -575,18 +592,18 @@
         private System.Windows.Forms.Label labelDeleteComment;
         private System.Windows.Forms.Button Deletebutton;
         private System.Windows.Forms.Button updateButton;
-        private System.Windows.Forms.TextBox txtCommentDescUPDAtE;
+        private System.Windows.Forms.TextBox txtCommentDescUpdate;
         private System.Windows.Forms.Label labelCommentDescUpdate;
         private System.Windows.Forms.Label txtUpdateComment;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.TabPage assDesTab;
+        private System.Windows.Forms.TabPage announceDesTab;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label assignmentTitle;
-        private System.Windows.Forms.TextBox txtAssTitle;
-        private System.Windows.Forms.TextBox txtAssDesc;
-        private System.Windows.Forms.TextBox txtAssignmetFile;
+        private System.Windows.Forms.TextBox txtAnnounceTitle;
+        private System.Windows.Forms.TextBox txtAnnounceDesc;
+        private System.Windows.Forms.TextBox txtAnnounceFile;
         private System.Windows.Forms.DataGridView commentListGridForDeletion;
         private System.Windows.Forms.Label noCommentToDelete_Label;
         private System.Windows.Forms.DataGridView commentListForUpdation;

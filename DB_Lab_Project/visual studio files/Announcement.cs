@@ -34,15 +34,16 @@ namespace intial_form_1_
             this.teacherName = teacherName;
             this.teacherUsername = teacherUsername;
             this.classroomID = classroomID;
+            cn = new SqlConnection(dbcon.MyConnection());
         }
-        private Color RandomColor(int assignmentCounter)
+        private Color RandomColor(int announcementCounter)
         {
             //the colors: 138, 197, 255 ,, 209, 236, 241 ,, 233, 233, 233
-            if (assignmentCounter > 3)
-                assignmentCounter = 1;
-            if (assignmentCounter == 1)
+            if (announcementCounter > 3)
+                announcementCounter = 1;
+            if (announcementCounter == 1)
                 return Color.FromArgb(138, 197, 255);
-            else if (assignmentCounter == 2)
+            else if (announcementCounter == 2)
                 return Color.FromArgb(209, 236, 241);
             else
                 return Color.FromArgb(233, 233, 233);
@@ -61,21 +62,21 @@ namespace intial_form_1_
                 dr = cm.ExecuteReader();
                 if (!dr.HasRows)
                 {
-                    noClassLabel.Visible = true;
-                    noClassLabel.Text = "No Announcement Found";
+                    noAnnouncementLabel.Visible = true;
+                    noAnnouncementLabel.Text = "No Announcement Found";
                 }
                 else
                 {
-                    noClassLabel.Visible = false;
-                    int assignmentCounter = 1;
+                    noAnnouncementLabel.Visible = false;
+                    int announcementCounter = 1;
                     while (dr.Read())
                     {
                         teacherNameLabel.Text = teacherName;
                         //Panel
                         Panel panel = new Panel();
                         panel.Size = new Size(691, 100);
-                        panel.BackColor = RandomColor(assignmentCounter);
-                        assignmentCounter++;
+                        panel.BackColor = RandomColor(announcementCounter);
+                        announcementCounter++;
                         panel.BorderStyle = BorderStyle.FixedSingle;
                         panel.Name = dr["announcementID"].ToString();
 
@@ -99,7 +100,7 @@ namespace intial_form_1_
                         announcementDate.Font = new Font("HP Simplified Hans", 12, FontStyle.Bold);
                         announcementDate.AutoSize = true;
                         //announcementDate should be at the bottom right of the panel
-                        announcementDate.Location = new Point(400, 60);
+                        announcementDate.Location = new Point(430, 60);
 
                         panel.Controls.Add(announcementDescription);
                         panel.Controls.Add(announcementTitle);
@@ -108,6 +109,8 @@ namespace intial_form_1_
                         panel.Click += (s, ev) =>
                         {
                             this.Hide();
+                            announcementPanel announcementPanel = new announcementPanel(teacherName, teacherUsername, classroomID, panel.Name);
+                            announcementPanel.Show();
                         };
                     }
                 }
@@ -121,24 +124,20 @@ namespace intial_form_1_
             }
         }
 
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Class classPage = new Class(teacherName, teacherUsername, classroomID);
-        }
         private void CreateAnnouncement_Click(object sender, EventArgs e)
         {
             string announcementTitle = txtAnnounceTitle.Text;
             string announcementDescription = txtAnnounceDesc.Text;
-            string announcementDate = DateTime.Now.ToString("yyyy-MM-dd");
+            string announcementDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             string announcementFile = txtAnnounceFile.Text;
             try
             {
                 cn.Open();
-                cm = new SqlCommand("insert into Announcement(announcementTitle, announcementDescription, announcementDate, username_Teacher, classroomID) values(@announcementTitle, @announcementDescription, @announcementDate, @username_Teacher, @classroomID)", cn);
+                cm = new SqlCommand("insert into Announcement(announcementTitle, announcementDescription, announcementDate, username_Teacher, announcementFile, classroomID) values(@announcementTitle, @announcementDescription, @announcementDate, @username_Teacher, @announcementFile, @classroomID)", cn);
                 cm.Parameters.AddWithValue("@announcementTitle", announcementTitle);
                 cm.Parameters.AddWithValue("@announcementDescription", announcementDescription);
                 cm.Parameters.AddWithValue("@announcementDate", announcementDate);
+                cm.Parameters.AddWithValue("@announcementFile", announcementFile);
                 cm.Parameters.AddWithValue("@username_Teacher", teacherUsername);
                 cm.Parameters.AddWithValue("@classroomID", classroomID);
                 cm.ExecuteNonQuery();
@@ -147,6 +146,7 @@ namespace intial_form_1_
                 txtAnnounceTitle.Clear();
                 txtAnnounceDesc.Clear();
                 txtAnnounceFile.Clear();
+                loadAnnouncementsAtStartPage(sender, e);
             }
             catch (Exception ex)
             {
@@ -170,12 +170,12 @@ namespace intial_form_1_
                 if (dr.HasRows)
                 {
                     //display the data in the textboxes
-                    txtAnnounceTitle.Text = dr["announcementTitle"].ToString();
-                    txtAnnounceDesc.Text = dr["announcementDescription"].ToString();
-                    txtAnnounceFile.Text = dr["announcementFile"].ToString();
+                    modifyTitleBox.Text = dr["announcementTitle"].ToString();
+                    modifyDescBox.Text = dr["announcementDescription"].ToString();
+                    modifyAnnouncementFileBox.Text = dr["announcementFile"].ToString();
+                    toggleUpdateAnnouncementTab();
                 }
                 cn.Close();
-
             }
             catch (Exception ex)
             {
@@ -208,7 +208,7 @@ namespace intial_form_1_
                 if (string.IsNullOrEmpty(announcementFile))
                 {
                     announcementFile = null;
-                    cm.Parameters.AddWithValue("@assignmentFile", DBNull.Value);
+                    cm.Parameters.AddWithValue("@announcementFile", DBNull.Value);
                 }
 
                 // Execute the necessary SQL query to update the record in the database
@@ -216,15 +216,15 @@ namespace intial_form_1_
                 //if data is empty, set it to null run query with dat
                 
                 cm = new SqlCommand("update Announcement set announcementTitle = @announcementTitle, announcementDescription = @announcementDescription, announcementFile = @announcementFile where announcementID = @announcementID", cn);
-                cm.Parameters.AddWithValue("@assignmentDescription", announcementTitle);
-                cm.Parameters.AddWithValue("@assignmentFile", announcementFile);
-                cm.Parameters.AddWithValue("@assignmentTitle", announcementTitle);
+                cm.Parameters.AddWithValue("@announcementDescription", announcementTitle);
+                cm.Parameters.AddWithValue("@announcementFile", announcementFile);
+                cm.Parameters.AddWithValue("@announcementTitle", announcementTitle);
                 cm.Parameters.AddWithValue("@announcementID", this.announcementID);
                 cm.ExecuteNonQuery();
                 cn.Close();
                 // Display a success message or perform any other action upon successful modification
                 MessageBox.Show("Assignment modified successfully.");
-                // AssignmentloadForUpdateDelete(sender, e);
+                AnnouncementLoadForUpdateDelete(sender, e);
                 toggleUpdateAnnouncementTab();
             }
             catch (Exception ex)
@@ -260,6 +260,7 @@ namespace intial_form_1_
                 selectButton.Visible = true;
                 //make all textboxes invisible
                 modifyDescBox.Visible = false;
+                modifyAnnouncementFileBox.Visible = false;
                 modifyTitleBox.Visible = false;
                 //make all labels invisible
                 label14.Visible = false;
@@ -298,6 +299,10 @@ namespace intial_form_1_
                     announcementListForModification.DataSource = dt;
                     cn.Close();
                 }
+                else if (AnnouncementTABS.SelectedTab.Name == "AnnouncementTab")
+                {
+                    loadAnnouncementsAtStartPage(sender, e);
+                }
             }
             catch (Exception ex)
             {
@@ -328,9 +333,8 @@ namespace intial_form_1_
                     {
                         // Get the assignment ID from the selected row
                         int announcementID = Convert.ToInt32(row.Cells["announcementID"].Value);
-
                         // Execute the delete query using the assignment ID
-                        cm = new SqlCommand("DELETE FROM Assignment WHERE announcementID = @announcementID", cn);
+                        cm = new SqlCommand("DELETE FROM announcement WHERE announcementID = @announcementID", cn);
                         cm.Parameters.AddWithValue("@announcementID", announcementID);
                         cn.Open();
                         cm.ExecuteNonQuery();
@@ -348,6 +352,12 @@ namespace intial_form_1_
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+         private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Class classPage = new Class(teacherName, teacherUsername, classroomID);
+            classPage.Show();
         }
     }
 }

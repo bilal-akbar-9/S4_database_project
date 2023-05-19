@@ -19,9 +19,7 @@ namespace intial_form_1_
         SqlCommand cm = new SqlCommand();
         DBConnection dbcon = new DBConnection();
         SqlDataReader dr;
-
         SqlDataAdapter adapter;
-
         string teacherUserName;
         string classroomID;
         String teacherName;
@@ -99,7 +97,7 @@ namespace intial_form_1_
         }
 
         // Global variable to store the selected assignment 
-       
+
 
         private void backButton_Click(object sender, EventArgs e)
         {
@@ -140,103 +138,105 @@ namespace intial_form_1_
         private void loadCommentsToDeleteOrUpdate(object sender, EventArgs e)
         {
 
-                try
+            try
+            {
+                if (commentTABS.SelectedTab.Name == "deleteCommentTab")
                 {
-                    if(commentTABS.SelectedTab.Name == "deleteCommentTab") {
-                        DataTable dt = new DataTable();
-                        cn.Open();
-                        cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
-                        cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
-                        int commentCount = Convert.ToInt32(cm.ExecuteScalar());
-                        //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
-                        if (commentCount == 0)
-                        {
-                            noCommentToDelete_Label.Visible = true;
-                            noCommentToDelete_Label.Text = "No comments for this assignment";
-                            noCommentToDelete_Label.ForeColor = Color.Red;
-
-                        }
-                        else
-                        {
-                            
-                            noCommentToDelete_Label.Visible = false;
-                            adapter = new SqlDataAdapter(cm);
-                            adapter.Fill(dt);
-                            //make delete button and grid visible
-                            Deletebutton.Visible = true;
-                            commentListGridForDeletion.Visible = true;
-                            commentListGridForDeletion.DataSource = dt;
-                        }
-                        //close the connection
-                        cn.Close();
-                    } 
-                     else if(commentTABS.SelectedTab.Name == "updateCommentTab")
+                    DataTable dt = new DataTable();
+                    cn.Open();
+                    cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
+                    cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                    int commentCount = Convert.ToInt32(cm.ExecuteScalar());
+                    //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
+                    if (commentCount == 0)
                     {
-                        DataTable dt = new DataTable();
-                        cn.Open();
-                        cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
-                        cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
-                        int commentCount = Convert.ToInt32(cm.ExecuteScalar());
-                        //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
-                        if (commentCount == 0)
-                        {
-                            noCommentToUpdateLabel.Visible = true;
-                            noCommentToUpdateLabel.Text = "No Comments for this assignment";
-                            noCommentToUpdateLabel.ForeColor = Color.Red;
-                        //select button and grid will be hidden
-                            SelectButton.Visible = false;
-                            commentListForUpdation.Visible = false;
-                        }
-                        else
-                        {
-                            SelectButton.Visible = true;
-                            commentListForUpdation.Visible = true;
-                            noCommentToUpdateLabel.Visible = false;
-                            adapter = new SqlDataAdapter(cm);
-                            adapter.Fill(dt);
-                            commentListForUpdation.DataSource = dt;
-                        }
-                        
-                        cn.Close();
+                        noCommentToDelete_Label.Visible = true;
+                        noCommentToDelete_Label.Text = "No comments for this assignment";
+                        noCommentToDelete_Label.ForeColor = Color.Red;
+
                     }
-                    else if(commentTABS.SelectedTab.Name == "viewCommentsTab") {
-                        //if no row is selected then commentslist
-                         DataTable dt = new DataTable();
-                        cn.Open();
-                        cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
-                        cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
-                        int commentCount = Convert.ToInt32(cm.ExecuteScalar());
-                        //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
-                        if (commentCount == 0)
-                        {
-                            noCommentToViewLabel.Visible = true;
-                            noCommentToViewLabel.Text = "No comments to view";
-                            noCommentToViewLabel.ForeColor = Color.Red;
-                            allCommentsList.Visible = false;
-                        }
-                        else
-                        {
-                            allCommentsList.Visible = true;
-                            noCommentToViewLabel.Visible = false;
-                            adapter = new SqlDataAdapter(cm);
-                            adapter.Fill(dt);
-                            allCommentsList.DataSource = dt;
-                        }
-                        cn.Close();
+                    else
+                    {
+
+                        noCommentToDelete_Label.Visible = false;
+                        adapter = new SqlDataAdapter(cm);
+                        adapter.Fill(dt);
+                        //make delete button and grid visible
+                        Deletebutton.Visible = true;
+                        commentListGridForDeletion.Visible = true;
+                        commentListGridForDeletion.DataSource = dt;
                     }
-                        
-                }
-                catch (Exception ex)
-                {
+                    //close the connection
                     cn.Close();
-                    MessageBox.Show(ex.Message);
                 }
-            
+                else if (commentTABS.SelectedTab.Name == "updateCommentTab")
+                {
+                    DataTable dt = new DataTable();
+                    cn.Open();
+                    cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
+                    cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                    int commentCount = Convert.ToInt32(cm.ExecuteScalar());
+                    //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
+                    if (commentCount == 0)
+                    {
+                        noCommentToUpdateLabel.Visible = true;
+                        noCommentToUpdateLabel.Text = "No Comments for this assignment";
+                        noCommentToUpdateLabel.ForeColor = Color.Red;
+                        //select button and grid will be hidden
+                        SelectButton.Visible = false;
+                        commentListForUpdation.Visible = false;
+                    }
+                    else
+                    {
+                        SelectButton.Visible = true;
+                        commentListForUpdation.Visible = true;
+                        noCommentToUpdateLabel.Visible = false;
+                        adapter = new SqlDataAdapter(cm);
+                        adapter.Fill(dt);
+                        commentListForUpdation.DataSource = dt;
+                    }
+
+                    cn.Close();
+                }
+                else if (commentTABS.SelectedTab.Name == "viewCommentsTab")
+                {
+                    //if no row is selected then commentslist
+                    DataTable dt = new DataTable();
+                    cn.Open();
+                    cm = new SqlCommand("select * from Comment where assignmentID=@AssignmentID", cn);
+                    cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                    int commentCount = Convert.ToInt32(cm.ExecuteScalar());
+                    //if there is no comment for this assignment, then label will be shown to the user, else the grid will be shown
+                    if (commentCount == 0)
+                    {
+                        noCommentToViewLabel.Visible = true;
+                        noCommentToViewLabel.Text = "No comments to view";
+                        noCommentToViewLabel.ForeColor = Color.Red;
+                        allCommentsList.Visible = false;
+                    }
+                    else
+                    {
+                        allCommentsList.Visible = true;
+                        noCommentToViewLabel.Visible = false;
+                        adapter = new SqlDataAdapter(cm);
+                        adapter.Fill(dt);
+                        allCommentsList.DataSource = dt;
+                    }
+                    cn.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void DeleteCommentButtonClicked(object sender, EventArgs e)
         {
-            //check if the comment is selected or not
+                //check if the comment is selected or not
             if (commentListGridForDeletion.SelectedRows.Count == 0 || commentListGridForDeletion.SelectedRows[0].IsNewRow)
             {
                 MessageBox.Show("Please select a comment to delete");
@@ -250,7 +250,7 @@ namespace intial_form_1_
                 foreach (DataGridViewRow row in commentListGridForDeletion.SelectedRows)
                 {
                     try
-                    {   
+                    {
                         int commentID = Convert.ToInt32(row.Cells["commentID"].Value);
                         cm = new SqlCommand("delete from Comment where commentID=@CommentID", cn);
                         cm.Parameters.AddWithValue("@CommentID", commentID);
@@ -271,7 +271,7 @@ namespace intial_form_1_
                 dt.Clear();
                 adapter.Fill(dt);
                 cn.Close();
-               //if grid is empty then hide the delete button
+                //if grid is empty then hide the delete button
                 if (dt.Rows.Count == 0)
                 {
                     Deletebutton.Visible = false;
@@ -283,8 +283,9 @@ namespace intial_form_1_
             }
         }
 
-        private void toggleUpdateCommentTab() {
-            if(commentListForUpdation.Visible == true)
+        private void toggleUpdateCommentTab()
+        {
+            if (commentListForUpdation.Visible == true)
             {
                 commentListForUpdation.Visible = false;
                 SelectButton.Visible = false;
@@ -303,7 +304,8 @@ namespace intial_form_1_
         }
         private void selectCommentsButtonClicked(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 //get the comment id from the selected row
                 int commentID = Convert.ToInt32(commentListForUpdation.SelectedRows[0].Cells["commentID"].Value);
 
@@ -321,7 +323,7 @@ namespace intial_form_1_
                 dr.Close();
                 cn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -331,18 +333,18 @@ namespace intial_form_1_
         {
             try
             {
-            string CommentDesc = txtCommentDescUPDAtE.Text;
-            string CommentDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            //store the comment id from the selected row
-            int commentID = Convert.ToInt32(commentListForUpdation.SelectedRows[0].Cells["commentID"].Value);
-            //handle null value with messagebox
-            if (CommentDesc == "")
-            {
-                MessageBox.Show("Please fill all the fields");
-                return;
-            }
+                string CommentDesc = txtCommentDescUPDAtE.Text;
+                string CommentDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                //store the comment id from the selected row
+                int commentID = Convert.ToInt32(commentListForUpdation.SelectedRows[0].Cells["commentID"].Value);
+                //handle null value with messagebox
+                if (CommentDesc == "")
+                {
+                    MessageBox.Show("Please fill all the fields");
+                    return;
+                }
 
-            
+
                 cn.Open();
                 cm = new SqlCommand("update Comment set commentDescription=@CommentDesc, commentDate=@CommentDate where commentID=@CommentID", cn);
                 cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
