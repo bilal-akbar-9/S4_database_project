@@ -55,9 +55,14 @@ create table Announcement
     foreign key (classroomID) references Classroom(classroomID) on delete cascade
 )
 
+-- insert into announcement values ('test', 'test', '2021-05-05', 'admin', 'test', 1)
+
+
+
 create table Material
 (
     materialID int IDENTITY(1,1) not null,
+    materialTitle varchar(100) not null,
     materialDescription varchar(100) not null,
     materialType varchar(100) not null,
     username_Teacher varchar(20) not null,
@@ -115,6 +120,11 @@ create table Comment
     foreign key (assignmentID) references Assignment(assignmentID) on delete cascade,
     foreign key (commentUserName) references tblUser(username)
 )
+
+
+
+drop table Comment
+
 create table announcementComment
 (
     announcementCommentID int identity(1,1) not null,
