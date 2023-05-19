@@ -194,7 +194,7 @@
             this.commentTABS.Margin = new System.Windows.Forms.Padding(2);
             this.commentTABS.Name = "commentTABS";
             this.commentTABS.SelectedIndex = 0;
-            this.commentTABS.Size = new System.Drawing.Size(921, 431);
+            this.commentTABS.Size = new System.Drawing.Size(906, 431);
             this.commentTABS.TabIndex = 0;
             this.commentTABS.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
             // 
@@ -204,7 +204,7 @@
             this.viewCommentsTab.Controls.Add(this.allCommentsList);
             this.viewCommentsTab.Location = new System.Drawing.Point(4, 22);
             this.viewCommentsTab.Name = "viewCommentsTab";
-            this.viewCommentsTab.Size = new System.Drawing.Size(913, 405);
+            this.viewCommentsTab.Size = new System.Drawing.Size(898, 405);
             this.viewCommentsTab.TabIndex = 3;
             this.viewCommentsTab.Text = "Comments";
             this.viewCommentsTab.UseVisualStyleBackColor = true;
@@ -468,7 +468,6 @@
             this.commentListGridForDeletion.AllowUserToAddRows = false;
             this.commentListGridForDeletion.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.commentListGridForDeletion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;

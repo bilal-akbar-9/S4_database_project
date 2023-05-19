@@ -141,6 +141,13 @@ namespace intial_form_1_
             Material material = new Material(teacherName, teacherUsername, classroomID);
             material.Show();
         }
+
+        private void generateReportButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            generateReport generateReport = new generateReport(teacherName, teacherUsername, classroomID);
+            generateReport.Show();
+        }
         //function that changes the name of classroom to the clas name of class code received
 
 

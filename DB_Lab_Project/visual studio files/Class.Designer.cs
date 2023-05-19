@@ -33,6 +33,7 @@ namespace intial_form_1_
             this.assignmentButton = new System.Windows.Forms.Button();
             this.Material = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.generateReportButton = new System.Windows.Forms.Button();
             this.teacherNameLabel = new System.Windows.Forms.Label();
             this.classroomName = new System.Windows.Forms.Label();
             this.announcementButton = new System.Windows.Forms.Button();
@@ -67,12 +68,26 @@ namespace intial_form_1_
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.Controls.Add(this.generateReportButton);
             this.panel1.Controls.Add(this.teacherNameLabel);
             this.panel1.Controls.Add(this.classroomName);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(915, 83);
             this.panel1.TabIndex = 0;
+            // 
+            // generateReportButton
+            // 
+            this.generateReportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(103)))));
+            this.generateReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateReportButton.ForeColor = System.Drawing.Color.White;
+            this.generateReportButton.Location = new System.Drawing.Point(731, 19);
+            this.generateReportButton.Name = "generateReportButton";
+            this.generateReportButton.Size = new System.Drawing.Size(172, 47);
+            this.generateReportButton.TabIndex = 28;
+            this.generateReportButton.Text = "Generate Report";
+            this.generateReportButton.UseVisualStyleBackColor = false;
+            this.generateReportButton.Click += new System.EventHandler(this.generateReportButton_Click);
             // 
             // teacherNameLabel
             // 
@@ -117,7 +132,7 @@ namespace intial_form_1_
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
             this.backButton.Location = new System.Drawing.Point(26, 448);
-            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(86, 40);
             this.backButton.TabIndex = 27;
@@ -160,5 +175,6 @@ namespace intial_form_1_
         private System.Windows.Forms.Label teacherNameLabel;
         private System.Windows.Forms.Button announcementButton;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Button generateReportButton;
     }
 }
