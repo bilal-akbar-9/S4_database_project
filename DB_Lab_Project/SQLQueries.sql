@@ -108,19 +108,22 @@ create table Comment
     commentDescription varchar(100) not null,
     commentDate date not null,
     assignmentID int not null,
+    commentUserName varchar(20) not null,
     -- Primary key
     primary key (commentID),
     -- Foreign key
-    foreign key (assignmentID) references Assignment(assignmentID) on delete cascade
+    foreign key (assignmentID) references Assignment(assignmentID) on delete cascade,
+    foreign key (commentUserName) references tblUser(username)
 )
-
 create table announcementComment
 (
     announcementCommentID int identity(1,1) not null,
     announcementID int not null,
+    commentUserName varchar(20) not null,
     commentDescription varchar(100) not null,
     commentDate date not null,
     -- Primary key
     primary key (announcementCommentID),
-    foreign key (announcementID) references Announcement(announcementID) on DELETE CASCADE
+    foreign key (announcementID) references Announcement(announcementID) on DELETE CASCADE,
+    foreign key (commentUserName) references tblUser(username)
 )

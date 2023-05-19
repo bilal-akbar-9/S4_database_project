@@ -73,7 +73,7 @@ namespace intial_form_1_
             }
             else
             {   
-                string date = DateTime.Now.ToString("yyyy-MM-dd");
+                string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 string textBoxsubmissionnew =textBoxsubmission.Text;
                 cn.Open();
                 cm = new SqlCommand("INSERT INTO Submissions (studentUsername, assignmentID, submissionFile, submissionDate, submissionPoints) VALUES (@studentUsername, @assignmentID, @textBoxsubmissionnew, @date, @submissionPoints)", cn);
