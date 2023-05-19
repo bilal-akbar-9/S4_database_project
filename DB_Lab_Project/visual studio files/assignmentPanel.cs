@@ -79,10 +79,11 @@ namespace intial_form_1_
             try
             {
                 cn.Open();
-                cm = new SqlCommand("insert into Comment (commentDescription,commentDate,assignmentID) values (@CommentDesc,@CommentDate,@AssignmentID)", cn);
+                cm = new SqlCommand("insert into Comment (commentDescription,commentDate,assignmentID,commentUserName) values (@CommentDesc,@CommentDate,@AssignmentID,@commentUserName)", cn);
                 cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
                 cm.Parameters.AddWithValue("@CommentDate", CommentDate);
                 cm.Parameters.AddWithValue("@AssignmentID", this.assignmentID);
+                cm.Parameters.AddWithValue("@commentUserName", this.teacherUserName);
                 cm.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("Comment Added Successfully", "Comment", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -153,7 +154,6 @@ namespace intial_form_1_
                         noCommentToDelete_Label.Visible = true;
                         noCommentToDelete_Label.Text = "No comments for this assignment";
                         noCommentToDelete_Label.ForeColor = Color.Red;
-
                     }
                     else
                     {

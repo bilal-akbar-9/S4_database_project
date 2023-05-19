@@ -1,6 +1,6 @@
 ﻿namespace intial_form_1_
 {
-    partial class StudentAssignments
+    partial class studentAssignments
     {
         /// <summary>
         /// Required designer variable.
@@ -46,10 +46,10 @@
             this.backButtonStu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.backButtonStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButtonStu.ForeColor = System.Drawing.Color.White;
-            this.backButtonStu.Location = new System.Drawing.Point(35, 731);
-            this.backButtonStu.Margin = new System.Windows.Forms.Padding(2);
+            this.backButtonStu.Location = new System.Drawing.Point(23, 475);
+            this.backButtonStu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.backButtonStu.Name = "backButtonStu";
-            this.backButtonStu.Size = new System.Drawing.Size(129, 62);
+            this.backButtonStu.Size = new System.Drawing.Size(86, 40);
             this.backButtonStu.TabIndex = 32;
             this.backButtonStu.Text = "←";
             this.backButtonStu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -60,10 +60,10 @@
             // 
             this.flowLayoutStudentAssignment.AutoScroll = true;
             this.flowLayoutStudentAssignment.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutStudentAssignment.Location = new System.Drawing.Point(245, 206);
+            this.flowLayoutStudentAssignment.Location = new System.Drawing.Point(163, 134);
             this.flowLayoutStudentAssignment.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutStudentAssignment.Name = "flowLayoutStudentAssignment";
-            this.flowLayoutStudentAssignment.Size = new System.Drawing.Size(1152, 486);
+            this.flowLayoutStudentAssignment.Size = new System.Drawing.Size(768, 316);
             this.flowLayoutStudentAssignment.TabIndex = 31;
             this.flowLayoutStudentAssignment.Visible = false;
             this.flowLayoutStudentAssignment.WrapContents = false;
@@ -73,10 +73,9 @@
             this.noClassLabelStu.AutoSize = true;
             this.noClassLabelStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noClassLabelStu.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.noClassLabelStu.Location = new System.Drawing.Point(13, 206);
-            this.noClassLabelStu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.noClassLabelStu.Location = new System.Drawing.Point(9, 134);
             this.noClassLabelStu.Name = "noClassLabelStu";
-            this.noClassLabelStu.Size = new System.Drawing.Size(164, 29);
+            this.noClassLabelStu.Size = new System.Drawing.Size(106, 20);
             this.noClassLabelStu.TabIndex = 30;
             this.noClassLabelStu.Text = "No Class Text";
             // 
@@ -86,10 +85,9 @@
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Controls.Add(this.teacherNameStudentLabel);
             this.panel1.Controls.Add(this.classroomStuName);
-            this.panel1.Location = new System.Drawing.Point(0, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(1, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1599, 129);
+            this.panel1.Size = new System.Drawing.Size(1066, 84);
             this.panel1.TabIndex = 28;
             // 
             // teacherNameStudentLabel
@@ -97,10 +95,9 @@
             this.teacherNameStudentLabel.AutoSize = true;
             this.teacherNameStudentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teacherNameStudentLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.teacherNameStudentLabel.Location = new System.Drawing.Point(44, 85);
-            this.teacherNameStudentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.teacherNameStudentLabel.Location = new System.Drawing.Point(27, 55);
             this.teacherNameStudentLabel.Name = "teacherNameStudentLabel";
-            this.teacherNameStudentLabel.Size = new System.Drawing.Size(79, 29);
+            this.teacherNameStudentLabel.Size = new System.Drawing.Size(51, 20);
             this.teacherNameStudentLabel.TabIndex = 4;
             this.teacherNameStudentLabel.Text = "label1";
             // 
@@ -109,10 +106,9 @@
             this.classroomStuName.AutoSize = true;
             this.classroomStuName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomStuName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.classroomStuName.Location = new System.Drawing.Point(27, 34);
-            this.classroomStuName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.classroomStuName.Location = new System.Drawing.Point(16, 22);
             this.classroomStuName.Name = "classroomStuName";
-            this.classroomStuName.Size = new System.Drawing.Size(257, 47);
+            this.classroomStuName.Size = new System.Drawing.Size(170, 31);
             this.classroomStuName.TabIndex = 0;
             this.classroomStuName.Text = "Assignments";
             // 
@@ -121,25 +117,25 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(709, 764);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(473, 497);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 29);
+            this.label1.Size = new System.Drawing.Size(150, 20);
             this.label1.TabIndex = 29;
             this.label1.Text = "Made by BTI with 💓";
             this.label1.Visible = false;
             // 
             // StudentAssignments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1601, 827);
+            this.ClientSize = new System.Drawing.Size(1067, 538);
             this.Controls.Add(this.backButtonStu);
             this.Controls.Add(this.flowLayoutStudentAssignment);
             this.Controls.Add(this.noClassLabelStu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StudentAssignments";
             this.Text = "StudentAssignments";
             this.Activated += new System.EventHandler(this.loadAssignmentAtStartPageStudentClas);

@@ -98,11 +98,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentAssignments.cs">
+    <Compile Include="studentAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentAssignments.Designer.cs">
-      <DependentUpon>StudentAssignments.cs</DependentUpon>
+    <Compile Include="studentAnnouncement.Designer.cs">
+      <DependentUpon>studentAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentAssignments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentAssignments.Designer.cs">
+      <DependentUpon>studentAssignments.cs</DependentUpon>
     </Compile>
     <Compile Include="studentClassroom.cs">
       <SubType>Form</SubType>
@@ -156,8 +162,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StudentAssignments.resx">
-      <DependentUpon>StudentAssignments.cs</DependentUpon>
+    <EmbeddedResource Include="studentAnnouncement.resx">
+      <DependentUpon>studentAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentAssignments.resx">
+      <DependentUpon>studentAssignments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="studentClassroom.resx">
       <DependentUpon>studentClassroom.cs</DependentUpon>

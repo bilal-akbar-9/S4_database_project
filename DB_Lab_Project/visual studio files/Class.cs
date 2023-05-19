@@ -65,8 +65,10 @@ namespace intial_form_1_
                 if (dr.HasRows)
                 {
                     classroomName.Text = dr["classroomName"].ToString();
+                    if (studentClassPanelFlag == 1)
+                    teacherNameLabel.Text = "Name: " + studentName;
+                    else 
                     teacherNameLabel.Text = "Name: " + teacherName;
-                    //
                 }
                 else
                 {
@@ -93,7 +95,7 @@ namespace intial_form_1_
             }
             else
             {
-                StudentAssignments studentAssignments = new StudentAssignments(studentName, studentUsername, classroomID, teacherName, teacherUsername);
+                studentAssignments studentAssignments = new studentAssignments(studentName, studentUsername, classroomID, teacherName, teacherUsername);
                 studentAssignments.Show();
             }
         }
@@ -107,8 +109,8 @@ namespace intial_form_1_
             }
             else
             {
-                // Announcement announcements = new Announcement(studentName, studentUsername, classroomID, "student");
-                // announcements.Show();
+                studentAnnouncement studentAnnouncement = new studentAnnouncement(studentName, studentUsername, classroomID);
+                studentAnnouncement.Show();
             }
         }
 

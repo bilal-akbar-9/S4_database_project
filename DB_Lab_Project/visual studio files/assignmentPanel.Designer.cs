@@ -96,10 +96,11 @@
             this.TeacherTabs.Controls.Add(this.assDesTab);
             this.TeacherTabs.Controls.Add(this.ViewProgressTab);
             this.TeacherTabs.Controls.Add(this.CommentsTab);
-            this.TeacherTabs.Location = new System.Drawing.Point(-2, 5);
+            this.TeacherTabs.Location = new System.Drawing.Point(-1, 3);
+            this.TeacherTabs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TeacherTabs.Name = "TeacherTabs";
             this.TeacherTabs.SelectedIndex = 0;
-            this.TeacherTabs.Size = new System.Drawing.Size(1371, 702);
+            this.TeacherTabs.Size = new System.Drawing.Size(914, 456);
             this.TeacherTabs.TabIndex = 1;
             this.TeacherTabs.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
             // 
@@ -116,10 +117,9 @@
             this.assDesTab.Controls.Add(this.dueDate);
             this.assDesTab.Controls.Add(this.label1);
             this.assDesTab.Controls.Add(this.assignmentTitle);
-            this.assDesTab.Location = new System.Drawing.Point(4, 29);
-            this.assDesTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.assDesTab.Location = new System.Drawing.Point(4, 22);
             this.assDesTab.Name = "assDesTab";
-            this.assDesTab.Size = new System.Drawing.Size(1363, 669);
+            this.assDesTab.Size = new System.Drawing.Size(906, 430);
             this.assDesTab.TabIndex = 4;
             this.assDesTab.Text = "Assignment";
             // 
@@ -127,59 +127,62 @@
             // 
             this.dueDateLabel.AutoSize = true;
             this.dueDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dueDateLabel.Location = new System.Drawing.Point(1029, 95);
-            this.dueDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dueDateLabel.Location = new System.Drawing.Point(686, 62);
             this.dueDateLabel.Name = "dueDateLabel";
-            this.dueDateLabel.Size = new System.Drawing.Size(79, 29);
+            this.dueDateLabel.Size = new System.Drawing.Size(51, 20);
             this.dueDateLabel.TabIndex = 47;
             this.dueDateLabel.Text = "label2";
             // 
             // txtAssPoints
             // 
             this.txtAssPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssPoints.Location = new System.Drawing.Point(908, 271);
+            this.txtAssPoints.Location = new System.Drawing.Point(605, 176);
+            this.txtAssPoints.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssPoints.Name = "txtAssPoints";
             this.txtAssPoints.ReadOnly = true;
-            this.txtAssPoints.Size = new System.Drawing.Size(216, 35);
+            this.txtAssPoints.Size = new System.Drawing.Size(145, 26);
             this.txtAssPoints.TabIndex = 45;
             // 
             // txtAssignmetFile
             // 
             this.txtAssignmetFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssignmetFile.Location = new System.Drawing.Point(908, 398);
+            this.txtAssignmetFile.Location = new System.Drawing.Point(605, 259);
+            this.txtAssignmetFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssignmetFile.Name = "txtAssignmetFile";
             this.txtAssignmetFile.ReadOnly = true;
-            this.txtAssignmetFile.Size = new System.Drawing.Size(216, 35);
+            this.txtAssignmetFile.Size = new System.Drawing.Size(145, 26);
             this.txtAssignmetFile.TabIndex = 46;
             // 
             // txtAssTitle
             // 
-            this.txtAssTitle.Location = new System.Drawing.Point(123, 146);
+            this.txtAssTitle.Location = new System.Drawing.Point(82, 95);
+            this.txtAssTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssTitle.Multiline = true;
             this.txtAssTitle.Name = "txtAssTitle";
             this.txtAssTitle.ReadOnly = true;
             this.txtAssTitle.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssTitle.Size = new System.Drawing.Size(632, 46);
+            this.txtAssTitle.Size = new System.Drawing.Size(423, 31);
             this.txtAssTitle.TabIndex = 44;
-            // this.txtAssTitle.TextChanged += new System.EventHandler(this.txtAssTitle_TextChanged);
             // 
             // txtAssDesc
             // 
-            this.txtAssDesc.Location = new System.Drawing.Point(123, 271);
+            this.txtAssDesc.Location = new System.Drawing.Point(82, 176);
+            this.txtAssDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssDesc.Multiline = true;
             this.txtAssDesc.Name = "txtAssDesc";
             this.txtAssDesc.ReadOnly = true;
             this.txtAssDesc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssDesc.Size = new System.Drawing.Size(632, 276);
+            this.txtAssDesc.Size = new System.Drawing.Size(423, 181);
             this.txtAssDesc.TabIndex = 43;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(903, 346);
+            this.label4.Location = new System.Drawing.Point(602, 225);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 29);
+            this.label4.Size = new System.Drawing.Size(38, 20);
             this.label4.TabIndex = 42;
             this.label4.Text = "File";
             // 
@@ -187,9 +190,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(903, 220);
+            this.label3.Location = new System.Drawing.Point(602, 143);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 29);
+            this.label3.Size = new System.Drawing.Size(50, 20);
             this.label3.TabIndex = 41;
             this.label3.Text = "Point";
             // 
@@ -197,9 +201,10 @@
             // 
             this.dueDate.AutoSize = true;
             this.dueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dueDate.Location = new System.Drawing.Point(903, 98);
+            this.dueDate.Location = new System.Drawing.Point(602, 64);
+            this.dueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dueDate.Name = "dueDate";
-            this.dueDate.Size = new System.Drawing.Size(121, 29);
+            this.dueDate.Size = new System.Drawing.Size(86, 20);
             this.dueDate.TabIndex = 40;
             this.dueDate.Text = "DueDate:";
             // 
@@ -207,9 +212,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(118, 220);
+            this.label1.Location = new System.Drawing.Point(79, 143);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 29);
+            this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 39;
             this.label1.Text = "Description";
             // 
@@ -217,9 +223,10 @@
             // 
             this.assignmentTitle.AutoSize = true;
             this.assignmentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assignmentTitle.Location = new System.Drawing.Point(118, 98);
+            this.assignmentTitle.Location = new System.Drawing.Point(79, 64);
+            this.assignmentTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.assignmentTitle.Name = "assignmentTitle";
-            this.assignmentTitle.Size = new System.Drawing.Size(66, 29);
+            this.assignmentTitle.Size = new System.Drawing.Size(43, 20);
             this.assignmentTitle.TabIndex = 38;
             this.assignmentTitle.Text = "Title";
             // 
@@ -230,10 +237,11 @@
             this.ViewProgressTab.Controls.Add(this.ViewProgressDatagridView);
             this.ViewProgressTab.Controls.Add(this.buttonViewProgress);
             this.ViewProgressTab.Controls.Add(this.labelViewProgress);
-            this.ViewProgressTab.Location = new System.Drawing.Point(4, 29);
+            this.ViewProgressTab.Location = new System.Drawing.Point(4, 22);
+            this.ViewProgressTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ViewProgressTab.Name = "ViewProgressTab";
-            this.ViewProgressTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.ViewProgressTab.Size = new System.Drawing.Size(1363, 669);
+            this.ViewProgressTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewProgressTab.Size = new System.Drawing.Size(906, 430);
             this.ViewProgressTab.TabIndex = 2;
             this.ViewProgressTab.Text = "View Progress";
             // 
@@ -241,10 +249,9 @@
             // 
             this.countlabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.countlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countlabel.Location = new System.Drawing.Point(38, 95);
-            this.countlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.countlabel.Location = new System.Drawing.Point(25, 62);
             this.countlabel.Name = "countlabel";
-            this.countlabel.Size = new System.Drawing.Size(312, 88);
+            this.countlabel.Size = new System.Drawing.Size(208, 57);
             this.countlabel.TabIndex = 10;
             this.countlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.countlabel.Visible = false;
@@ -255,12 +262,13 @@
             this.ViewProgressDatagridView.AllowUserToDeleteRows = false;
             this.ViewProgressDatagridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.ViewProgressDatagridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewProgressDatagridView.Location = new System.Drawing.Point(44, 197);
+            this.ViewProgressDatagridView.Location = new System.Drawing.Point(29, 128);
+            this.ViewProgressDatagridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ViewProgressDatagridView.Name = "ViewProgressDatagridView";
             this.ViewProgressDatagridView.ReadOnly = true;
             this.ViewProgressDatagridView.RowHeadersWidth = 62;
             this.ViewProgressDatagridView.RowTemplate.Height = 28;
-            this.ViewProgressDatagridView.Size = new System.Drawing.Size(1245, 438);
+            this.ViewProgressDatagridView.Size = new System.Drawing.Size(830, 285);
             this.ViewProgressDatagridView.TabIndex = 9;
             // 
             // buttonViewProgress
@@ -270,9 +278,10 @@
             this.buttonViewProgress.FlatAppearance.BorderSize = 3;
             this.buttonViewProgress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonViewProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewProgress.Location = new System.Drawing.Point(969, 111);
+            this.buttonViewProgress.Location = new System.Drawing.Point(646, 72);
+            this.buttonViewProgress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonViewProgress.Name = "buttonViewProgress";
-            this.buttonViewProgress.Size = new System.Drawing.Size(320, 57);
+            this.buttonViewProgress.Size = new System.Drawing.Size(213, 37);
             this.buttonViewProgress.TabIndex = 8;
             this.buttonViewProgress.Text = "Check";
             this.buttonViewProgress.UseVisualStyleBackColor = false;
@@ -282,9 +291,10 @@
             // 
             this.labelViewProgress.AutoSize = true;
             this.labelViewProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelViewProgress.Location = new System.Drawing.Point(585, 52);
+            this.labelViewProgress.Location = new System.Drawing.Point(390, 34);
+            this.labelViewProgress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelViewProgress.Name = "labelViewProgress";
-            this.labelViewProgress.Size = new System.Drawing.Size(236, 37);
+            this.labelViewProgress.Size = new System.Drawing.Size(166, 26);
             this.labelViewProgress.TabIndex = 1;
             this.labelViewProgress.Text = "View Progress";
             // 
@@ -292,10 +302,11 @@
             // 
             this.CommentsTab.BackColor = System.Drawing.SystemColors.HotTrack;
             this.CommentsTab.Controls.Add(this.commentTABS);
-            this.CommentsTab.Location = new System.Drawing.Point(4, 29);
+            this.CommentsTab.Location = new System.Drawing.Point(4, 22);
+            this.CommentsTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CommentsTab.Name = "CommentsTab";
-            this.CommentsTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.CommentsTab.Size = new System.Drawing.Size(1363, 669);
+            this.CommentsTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CommentsTab.Size = new System.Drawing.Size(906, 430);
             this.CommentsTab.TabIndex = 3;
             this.CommentsTab.Text = "Comments";
             // 
@@ -306,9 +317,10 @@
             this.commentTABS.Controls.Add(this.updateCommentTab);
             this.commentTABS.Controls.Add(this.deleteCommentTab);
             this.commentTABS.Location = new System.Drawing.Point(0, 0);
+            this.commentTABS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.commentTABS.Name = "commentTABS";
             this.commentTABS.SelectedIndex = 0;
-            this.commentTABS.Size = new System.Drawing.Size(1382, 663);
+            this.commentTABS.Size = new System.Drawing.Size(921, 431);
             this.commentTABS.TabIndex = 0;
             this.commentTABS.Click += new System.EventHandler(this.loadCommentsToDeleteOrUpdate);
             // 
@@ -316,10 +328,9 @@
             // 
             this.viewCommentsTab.Controls.Add(this.noCommentToViewLabel);
             this.viewCommentsTab.Controls.Add(this.allCommentsList);
-            this.viewCommentsTab.Location = new System.Drawing.Point(4, 29);
-            this.viewCommentsTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.viewCommentsTab.Location = new System.Drawing.Point(4, 22);
             this.viewCommentsTab.Name = "viewCommentsTab";
-            this.viewCommentsTab.Size = new System.Drawing.Size(1374, 630);
+            this.viewCommentsTab.Size = new System.Drawing.Size(913, 405);
             this.viewCommentsTab.TabIndex = 3;
             this.viewCommentsTab.Text = "Comments";
             this.viewCommentsTab.UseVisualStyleBackColor = true;
@@ -327,10 +338,9 @@
             // noCommentToViewLabel
             // 
             this.noCommentToViewLabel.AutoSize = true;
-            this.noCommentToViewLabel.Location = new System.Drawing.Point(594, 302);
-            this.noCommentToViewLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.noCommentToViewLabel.Location = new System.Drawing.Point(396, 196);
             this.noCommentToViewLabel.Name = "noCommentToViewLabel";
-            this.noCommentToViewLabel.Size = new System.Drawing.Size(159, 20);
+            this.noCommentToViewLabel.Size = new System.Drawing.Size(109, 13);
             this.noCommentToViewLabel.TabIndex = 27;
             this.noCommentToViewLabel.Text = "No comments to view";
             this.noCommentToViewLabel.Visible = false;
@@ -352,10 +362,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.allCommentsList.DefaultCellStyle = dataGridViewCellStyle1;
-            this.allCommentsList.Location = new System.Drawing.Point(5, 12);
+            this.allCommentsList.Location = new System.Drawing.Point(3, 8);
+            this.allCommentsList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.allCommentsList.Name = "allCommentsList";
             this.allCommentsList.RowHeadersWidth = 62;
-            this.allCommentsList.Size = new System.Drawing.Size(1338, 600);
+            this.allCommentsList.Size = new System.Drawing.Size(892, 390);
             this.allCommentsList.TabIndex = 0;
             // 
             // addCommentTab
@@ -365,10 +376,11 @@
             this.addCommentTab.Controls.Add(this.txtCommentDesc);
             this.addCommentTab.Controls.Add(this.labelCommentDesc);
             this.addCommentTab.Controls.Add(this.labelnewComment);
-            this.addCommentTab.Location = new System.Drawing.Point(4, 29);
+            this.addCommentTab.Location = new System.Drawing.Point(4, 22);
+            this.addCommentTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addCommentTab.Name = "addCommentTab";
-            this.addCommentTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.addCommentTab.Size = new System.Drawing.Size(1374, 630);
+            this.addCommentTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCommentTab.Size = new System.Drawing.Size(913, 405);
             this.addCommentTab.TabIndex = 0;
             this.addCommentTab.Text = "Add Comment";
             // 
@@ -379,9 +391,10 @@
             this.buttonAddComment.FlatAppearance.BorderSize = 3;
             this.buttonAddComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddComment.Location = new System.Drawing.Point(897, 446);
+            this.buttonAddComment.Location = new System.Drawing.Point(598, 290);
+            this.buttonAddComment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAddComment.Name = "buttonAddComment";
-            this.buttonAddComment.Size = new System.Drawing.Size(232, 49);
+            this.buttonAddComment.Size = new System.Drawing.Size(155, 32);
             this.buttonAddComment.TabIndex = 11;
             this.buttonAddComment.Text = "Post";
             this.buttonAddComment.UseVisualStyleBackColor = false;
@@ -391,19 +404,21 @@
             // 
             this.txtCommentDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCommentDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommentDesc.Location = new System.Drawing.Point(236, 197);
+            this.txtCommentDesc.Location = new System.Drawing.Point(157, 128);
+            this.txtCommentDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCommentDesc.Multiline = true;
             this.txtCommentDesc.Name = "txtCommentDesc";
-            this.txtCommentDesc.Size = new System.Drawing.Size(894, 217);
+            this.txtCommentDesc.Size = new System.Drawing.Size(596, 141);
             this.txtCommentDesc.TabIndex = 9;
             // 
             // labelCommentDesc
             // 
             this.labelCommentDesc.AutoSize = true;
             this.labelCommentDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCommentDesc.Location = new System.Drawing.Point(231, 151);
+            this.labelCommentDesc.Location = new System.Drawing.Point(154, 98);
+            this.labelCommentDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCommentDesc.Name = "labelCommentDesc";
-            this.labelCommentDesc.Size = new System.Drawing.Size(223, 26);
+            this.labelCommentDesc.Size = new System.Drawing.Size(153, 18);
             this.labelCommentDesc.TabIndex = 7;
             this.labelCommentDesc.Text = "Comment Description";
             // 
@@ -411,9 +426,10 @@
             // 
             this.labelnewComment.AutoSize = true;
             this.labelnewComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelnewComment.Location = new System.Drawing.Point(561, 35);
+            this.labelnewComment.Location = new System.Drawing.Point(374, 23);
+            this.labelnewComment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelnewComment.Name = "labelnewComment";
-            this.labelnewComment.Size = new System.Drawing.Size(240, 37);
+            this.labelnewComment.Size = new System.Drawing.Size(169, 26);
             this.labelnewComment.TabIndex = 6;
             this.labelnewComment.Text = "New Comment";
             // 
@@ -427,20 +443,20 @@
             this.updateCommentTab.Controls.Add(this.labelCommentDescUpdate);
             this.updateCommentTab.Controls.Add(this.txtUpdateComment);
             this.updateCommentTab.Controls.Add(this.commentListForUpdation);
-            this.updateCommentTab.Location = new System.Drawing.Point(4, 29);
+            this.updateCommentTab.Location = new System.Drawing.Point(4, 22);
+            this.updateCommentTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updateCommentTab.Name = "updateCommentTab";
-            this.updateCommentTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.updateCommentTab.Size = new System.Drawing.Size(1374, 630);
+            this.updateCommentTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateCommentTab.Size = new System.Drawing.Size(913, 405);
             this.updateCommentTab.TabIndex = 2;
             this.updateCommentTab.Text = "Update Comment";
             // 
             // noCommentToUpdateLabel
             // 
             this.noCommentToUpdateLabel.AutoSize = true;
-            this.noCommentToUpdateLabel.Location = new System.Drawing.Point(592, 308);
-            this.noCommentToUpdateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.noCommentToUpdateLabel.Location = new System.Drawing.Point(395, 200);
             this.noCommentToUpdateLabel.Name = "noCommentToUpdateLabel";
-            this.noCommentToUpdateLabel.Size = new System.Drawing.Size(179, 20);
+            this.noCommentToUpdateLabel.Size = new System.Drawing.Size(120, 13);
             this.noCommentToUpdateLabel.TabIndex = 26;
             this.noCommentToUpdateLabel.Text = "No comments to update";
             this.noCommentToUpdateLabel.Visible = false;
@@ -452,9 +468,10 @@
             this.SelectButton.FlatAppearance.BorderSize = 3;
             this.SelectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SelectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectButton.Location = new System.Drawing.Point(1094, 558);
+            this.SelectButton.Location = new System.Drawing.Point(729, 363);
+            this.SelectButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SelectButton.Name = "SelectButton";
-            this.SelectButton.Size = new System.Drawing.Size(232, 49);
+            this.SelectButton.Size = new System.Drawing.Size(155, 32);
             this.SelectButton.TabIndex = 25;
             this.SelectButton.Text = "Select";
             this.SelectButton.UseVisualStyleBackColor = false;
@@ -467,9 +484,10 @@
             this.updateButton.FlatAppearance.BorderSize = 3;
             this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.Location = new System.Drawing.Point(1094, 558);
+            this.updateButton.Location = new System.Drawing.Point(729, 363);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(232, 49);
+            this.updateButton.Size = new System.Drawing.Size(155, 32);
             this.updateButton.TabIndex = 19;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = false;
@@ -479,10 +497,11 @@
             // txtCommentDescUPDAtE
             // 
             this.txtCommentDescUPDAtE.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommentDescUPDAtE.Location = new System.Drawing.Point(158, 208);
+            this.txtCommentDescUPDAtE.Location = new System.Drawing.Point(105, 135);
+            this.txtCommentDescUPDAtE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCommentDescUPDAtE.Multiline = true;
             this.txtCommentDescUPDAtE.Name = "txtCommentDescUPDAtE";
-            this.txtCommentDescUPDAtE.Size = new System.Drawing.Size(1020, 253);
+            this.txtCommentDescUPDAtE.Size = new System.Drawing.Size(681, 166);
             this.txtCommentDescUPDAtE.TabIndex = 17;
             this.txtCommentDescUPDAtE.Visible = false;
             // 
@@ -490,9 +509,10 @@
             // 
             this.labelCommentDescUpdate.AutoSize = true;
             this.labelCommentDescUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCommentDescUpdate.Location = new System.Drawing.Point(153, 160);
+            this.labelCommentDescUpdate.Location = new System.Drawing.Point(102, 104);
+            this.labelCommentDescUpdate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCommentDescUpdate.Name = "labelCommentDescUpdate";
-            this.labelCommentDescUpdate.Size = new System.Drawing.Size(223, 26);
+            this.labelCommentDescUpdate.Size = new System.Drawing.Size(153, 18);
             this.labelCommentDescUpdate.TabIndex = 15;
             this.labelCommentDescUpdate.Text = "Comment Description";
             this.labelCommentDescUpdate.Visible = false;
@@ -501,9 +521,10 @@
             // 
             this.txtUpdateComment.AutoSize = true;
             this.txtUpdateComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdateComment.Location = new System.Drawing.Point(534, 22);
+            this.txtUpdateComment.Location = new System.Drawing.Point(356, 14);
+            this.txtUpdateComment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtUpdateComment.Name = "txtUpdateComment";
-            this.txtUpdateComment.Size = new System.Drawing.Size(282, 37);
+            this.txtUpdateComment.Size = new System.Drawing.Size(198, 26);
             this.txtUpdateComment.TabIndex = 14;
             this.txtUpdateComment.Text = "Update Comment";
             // 
@@ -532,8 +553,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.commentListForUpdation.DefaultCellStyle = dataGridViewCellStyle3;
             this.commentListForUpdation.EnableHeadersVisualStyles = false;
-            this.commentListForUpdation.Location = new System.Drawing.Point(10, 66);
-            this.commentListForUpdation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.commentListForUpdation.Location = new System.Drawing.Point(7, 43);
             this.commentListForUpdation.MultiSelect = false;
             this.commentListForUpdation.Name = "commentListForUpdation";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -544,7 +564,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.commentListForUpdation.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.commentListForUpdation.Size = new System.Drawing.Size(887, 315);
+            this.commentListForUpdation.Size = new System.Drawing.Size(877, 315);
             this.commentListForUpdation.TabIndex = 24;
             // 
             // deleteCommentTab
@@ -554,20 +574,20 @@
             this.deleteCommentTab.Controls.Add(this.commentListGridForDeletion);
             this.deleteCommentTab.Controls.Add(this.Deletebutton);
             this.deleteCommentTab.Controls.Add(this.labelDeleteComment);
-            this.deleteCommentTab.Location = new System.Drawing.Point(4, 29);
+            this.deleteCommentTab.Location = new System.Drawing.Point(4, 22);
+            this.deleteCommentTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteCommentTab.Name = "deleteCommentTab";
-            this.deleteCommentTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.deleteCommentTab.Size = new System.Drawing.Size(1374, 630);
+            this.deleteCommentTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteCommentTab.Size = new System.Drawing.Size(913, 405);
             this.deleteCommentTab.TabIndex = 1;
             this.deleteCommentTab.Text = "Delete Comment";
             // 
             // noCommentToDelete_Label
             // 
             this.noCommentToDelete_Label.AutoSize = true;
-            this.noCommentToDelete_Label.Location = new System.Drawing.Point(564, 305);
-            this.noCommentToDelete_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.noCommentToDelete_Label.Location = new System.Drawing.Point(376, 198);
             this.noCommentToDelete_Label.Name = "noCommentToDelete_Label";
-            this.noCommentToDelete_Label.Size = new System.Drawing.Size(173, 20);
+            this.noCommentToDelete_Label.Size = new System.Drawing.Size(116, 13);
             this.noCommentToDelete_Label.TabIndex = 18;
             this.noCommentToDelete_Label.Text = "No comments to delete";
             this.noCommentToDelete_Label.Visible = false;
@@ -577,7 +597,6 @@
             this.commentListGridForDeletion.AllowUserToAddRows = false;
             this.commentListGridForDeletion.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.commentListGridForDeletion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
@@ -602,11 +621,10 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.commentListGridForDeletion.DefaultCellStyle = dataGridViewCellStyle7;
             this.commentListGridForDeletion.EnableHeadersVisualStyles = false;
-            this.commentListGridForDeletion.Location = new System.Drawing.Point(18, 63);
-            this.commentListGridForDeletion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.commentListGridForDeletion.Location = new System.Drawing.Point(12, 41);
             this.commentListGridForDeletion.Name = "commentListGridForDeletion";
             this.commentListGridForDeletion.RowHeadersWidth = 62;
-            this.commentListGridForDeletion.Size = new System.Drawing.Size(1304, 469);
+            this.commentListGridForDeletion.Size = new System.Drawing.Size(869, 305);
             this.commentListGridForDeletion.TabIndex = 17;
             this.commentListGridForDeletion.Visible = false;
             // 
@@ -617,9 +635,10 @@
             this.Deletebutton.FlatAppearance.BorderSize = 3;
             this.Deletebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Deletebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Deletebutton.Location = new System.Drawing.Point(1041, 540);
+            this.Deletebutton.Location = new System.Drawing.Point(694, 351);
+            this.Deletebutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Deletebutton.Name = "Deletebutton";
-            this.Deletebutton.Size = new System.Drawing.Size(270, 48);
+            this.Deletebutton.Size = new System.Drawing.Size(180, 31);
             this.Deletebutton.TabIndex = 16;
             this.Deletebutton.Text = "Delete";
             this.Deletebutton.UseVisualStyleBackColor = false;
@@ -630,9 +649,10 @@
             // 
             this.labelDeleteComment.AutoSize = true;
             this.labelDeleteComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeleteComment.Location = new System.Drawing.Point(544, 18);
+            this.labelDeleteComment.Location = new System.Drawing.Point(363, 12);
+            this.labelDeleteComment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDeleteComment.Name = "labelDeleteComment";
-            this.labelDeleteComment.Size = new System.Drawing.Size(269, 37);
+            this.labelDeleteComment.Size = new System.Drawing.Size(191, 26);
             this.labelDeleteComment.TabIndex = 7;
             this.labelDeleteComment.Text = "Delete Comment";
             // 
@@ -644,9 +664,10 @@
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
-            this.backButton.Location = new System.Drawing.Point(16, 714);
+            this.backButton.Location = new System.Drawing.Point(11, 464);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(129, 62);
+            this.backButton.Size = new System.Drawing.Size(86, 40);
             this.backButton.TabIndex = 26;
             this.backButton.Text = "←";
             this.backButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -655,11 +676,12 @@
             // 
             // assignmentPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 788);
+            this.ClientSize = new System.Drawing.Size(913, 512);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.TeacherTabs);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "assignmentPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Assignment Panel";
