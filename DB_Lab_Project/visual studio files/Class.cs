@@ -93,8 +93,8 @@ namespace intial_form_1_
             }
             else
             {
-                Assignments assignments = new Assignments(studentName, studentUsername, classroomID, "student");
-                assignments.Show();
+                StudentAssignments studentAssignments = new StudentAssignments(studentName, studentUsername, classroomID, teacherName, teacherUsername);
+                studentAssignments.Show();
             }
         }
         private void announcementButton_Click(object sender, EventArgs e)
@@ -131,6 +131,13 @@ namespace intial_form_1_
                 studentClassPanel.Show();
             }
 
+        }
+
+        private void createMaterialButton_Clicked(object sender, EventArgs e)
+        {
+            this.Hide();
+            Material material = new Material(teacherName, teacherUsername, classroomID);
+            material.Show();
         }
         //function that changes the name of classroom to the clas name of class code received
 

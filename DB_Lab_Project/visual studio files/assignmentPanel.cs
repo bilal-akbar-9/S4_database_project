@@ -304,9 +304,13 @@ namespace intial_form_1_
         }
         private void selectCommentsButtonClicked(object sender, EventArgs e)
         {
-            try
-            {
-                //get the comment id from the selected row
+            try {
+                //check if the comment is selected or not
+                if (commentListForUpdation.SelectedRows.Count == 0 || commentListForUpdation.SelectedRows[0].IsNewRow)
+                {
+                    MessageBox.Show("Please select a comment to update");
+                    return;
+                }
                 int commentID = Convert.ToInt32(commentListForUpdation.SelectedRows[0].Cells["commentID"].Value);
 
                 //get the comment data from the database

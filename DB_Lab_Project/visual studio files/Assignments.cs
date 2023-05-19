@@ -42,14 +42,14 @@ namespace intial_form_1_
             cn = new SqlConnection(dbcon.MyConnection());
         }
 
-        public Assignments(String studentName, String studentUsername, String classroomID, String random)
-        {
-            InitializeComponent();
-            this.studentUsername = studentUsername;
-            this.studentName = studentName;
-            this.classroomID = classroomID;
-            cn = new SqlConnection(dbcon.MyConnection());
-        }
+        // public Assignments(String studentName, String studentUsername, String classroomID, String random)
+        // {
+        //     InitializeComponent();
+        //     this.studentUsername = studentUsername;
+        //     this.studentName = studentName;
+        //     this.classroomID = classroomID;
+        //     cn = new SqlConnection(dbcon.MyConnection());
+        // }
         private Color RandomColor(int assignmentCounter)
         {
             //the colors: 138, 197, 255 ,, 209, 236, 241 ,, 233, 233, 233

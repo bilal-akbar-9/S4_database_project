@@ -62,6 +62,7 @@ namespace intial_form_1_
             this.Material.TabIndex = 1;
             this.Material.Text = "Material";
             this.Material.UseVisualStyleBackColor = false;
+            this.Material.Click += new System.EventHandler(this.createMaterialButton_Clicked);
             // 
             // panel1
             // 
