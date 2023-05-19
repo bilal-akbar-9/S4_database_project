@@ -96,6 +96,17 @@
       <DependentUpon>classroom.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="DBLabProjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLabProjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="generateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="generateReport.Designer.cs">
+      <DependentUpon>generateReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Material.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,11 +128,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="StudentAssignments.cs">
+    <Compile Include="studentAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentAssignments.Designer.cs">
-      <DependentUpon>StudentAssignments.cs</DependentUpon>
+    <Compile Include="studentAnnouncement.Designer.cs">
+      <DependentUpon>studentAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentAssignments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentAssignments.Designer.cs">
+      <DependentUpon>studentAssignments.cs</DependentUpon>
     </Compile>
     <Compile Include="studentClassroom.cs">
       <SubType>Form</SubType>
@@ -147,6 +164,7 @@
     <EmbeddedResource Include="announcementPanel.resx">
       <DependentUpon>announcementPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="assignmentReport.rdlc" />
     <EmbeddedResource Include="Assignments.resx">
       <DependentUpon>Assignments.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="classroom.resx">
       <DependentUpon>classroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="generateReport.resx">
+      <DependentUpon>generateReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -175,8 +196,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StudentAssignments.resx">
-      <DependentUpon>StudentAssignments.cs</DependentUpon>
+    <EmbeddedResource Include="studentReport.rdlc" />
+    <EmbeddedResource Include="studentAnnouncement.resx">
+      <DependentUpon>studentAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentAssignments.resx">
+      <DependentUpon>studentAssignments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="studentClassroom.resx">
       <DependentUpon>studentClassroom.cs</DependentUpon>
@@ -187,6 +212,17 @@
     <EmbeddedResource Include="Submission.resx">
       <DependentUpon>Submission.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DBLabProjectDataSet.xsc">
+      <DependentUpon>DBLabProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBLabProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBLabProjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLabProjectDataSet.xss">
+      <DependentUpon>DBLabProjectDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -47,6 +47,7 @@ namespace intial_form_1_
             this.studentName = studentName;
             this.classroomID = classroomID;
             this.studentClassPanelFlag = studentClassPanelFlag;
+            this.generateReportButton.Visible = false;
         }
 
 
@@ -65,8 +66,10 @@ namespace intial_form_1_
                 if (dr.HasRows)
                 {
                     classroomName.Text = dr["classroomName"].ToString();
+                    if (studentClassPanelFlag == 1)
+                    teacherNameLabel.Text = "Name: " + studentName;
+                    else 
                     teacherNameLabel.Text = "Name: " + teacherName;
-                    //
                 }
                 else
                 {
@@ -93,7 +96,7 @@ namespace intial_form_1_
             }
             else
             {
-                StudentAssignments studentAssignments = new StudentAssignments(studentName, studentUsername, classroomID, teacherName, teacherUsername);
+                studentAssignments studentAssignments = new studentAssignments(studentName, studentUsername, classroomID, teacherName, teacherUsername);
                 studentAssignments.Show();
             }
         }
@@ -107,8 +110,8 @@ namespace intial_form_1_
             }
             else
             {
-                // Announcement announcements = new Announcement(studentName, studentUsername, classroomID, "student");
-                // announcements.Show();
+                studentAnnouncement studentAnnouncement = new studentAnnouncement(studentName, studentUsername, classroomID);
+                studentAnnouncement.Show();
             }
         }
 
@@ -138,6 +141,13 @@ namespace intial_form_1_
             this.Hide();
             Material material = new Material(teacherName, teacherUsername, classroomID);
             material.Show();
+        }
+
+        private void generateReportButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            generateReport generateReport = new generateReport(teacherName, teacherUsername, classroomID);
+            generateReport.Show();
         }
         //function that changes the name of classroom to the clas name of class code received
 

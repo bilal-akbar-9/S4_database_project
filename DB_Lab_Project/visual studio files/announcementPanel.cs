@@ -20,9 +20,12 @@ namespace intial_form_1_
         SqlDataReader dr;
         SqlDataAdapter adapter;
         string teacherUserName;
-        string classroomID;
         String teacherName;
+        String studentName;
+        String studentUserName;
+        string classroomID;
         String announcementID;
+        Boolean StudentFlag;
         public announcementPanel()
         {
             InitializeComponent();
@@ -37,6 +40,17 @@ namespace intial_form_1_
             cn = new SqlConnection(dbcon.MyConnection());
             this.KeyPreview = true;
 
+        }
+        public announcementPanel(string studentName, string studentUserName, string classroomID, string announcementID, Boolean StudentFlag)
+        {
+            InitializeComponent();
+            this.studentUserName = studentUserName;
+            this.classroomID = classroomID;
+            this.studentName = studentName;
+            this.announcementID = announcementID;
+            cn = new SqlConnection(dbcon.MyConnection());
+            this.KeyPreview = true;
+            this.StudentFlag = StudentFlag;
         }
         private void announcementPanel_Load(object sender, EventArgs e)
         {
@@ -72,20 +86,34 @@ namespace intial_form_1_
                 {
                     DataTable dt = new DataTable();
                     cn.Open();
-                    cm = new SqlCommand("select * from announcementComment where announcementID=@announcementID", cn);
-                    cm.Parameters.AddWithValue("@announcementID", this.announcementID);
+                    if (StudentFlag)
+                    {
+                        cm = new SqlCommand("select * from announcementComment where commentUserName = @studentUserName and announcementID = @announcementID", cn);
+                        cm.Parameters.AddWithValue("@studentUserName", this.studentUserName);
+                        cm.Parameters.AddWithValue("@announcementID", this.announcementID);
+                    }
+                    else
+                    {
+                        cm = new SqlCommand("select * from announcementComment where announcementID=@announcementID", cn);
+                        cm.Parameters.AddWithValue("@announcementID", this.announcementID);
+                        cm.Parameters.AddWithValue("@studentUserName", this.teacherUserName);
+                    }
                     int commentCount = Convert.ToInt32(cm.ExecuteScalar());
                     //if there is no comment for this announcement, then label will be shown to the user, else the grid will be shown
-                    if (commentCount == 0)
+                    if (commentCount == 0 && !StudentFlag)
                     {
                         noCommentToDelete_Label.Visible = true;
                         noCommentToDelete_Label.Text = "No comments for this announcement";
                         noCommentToDelete_Label.ForeColor = Color.Red;
-
+                    }
+                    else if (commentCount == 0 && StudentFlag)
+                    {
+                        noCommentToDelete_Label.Visible = true;
+                        noCommentToDelete_Label.Text = "You haven't commented on this announcement";
+                        noCommentToDelete_Label.ForeColor = Color.Red;
                     }
                     else
                     {
-
                         noCommentToDelete_Label.Visible = false;
                         adapter = new SqlDataAdapter(cm);
                         adapter.Fill(dt);
@@ -101,14 +129,33 @@ namespace intial_form_1_
                 {
                     DataTable dt = new DataTable();
                     cn.Open();
-                    cm = new SqlCommand("select * from announcementComment where announcementID=@announcementID", cn);
-                    cm.Parameters.AddWithValue("@announcementID", announcementID);
+                    if (StudentFlag)
+                    {
+                        cm = new SqlCommand("select * from announcementComment where commentUserName = @studentUserName and announcementID = @announcementID", cn);
+                        cm.Parameters.AddWithValue("@studentUserName", this.studentUserName);
+                        cm.Parameters.AddWithValue("@announcementID", this.announcementID);
+                    }
+                    else
+                    {
+                        cm = new SqlCommand("select * from announcementComment where announcementID=@announcementID", cn);
+                        cm.Parameters.AddWithValue("@announcementID", this.announcementID);
+                        cm.Parameters.AddWithValue("@studentUserName", this.teacherUserName);
+                    }
                     int commentCount = Convert.ToInt32(cm.ExecuteScalar());
                     //if there is no comment for this announcement, then label will be shown to the user, else the grid will be shown
-                    if (commentCount == 0)
+                    if (commentCount == 0 && !StudentFlag)
                     {
                         noCommentToUpdateLabel.Visible = true;
                         noCommentToUpdateLabel.Text = "No Comments for this announcement";
+                        noCommentToUpdateLabel.ForeColor = Color.Red;
+                        //select button and grid will be hidden
+                        SelectButton.Visible = false;
+                        commentListForUpdation.Visible = false;
+                    }
+                    else if (commentCount == 0 && StudentFlag)
+                    {
+                        noCommentToUpdateLabel.Visible = true;
+                        noCommentToUpdateLabel.Text = "You haven't commented on this announcement";
                         noCommentToUpdateLabel.ForeColor = Color.Red;
                         //select button and grid will be hidden
                         SelectButton.Visible = false;
@@ -123,7 +170,6 @@ namespace intial_form_1_
                         adapter.Fill(dt);
                         commentListForUpdation.DataSource = dt;
                     }
-
                     cn.Close();
                 }
                 else if (commentTABS.SelectedTab.Name == "viewCommentsTab")
@@ -146,6 +192,8 @@ namespace intial_form_1_
                     {
                         allCommentsList.Visible = true;
                         noCommentToViewLabel.Visible = false;
+                        cm = new SqlCommand("select commentUserName, commentDescription, commentDate from announcementComment where announcementID=@announcementID", cn);
+                        cm.Parameters.AddWithValue("@announcementID", announcementID);
                         adapter = new SqlDataAdapter(cm);
                         adapter.Fill(dt);
                         allCommentsList.DataSource = dt;
@@ -296,10 +344,22 @@ namespace intial_form_1_
             try
             {
                 cn.Open();
-                cm = new SqlCommand("insert into announcementComment (commentDescription,commentDate,announcementID) values (@CommentDesc,@CommentDate,@announcementID)", cn);
-                cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
-                cm.Parameters.AddWithValue("@CommentDate", CommentDate);
-                cm.Parameters.AddWithValue("@announcementID", this.announcementID);
+                if (StudentFlag)
+                {
+                    cm = new SqlCommand("insert into announcementComment (commentDescription,commentDate,announcementID,commentUserName) values (@CommentDesc,@CommentDate,@announcementID,@commentUserName)", cn);
+                    cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
+                    cm.Parameters.AddWithValue("@CommentDate", CommentDate);
+                    cm.Parameters.AddWithValue("@announcementID", this.announcementID);
+                    cm.Parameters.AddWithValue("@commentUserName", this.studentUserName);
+                }
+                else
+                {
+                    cm = new SqlCommand("insert into announcementComment (commentDescription,commentDate,announcementID,commentUserName) values (@CommentDesc,@CommentDate,@announcementID,@commentUserName)", cn);
+                    cm.Parameters.AddWithValue("@CommentDesc", CommentDesc);
+                    cm.Parameters.AddWithValue("@CommentDate", CommentDate);
+                    cm.Parameters.AddWithValue("@announcementID", this.announcementID);
+                    cm.Parameters.AddWithValue("@commentUserName", this.teacherUserName);
+                }
                 cm.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("Comment Added Successfully", "Comment", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -314,9 +374,18 @@ namespace intial_form_1_
         }
         private void backButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Announcement announcement = new Announcement(teacherName, teacherUserName, classroomID);
-            announcement.Show();
+            if (StudentFlag)
+            {
+                studentAnnouncement studentAnnouncement = new studentAnnouncement(studentName, studentUserName, classroomID);
+                studentAnnouncement.Show();
+                this.Hide();
+            }
+            else
+            {
+                Announcement Announcement = new Announcement(teacherName, teacherUserName, classroomID);
+                Announcement.Show();
+                this.Hide();
+            }
         }
     }
 }

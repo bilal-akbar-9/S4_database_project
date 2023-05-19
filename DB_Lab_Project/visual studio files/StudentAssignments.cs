@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace intial_form_1_
 {
-    public partial class StudentAssignments : Form
+    public partial class studentAssignments : Form
     {
         SqlConnection cn = new SqlConnection();
         SqlCommand cm = new SqlCommand();
@@ -34,12 +34,12 @@ namespace intial_form_1_
 
         String assignmentTitleSubmission;
 
-        public StudentAssignments()
+        public studentAssignments()
         {
             InitializeComponent();
         }
 
-        public StudentAssignments(String studentName, String studentusername, String classroomID, String teacherName, String teacherUsername )
+        public studentAssignments(String studentName, String studentusername, String classroomID, String teacherName, String teacherUsername )
         {
             InitializeComponent();
             this.studentName = studentName;
@@ -69,7 +69,6 @@ namespace intial_form_1_
                 {
                     noClassLabelStu.Visible = true;
                     noClassLabelStu.Text = "No Assignments Found";
-                    MessageBox.Show("No Assignments Found");
                 }
                 else
                 {
