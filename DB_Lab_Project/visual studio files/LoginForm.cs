@@ -22,6 +22,8 @@ namespace intial_form_1_
         SqlDataReader dr;
 
         public string _pass, _username = "";
+
+        
         public bool _isactive = false;
         public LoginForm()
         {
@@ -34,14 +36,18 @@ namespace intial_form_1_
 
         private void Login_Click(object sender, EventArgs e)
         {
+            //radioButton functionality for student, teacher and admin
+            string roleFromLogin = GetSelectedRole();
             string _role= "", _name = "";
             try
             {
                 bool found = false;
                 cn.Open();
-                cm = new SqlCommand("select * from tblUser where username = @username and password = @password", cn);
+                cm = new SqlCommand("select * from tblUser where username = @username and password = @password and role = @roleFromLogin", cn);
                 cm.Parameters.AddWithValue("@username", username.Text);
                 cm.Parameters.AddWithValue("@password", password.Text);
+                cm.Parameters.AddWithValue("@roleFromLogin", roleFromLogin);
+
                 dr = cm.ExecuteReader();
                 dr.Read();
                 if (dr.HasRows) //dr.hasrows is true if there is a row in the table
@@ -69,7 +75,7 @@ namespace intial_form_1_
                     }
                     if (_role == "Student")
                     {
-                        MessageBox.Show("Welcome(Student) " + _name + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Welcome " + _name + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         username.Clear();
                         password.Clear();
                         this.Hide();
@@ -78,7 +84,7 @@ namespace intial_form_1_
                     }
                     else if (_role == "Admin")
                     {
-                        MessageBox.Show("Welcome(Admin) " + _name + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Welcome " + _name + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         username.Clear();
                         password.Clear();
                         this.Hide();
@@ -87,7 +93,7 @@ namespace intial_form_1_
                     }
                     else
                     {
-                        MessageBox.Show("Welcome(Teacher) " + _name + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Welcome " + _name + "!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         password.Clear();
                         username.Clear();
                         this.Hide();
@@ -99,7 +105,7 @@ namespace intial_form_1_
                 }
                 else
                 {
-                    MessageBox.Show(" Invalid Username or Password! " , "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning) ;
+                    MessageBox.Show(" Invalid credentials! " , "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning) ;
                 }
             }
             catch (Exception ex)
@@ -117,6 +123,25 @@ namespace intial_form_1_
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+        private string GetSelectedRole()
+        {
+            if (studentRadioButton.Checked)
+            {
+                return "Student";
+            }
+            else if (teacherRadioButton.Checked)
+            {
+                return "Teacher";
+            }
+            else if (adminRadionButton.Checked)
+            {
+                return "Admin";
+            }
+            else
+            {
+                return string.Empty;
+            }
         }
     }
 }
