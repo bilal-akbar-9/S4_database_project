@@ -102,7 +102,7 @@
             this.studentReport.LocalReport.ReportEmbeddedResource = "intial_form_1_.studentReport.rdlc";
             this.studentReport.Location = new System.Drawing.Point(28, 109);
             this.studentReport.Name = "studentReport";
-            this.studentReport.ServerReport.BearerToken = null;
+            //this.studentReport.ServerReport.BearerToken = null;
             this.studentReport.Size = new System.Drawing.Size(841, 280);
             this.studentReport.TabIndex = 30;
             // 
@@ -177,7 +177,7 @@
             this.assignmentReport.LocalReport.ReportEmbeddedResource = "intial_form_1_.assignmentReport.rdlc";
             this.assignmentReport.Location = new System.Drawing.Point(35, 109);
             this.assignmentReport.Name = "assignmentReport";
-            this.assignmentReport.ServerReport.BearerToken = null;
+            //this.assignmentReport.ServerReport.BearerToken = null;
             this.assignmentReport.Size = new System.Drawing.Size(841, 280);
             this.assignmentReport.TabIndex = 31;
             // 

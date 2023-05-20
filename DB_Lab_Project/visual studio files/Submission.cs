@@ -52,7 +52,6 @@ namespace intial_form_1_
             txtAssTitleSUbmission.Text = assignmentTitleSubmissions;
             txtAssDescsubmission.Text = assignmentDescription;
             dueDateLabelsubmission.Text = DueDate;
-            pointsSUbmmision.Text = submissionPoints;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -72,22 +71,22 @@ namespace intial_form_1_
                 MessageBox.Show("Please enter a submission");
             }
             else
-            {   
+            {
                 string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                string textBoxsubmissionnew =textBoxsubmission.Text;
+                string textBoxsubmissionnew = textBoxsubmission.Text;
                 cn.Open();
-                cm = new SqlCommand("INSERT INTO Submissions (studentUsername, assignmentID, submissionFile, submissionDate, submissionPoints) VALUES (@studentUsername, @assignmentID, @textBoxsubmissionnew, @date, @submissionPoints)", cn);
+                string submissionPointsEmpty = "";
+                cm = new SqlCommand("INSERT INTO Submissions (studentUsername, assignmentID, submissionFile, submissionDate, submissionPoints) VALUES (@studentUsername, @assignmentID, @textBoxsubmissionnew, @date, @submissionPointsEmpty)", cn);
                 cm.Parameters.AddWithValue("@studentUsername", studentusername);
                 cm.Parameters.AddWithValue("@assignmentID", assignmentID);
                 cm.Parameters.AddWithValue("@date", date);
-                cm.Parameters.AddWithValue("@submissionPoints", submissionPoints);
+                cm.Parameters.AddWithValue("@submissionPointsEmpty", submissionPointsEmpty);
                 cm.Parameters.AddWithValue("@textBoxsubmissionnew", textBoxsubmissionnew);
                 cm.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("Submission has been added");
 
             }
-
         }
     }
 }

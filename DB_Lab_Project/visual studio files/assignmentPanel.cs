@@ -365,5 +365,58 @@ namespace intial_form_1_
             }
 
         }
+
+        private void ViewProgressDatagridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ViewProgressDatagridView_CellEndEDit(object sender, DataGridViewCellEventArgs e)
+        {
+           if(e.RowIndex >= 0 && e.ColumnIndex >= 0)
+           {
+                DataGridViewRow row = this.ViewProgressDatagridView.Rows[e.RowIndex];
+
+                string newValueSubmissionPoints = row.Cells[e.ColumnIndex].Value.ToString();
+
+                //check if the value is not greater than submission points from the assignment table
+                int assignmentID = Convert.ToInt32(row.Cells["assignmentID"].Value);
+
+                // cn.Open();
+                // cm = new SqlCommand("select submissionPoints from Assignment where assignmentID=@AssignmentID", cn);
+                // cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                // dr = cm.ExecuteReader();
+                // dr.Read();
+                // //store the submission points from the assignment table
+                // int submissionPoints = Convert.ToInt32(dr["submissionPoints"]);
+                // dr.Close();
+                // name = ViewProgressDatagridView
+                 
+
+
+
+                try
+                {
+                    cn.Open();
+                    // cm with the update query and check if the value is not greater than submission points from the assignment table
+                    
+                    // cm = new SqlCommand("update Submissions set submissionPoints=@SubmissionPoints WHERE studentusername = @studentusername AND assignmentID = @assignmentID", cn);
+                    cm = new SqlCommand("update Submissions set submissionPoints = CASE  WHEN @SubmissionPoints <= (select assignmentPoints from Assignment where assignmentID=@assignmentID) THEN @SubmissionPoints ELSE submissionPoints END WHERE studentusername = @studentusername AND assignmentID = @assignmentID", cn);
+                    cm.Parameters.AddWithValue("@SubmissionPoints", newValueSubmissionPoints);
+                    cm.Parameters.AddWithValue("@studentusername", row.Cells["studentusername"].Value.ToString());
+                    cm.Parameters.AddWithValue("@assignmentID", row.Cells["assignmentID"].Value.ToString());
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+
+                    MessageBox.Show("Submission Points Updated Successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    cn.Close();
+                    MessageBox.Show(ex.Message);
+                }
+           }
+        }
     }
 }

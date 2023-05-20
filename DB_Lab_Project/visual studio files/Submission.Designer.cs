@@ -33,10 +33,8 @@
             this.textBoxsubmission = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.labeldescsubmission = new System.Windows.Forms.Label();
-            this.labelsubmitssionpoints = new System.Windows.Forms.Label();
             this.dueDatesubmission = new System.Windows.Forms.Label();
             this.dueDateLabelsubmission = new System.Windows.Forms.Label();
-            this.pointsSUbmmision = new System.Windows.Forms.TextBox();
             this.txtAssDescsubmission = new System.Windows.Forms.TextBox();
             this.txtAssTitleSUbmission = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -92,16 +90,6 @@
             this.labeldescsubmission.Text = "Description";
             this.labeldescsubmission.Click += new System.EventHandler(this.label1_Click);
             // 
-            // labelsubmitssionpoints
-            // 
-            this.labelsubmitssionpoints.AutoSize = true;
-            this.labelsubmitssionpoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelsubmitssionpoints.Location = new System.Drawing.Point(1004, 269);
-            this.labelsubmitssionpoints.Name = "labelsubmitssionpoints";
-            this.labelsubmitssionpoints.Size = new System.Drawing.Size(73, 29);
-            this.labelsubmitssionpoints.TabIndex = 52;
-            this.labelsubmitssionpoints.Text = "Point";
-            // 
             // dueDatesubmission
             // 
             this.dueDatesubmission.AutoSize = true;
@@ -122,15 +110,6 @@
             this.dueDateLabelsubmission.Size = new System.Drawing.Size(79, 29);
             this.dueDateLabelsubmission.TabIndex = 54;
             this.dueDateLabelsubmission.Text = "label2";
-            // 
-            // pointsSUbmmision
-            // 
-            this.pointsSUbmmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pointsSUbmmision.Location = new System.Drawing.Point(1095, 269);
-            this.pointsSUbmmision.Name = "pointsSUbmmision";
-            this.pointsSUbmmision.ReadOnly = true;
-            this.pointsSUbmmision.Size = new System.Drawing.Size(196, 35);
-            this.pointsSUbmmision.TabIndex = 55;
             // 
             // txtAssDescsubmission
             // 
@@ -160,10 +139,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1566, 784);
-            this.Controls.Add(this.pointsSUbmmision);
             this.Controls.Add(this.dueDateLabelsubmission);
             this.Controls.Add(this.dueDatesubmission);
-            this.Controls.Add(this.labelsubmitssionpoints);
             this.Controls.Add(this.labeldescsubmission);
             this.Controls.Add(this.txtAssDescsubmission);
             this.Controls.Add(this.SubmitButton);
@@ -186,10 +163,8 @@
         private System.Windows.Forms.TextBox textBoxsubmission;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label labeldescsubmission;
-        private System.Windows.Forms.Label labelsubmitssionpoints;
         private System.Windows.Forms.Label dueDatesubmission;
         private System.Windows.Forms.Label dueDateLabelsubmission;
-        private System.Windows.Forms.TextBox pointsSUbmmision;
         private System.Windows.Forms.TextBox txtAssDescsubmission;
         private System.Windows.Forms.TextBox txtAssTitleSUbmission;
     }
