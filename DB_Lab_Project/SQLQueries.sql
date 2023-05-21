@@ -28,6 +28,8 @@ create table Classroom
 
 )
 
+select * from Classroom
+
 create table ClassroomAndStudent
 (
     -- username from User

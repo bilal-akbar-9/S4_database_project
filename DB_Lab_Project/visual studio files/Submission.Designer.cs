@@ -37,6 +37,7 @@
             this.dueDateLabelsubmission = new System.Windows.Forms.Label();
             this.txtAssDescsubmission = new System.Windows.Forms.TextBox();
             this.txtAssTitleSUbmission = new System.Windows.Forms.TextBox();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // assignmentTitleSubmission
@@ -133,12 +134,30 @@
             this.txtAssTitleSUbmission.Size = new System.Drawing.Size(632, 46);
             this.txtAssTitleSUbmission.TabIndex = 45;
             // 
+            // backButton
+            // 
+            this.backButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.backButton.FlatAppearance.BorderSize = 3;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.ForeColor = System.Drawing.Color.White;
+            this.backButton.Location = new System.Drawing.Point(37, 684);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(129, 62);
+            this.backButton.TabIndex = 55;
+            this.backButton.Text = "←";
+            this.backButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // Submission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1566, 784);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.dueDateLabelsubmission);
             this.Controls.Add(this.dueDatesubmission);
             this.Controls.Add(this.labeldescsubmission);
@@ -167,5 +186,6 @@
         private System.Windows.Forms.Label dueDateLabelsubmission;
         private System.Windows.Forms.TextBox txtAssDescsubmission;
         private System.Windows.Forms.TextBox txtAssTitleSUbmission;
+        private System.Windows.Forms.Button backButton;
     }
 }
