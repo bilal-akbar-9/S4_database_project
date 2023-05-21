@@ -50,7 +50,7 @@
             // classroomName
             // 
             this.classroomName.AutoSize = true;
-            this.classroomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classroomName.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.classroomName.Location = new System.Drawing.Point(18, 12);
             this.classroomName.Name = "classroomName";
@@ -71,7 +71,7 @@
             // teacherNameLabel
             // 
             this.teacherNameLabel.AutoSize = true;
-            this.teacherNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teacherNameLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teacherNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.teacherNameLabel.Location = new System.Drawing.Point(21, 43);
             this.teacherNameLabel.Name = "teacherNameLabel";
@@ -85,7 +85,7 @@
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButton.FlatAppearance.BorderSize = 3;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
             this.backButton.Location = new System.Drawing.Point(25, 451);
             this.backButton.Margin = new System.Windows.Forms.Padding(2);
@@ -153,7 +153,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(21, 43);
             this.label1.Name = "label1";
@@ -164,7 +164,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(18, 12);
             this.label2.Name = "label2";

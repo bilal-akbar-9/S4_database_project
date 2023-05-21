@@ -62,7 +62,7 @@ namespace intial_form_1_
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButton.FlatAppearance.BorderSize = 3;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
             this.backButton.Location = new System.Drawing.Point(17, 453);
             this.backButton.Margin = new System.Windows.Forms.Padding(1);
@@ -77,7 +77,7 @@ namespace intial_form_1_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(474, 473);
             this.label1.Name = "label1";
@@ -89,7 +89,7 @@ namespace intial_form_1_
             // noAnnouncementLabel
             // 
             this.noAnnouncementLabel.AutoSize = true;
-            this.noAnnouncementLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noAnnouncementLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noAnnouncementLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.noAnnouncementLabel.Location = new System.Drawing.Point(22, 100);
             this.noAnnouncementLabel.Name = "noAnnouncementLabel";
@@ -123,7 +123,7 @@ namespace intial_form_1_
             // studentNameLabel
             // 
             this.studentNameLabel.AutoSize = true;
-            this.studentNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentNameLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.studentNameLabel.Location = new System.Drawing.Point(29, 55);
             this.studentNameLabel.Name = "studentNameLabel";
@@ -134,7 +134,7 @@ namespace intial_form_1_
             // classroomName
             // 
             this.classroomName.AutoSize = true;
-            this.classroomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classroomName.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.classroomName.Location = new System.Drawing.Point(18, 22);
             this.classroomName.Name = "classroomName";

@@ -44,7 +44,7 @@
             this.MaterialbackButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.MaterialbackButton.FlatAppearance.BorderSize = 3;
             this.MaterialbackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.MaterialbackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaterialbackButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaterialbackButton.ForeColor = System.Drawing.Color.White;
             this.MaterialbackButton.Location = new System.Drawing.Point(23, 475);
             this.MaterialbackButton.Margin = new System.Windows.Forms.Padding(1);
@@ -71,7 +71,7 @@
             // stdNoMaterialLabel
             // 
             this.stdNoMaterialLabel.AutoSize = true;
-            this.stdNoMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stdNoMaterialLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stdNoMaterialLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.stdNoMaterialLabel.Location = new System.Drawing.Point(9, 134);
             this.stdNoMaterialLabel.Name = "stdNoMaterialLabel";
@@ -93,7 +93,7 @@
             // stdNamelabel
             // 
             this.stdNamelabel.AutoSize = true;
-            this.stdNamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stdNamelabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stdNamelabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.stdNamelabel.Location = new System.Drawing.Point(27, 55);
             this.stdNamelabel.Name = "stdNamelabel";
@@ -104,7 +104,7 @@
             // materialLabel
             // 
             this.materialLabel.AutoSize = true;
-            this.materialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialLabel.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel.Location = new System.Drawing.Point(16, 22);
             this.materialLabel.Name = "materialLabel";
@@ -115,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(473, 497);
             this.label1.Name = "label1";

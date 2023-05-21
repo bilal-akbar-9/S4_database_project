@@ -181,7 +181,7 @@
             // Name1
             // 
             this.Name1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Name1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name1.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name1.Location = new System.Drawing.Point(188, 38);
             this.Name1.Margin = new System.Windows.Forms.Padding(2);
             this.Name1.Name = "Name1";
@@ -192,7 +192,7 @@
             // retypePassword1
             // 
             this.retypePassword1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.retypePassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retypePassword1.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.retypePassword1.Location = new System.Drawing.Point(188, 157);
             this.retypePassword1.Margin = new System.Windows.Forms.Padding(2);
             this.retypePassword1.Name = "retypePassword1";
@@ -216,7 +216,7 @@
             // password1
             // 
             this.password1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.password1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password1.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password1.Location = new System.Drawing.Point(188, 113);
             this.password1.Margin = new System.Windows.Forms.Padding(2);
             this.password1.Name = "password1";
@@ -240,7 +240,7 @@
             // username1
             // 
             this.username1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username1.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username1.Location = new System.Drawing.Point(188, 75);
             this.username1.Margin = new System.Windows.Forms.Padding(2);
             this.username1.Name = "username1";
@@ -325,7 +325,7 @@
             // newPassword2
             // 
             this.newPassword2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.newPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPassword2.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newPassword2.Location = new System.Drawing.Point(186, 142);
             this.newPassword2.Margin = new System.Windows.Forms.Padding(2);
             this.newPassword2.Name = "newPassword2";
@@ -348,7 +348,7 @@
             // oldPassword2
             // 
             this.oldPassword2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.oldPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oldPassword2.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oldPassword2.Location = new System.Drawing.Point(186, 97);
             this.oldPassword2.Margin = new System.Windows.Forms.Padding(2);
             this.oldPassword2.Name = "oldPassword2";
@@ -371,7 +371,7 @@
             // username2
             // 
             this.username2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username2.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username2.Location = new System.Drawing.Point(186, 54);
             this.username2.Margin = new System.Windows.Forms.Padding(2);
             this.username2.Name = "username2";
@@ -433,7 +433,7 @@
             // username3
             // 
             this.username3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username3.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username3.Location = new System.Drawing.Point(165, 87);
             this.username3.Margin = new System.Windows.Forms.Padding(2);
             this.username3.Name = "username3";
@@ -496,7 +496,7 @@
             // username4
             // 
             this.username4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username4.Font = new System.Drawing.Font("HP Simplified Hans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username4.Location = new System.Drawing.Point(159, 88);
             this.username4.Margin = new System.Windows.Forms.Padding(2);
             this.username4.Name = "username4";

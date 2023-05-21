@@ -43,38 +43,42 @@
             // assignmentTitleSubmission
             // 
             this.assignmentTitleSubmission.AutoSize = true;
-            this.assignmentTitleSubmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assignmentTitleSubmission.Location = new System.Drawing.Point(142, 120);
+            this.assignmentTitleSubmission.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignmentTitleSubmission.Location = new System.Drawing.Point(95, 78);
+            this.assignmentTitleSubmission.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.assignmentTitleSubmission.Name = "assignmentTitleSubmission";
-            this.assignmentTitleSubmission.Size = new System.Drawing.Size(66, 29);
+            this.assignmentTitleSubmission.Size = new System.Drawing.Size(43, 20);
             this.assignmentTitleSubmission.TabIndex = 46;
             this.assignmentTitleSubmission.Text = "Title";
             // 
             // LabelSubmissionFile
             // 
             this.LabelSubmissionFile.AutoSize = true;
-            this.LabelSubmissionFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelSubmissionFile.Location = new System.Drawing.Point(1004, 410);
+            this.LabelSubmissionFile.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelSubmissionFile.Location = new System.Drawing.Point(669, 266);
+            this.LabelSubmissionFile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelSubmissionFile.Name = "LabelSubmissionFile";
-            this.LabelSubmissionFile.Size = new System.Drawing.Size(201, 29);
+            this.LabelSubmissionFile.Size = new System.Drawing.Size(135, 20);
             this.LabelSubmissionFile.TabIndex = 47;
             this.LabelSubmissionFile.Text = "Submission File";
             // 
             // textBoxsubmission
             // 
-            this.textBoxsubmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxsubmission.Location = new System.Drawing.Point(1009, 462);
+            this.textBoxsubmission.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxsubmission.Location = new System.Drawing.Point(673, 300);
+            this.textBoxsubmission.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxsubmission.Name = "textBoxsubmission";
-            this.textBoxsubmission.Size = new System.Drawing.Size(282, 35);
+            this.textBoxsubmission.Size = new System.Drawing.Size(189, 26);
             this.textBoxsubmission.TabIndex = 48;
             this.textBoxsubmission.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitButton.Location = new System.Drawing.Point(1316, 622);
+            this.SubmitButton.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitButton.Location = new System.Drawing.Point(877, 404);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(179, 77);
+            this.SubmitButton.Size = new System.Drawing.Size(119, 50);
             this.SubmitButton.TabIndex = 49;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -83,10 +87,11 @@
             // labeldescsubmission
             // 
             this.labeldescsubmission.AutoSize = true;
-            this.labeldescsubmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeldescsubmission.Location = new System.Drawing.Point(142, 312);
+            this.labeldescsubmission.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldescsubmission.Location = new System.Drawing.Point(95, 203);
+            this.labeldescsubmission.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labeldescsubmission.Name = "labeldescsubmission";
-            this.labeldescsubmission.Size = new System.Drawing.Size(146, 29);
+            this.labeldescsubmission.Size = new System.Drawing.Size(100, 20);
             this.labeldescsubmission.TabIndex = 51;
             this.labeldescsubmission.Text = "Description";
             this.labeldescsubmission.Click += new System.EventHandler(this.label1_Click);
@@ -94,44 +99,46 @@
             // dueDatesubmission
             // 
             this.dueDatesubmission.AutoSize = true;
-            this.dueDatesubmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dueDatesubmission.Location = new System.Drawing.Point(1004, 120);
+            this.dueDatesubmission.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dueDatesubmission.Location = new System.Drawing.Point(669, 78);
+            this.dueDatesubmission.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dueDatesubmission.Name = "dueDatesubmission";
-            this.dueDatesubmission.Size = new System.Drawing.Size(121, 29);
+            this.dueDatesubmission.Size = new System.Drawing.Size(86, 20);
             this.dueDatesubmission.TabIndex = 53;
             this.dueDatesubmission.Text = "DueDate:";
             // 
             // dueDateLabelsubmission
             // 
             this.dueDateLabelsubmission.AutoSize = true;
-            this.dueDateLabelsubmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dueDateLabelsubmission.Location = new System.Drawing.Point(1132, 120);
-            this.dueDateLabelsubmission.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dueDateLabelsubmission.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dueDateLabelsubmission.Location = new System.Drawing.Point(755, 78);
             this.dueDateLabelsubmission.Name = "dueDateLabelsubmission";
-            this.dueDateLabelsubmission.Size = new System.Drawing.Size(79, 29);
+            this.dueDateLabelsubmission.Size = new System.Drawing.Size(51, 20);
             this.dueDateLabelsubmission.TabIndex = 54;
             this.dueDateLabelsubmission.Text = "label2";
             // 
             // txtAssDescsubmission
             // 
-            this.txtAssDescsubmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssDescsubmission.Location = new System.Drawing.Point(147, 362);
+            this.txtAssDescsubmission.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssDescsubmission.Location = new System.Drawing.Point(98, 235);
+            this.txtAssDescsubmission.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssDescsubmission.Multiline = true;
             this.txtAssDescsubmission.Name = "txtAssDescsubmission";
             this.txtAssDescsubmission.ReadOnly = true;
             this.txtAssDescsubmission.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssDescsubmission.Size = new System.Drawing.Size(632, 276);
+            this.txtAssDescsubmission.Size = new System.Drawing.Size(423, 181);
             this.txtAssDescsubmission.TabIndex = 50;
             // 
             // txtAssTitleSUbmission
             // 
-            this.txtAssTitleSUbmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssTitleSUbmission.Location = new System.Drawing.Point(147, 168);
+            this.txtAssTitleSUbmission.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssTitleSUbmission.Location = new System.Drawing.Point(98, 109);
+            this.txtAssTitleSUbmission.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAssTitleSUbmission.Multiline = true;
             this.txtAssTitleSUbmission.Name = "txtAssTitleSUbmission";
             this.txtAssTitleSUbmission.ReadOnly = true;
             this.txtAssTitleSUbmission.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssTitleSUbmission.Size = new System.Drawing.Size(632, 46);
+            this.txtAssTitleSUbmission.Size = new System.Drawing.Size(423, 31);
             this.txtAssTitleSUbmission.TabIndex = 45;
             // 
             // backButton
@@ -140,11 +147,12 @@
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButton.FlatAppearance.BorderSize = 3;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
-            this.backButton.Location = new System.Drawing.Point(37, 684);
+            this.backButton.Location = new System.Drawing.Point(25, 445);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(129, 62);
+            this.backButton.Size = new System.Drawing.Size(86, 40);
             this.backButton.TabIndex = 55;
             this.backButton.Text = "←";
             this.backButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -153,10 +161,10 @@
             // 
             // Submission
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1566, 784);
+            this.ClientSize = new System.Drawing.Size(1044, 510);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.dueDateLabelsubmission);
             this.Controls.Add(this.dueDatesubmission);
@@ -167,7 +175,9 @@
             this.Controls.Add(this.LabelSubmissionFile);
             this.Controls.Add(this.assignmentTitleSubmission);
             this.Controls.Add(this.txtAssTitleSUbmission);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Submission";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Submission";
             this.Activated += new System.EventHandler(this.Submission_Load);
             this.Load += new System.EventHandler(this.Submission_Load);

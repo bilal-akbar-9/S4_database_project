@@ -109,7 +109,7 @@
             // 
             // txtAnnounceFile
             // 
-            this.txtAnnounceFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnnounceFile.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnnounceFile.Location = new System.Drawing.Point(625, 98);
             this.txtAnnounceFile.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnnounceFile.Name = "txtAnnounceFile";
@@ -142,7 +142,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(622, 64);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -153,7 +153,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(79, 143);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -164,7 +164,7 @@
             // assignmentTitle
             // 
             this.assignmentTitle.AutoSize = true;
-            this.assignmentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignmentTitle.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignmentTitle.Location = new System.Drawing.Point(79, 64);
             this.assignmentTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.assignmentTitle.Name = "assignmentTitle";
@@ -229,7 +229,7 @@
             this.allCommentsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -261,7 +261,7 @@
             this.buttonAddComment.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.buttonAddComment.FlatAppearance.BorderSize = 3;
             this.buttonAddComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddComment.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddComment.Location = new System.Drawing.Point(598, 290);
             this.buttonAddComment.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddComment.Name = "buttonAddComment";
@@ -274,7 +274,7 @@
             // txtCommentDesc
             // 
             this.txtCommentDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCommentDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentDesc.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDesc.Location = new System.Drawing.Point(157, 128);
             this.txtCommentDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtCommentDesc.Multiline = true;
@@ -285,7 +285,7 @@
             // labelCommentDesc
             // 
             this.labelCommentDesc.AutoSize = true;
-            this.labelCommentDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCommentDesc.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCommentDesc.Location = new System.Drawing.Point(154, 98);
             this.labelCommentDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCommentDesc.Name = "labelCommentDesc";
@@ -296,7 +296,7 @@
             // labelnewComment
             // 
             this.labelnewComment.AutoSize = true;
-            this.labelnewComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelnewComment.Font = new System.Drawing.Font("HP Simplified Hans", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelnewComment.Location = new System.Drawing.Point(374, 23);
             this.labelnewComment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelnewComment.Name = "labelnewComment";
@@ -338,7 +338,7 @@
             this.SelectButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.SelectButton.FlatAppearance.BorderSize = 3;
             this.SelectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SelectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectButton.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectButton.Location = new System.Drawing.Point(729, 363);
             this.SelectButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectButton.Name = "SelectButton";
@@ -354,7 +354,7 @@
             this.updateButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.updateButton.FlatAppearance.BorderSize = 3;
             this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.Location = new System.Drawing.Point(729, 363);
             this.updateButton.Margin = new System.Windows.Forms.Padding(2);
             this.updateButton.Name = "updateButton";
@@ -367,7 +367,7 @@
             // 
             // txtCommentDescUpdate
             // 
-            this.txtCommentDescUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentDescUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommentDescUpdate.Location = new System.Drawing.Point(105, 135);
             this.txtCommentDescUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.txtCommentDescUpdate.Multiline = true;
@@ -379,7 +379,7 @@
             // labelCommentDescUpdate
             // 
             this.labelCommentDescUpdate.AutoSize = true;
-            this.labelCommentDescUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCommentDescUpdate.Font = new System.Drawing.Font("HP Simplified Hans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCommentDescUpdate.Location = new System.Drawing.Point(102, 104);
             this.labelCommentDescUpdate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCommentDescUpdate.Name = "labelCommentDescUpdate";
@@ -391,7 +391,7 @@
             // txtUpdateComment
             // 
             this.txtUpdateComment.AutoSize = true;
-            this.txtUpdateComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateComment.Font = new System.Drawing.Font("HP Simplified Hans", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUpdateComment.Location = new System.Drawing.Point(356, 14);
             this.txtUpdateComment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtUpdateComment.Name = "txtUpdateComment";
@@ -408,7 +408,7 @@
             this.commentListForUpdation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(84)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -417,7 +417,7 @@
             this.commentListForUpdation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -429,7 +429,7 @@
             this.commentListForUpdation.Name = "commentListForUpdation";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -468,7 +468,7 @@
             this.commentListGridForDeletion.AllowUserToAddRows = false;
             this.commentListGridForDeletion.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("HP Simplified Hans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.commentListGridForDeletion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.commentListGridForDeletion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -476,7 +476,7 @@
             this.commentListGridForDeletion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
@@ -485,7 +485,7 @@
             this.commentListGridForDeletion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -504,7 +504,7 @@
             this.Deletebutton.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Deletebutton.FlatAppearance.BorderSize = 3;
             this.Deletebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Deletebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deletebutton.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Deletebutton.Location = new System.Drawing.Point(694, 351);
             this.Deletebutton.Margin = new System.Windows.Forms.Padding(2);
             this.Deletebutton.Name = "Deletebutton";
@@ -518,7 +518,7 @@
             // labelDeleteComment
             // 
             this.labelDeleteComment.AutoSize = true;
-            this.labelDeleteComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeleteComment.Font = new System.Drawing.Font("HP Simplified Hans", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeleteComment.Location = new System.Drawing.Point(363, 12);
             this.labelDeleteComment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDeleteComment.Name = "labelDeleteComment";
@@ -532,7 +532,7 @@
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButton.FlatAppearance.BorderSize = 3;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
             this.backButton.Location = new System.Drawing.Point(11, 464);
             this.backButton.Margin = new System.Windows.Forms.Padding(2);

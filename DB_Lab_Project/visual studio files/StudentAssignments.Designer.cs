@@ -44,7 +44,7 @@
             this.backButtonStu.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButtonStu.FlatAppearance.BorderSize = 3;
             this.backButtonStu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButtonStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButtonStu.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButtonStu.ForeColor = System.Drawing.Color.White;
             this.backButtonStu.Location = new System.Drawing.Point(23, 475);
             this.backButtonStu.Margin = new System.Windows.Forms.Padding(1);
@@ -71,7 +71,7 @@
             // noClassLabelStu
             // 
             this.noClassLabelStu.AutoSize = true;
-            this.noClassLabelStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noClassLabelStu.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noClassLabelStu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.noClassLabelStu.Location = new System.Drawing.Point(9, 134);
             this.noClassLabelStu.Name = "noClassLabelStu";
@@ -93,7 +93,7 @@
             // teacherNameStudentLabel
             // 
             this.teacherNameStudentLabel.AutoSize = true;
-            this.teacherNameStudentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teacherNameStudentLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teacherNameStudentLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.teacherNameStudentLabel.Location = new System.Drawing.Point(27, 55);
             this.teacherNameStudentLabel.Name = "teacherNameStudentLabel";
@@ -104,7 +104,7 @@
             // classroomStuName
             // 
             this.classroomStuName.AutoSize = true;
-            this.classroomStuName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classroomStuName.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomStuName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.classroomStuName.Location = new System.Drawing.Point(16, 22);
             this.classroomStuName.Name = "classroomStuName";
@@ -115,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(473, 497);
             this.label1.Name = "label1";

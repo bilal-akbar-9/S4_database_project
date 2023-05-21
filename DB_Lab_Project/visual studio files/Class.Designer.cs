@@ -44,7 +44,7 @@ namespace intial_form_1_
             // assignmentButton
             // 
             this.assignmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
-            this.assignmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignmentButton.Font = new System.Drawing.Font("HP Simplified Hans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignmentButton.Location = new System.Drawing.Point(145, 236);
             this.assignmentButton.Name = "assignmentButton";
             this.assignmentButton.Size = new System.Drawing.Size(633, 68);
@@ -56,7 +56,7 @@ namespace intial_form_1_
             // Material
             // 
             this.Material.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.Material.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Material.Font = new System.Drawing.Font("HP Simplified Hans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Material.Location = new System.Drawing.Point(145, 342);
             this.Material.Name = "Material";
             this.Material.Size = new System.Drawing.Size(633, 68);
@@ -79,7 +79,7 @@ namespace intial_form_1_
             // generateReportButton
             // 
             this.generateReportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(103)))));
-            this.generateReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateReportButton.Font = new System.Drawing.Font("HP Simplified Hans", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generateReportButton.ForeColor = System.Drawing.Color.White;
             this.generateReportButton.Location = new System.Drawing.Point(731, 19);
             this.generateReportButton.Name = "generateReportButton";
@@ -92,7 +92,7 @@ namespace intial_form_1_
             // teacherNameLabel
             // 
             this.teacherNameLabel.AutoSize = true;
-            this.teacherNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teacherNameLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teacherNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.teacherNameLabel.Location = new System.Drawing.Point(26, 50);
             this.teacherNameLabel.Name = "teacherNameLabel";
@@ -103,7 +103,7 @@ namespace intial_form_1_
             // classroomName
             // 
             this.classroomName.AutoSize = true;
-            this.classroomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classroomName.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.classroomName.Location = new System.Drawing.Point(23, 19);
             this.classroomName.Name = "classroomName";
@@ -114,7 +114,7 @@ namespace intial_form_1_
             // announcementButton
             // 
             this.announcementButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            this.announcementButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.announcementButton.Font = new System.Drawing.Font("HP Simplified Hans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.announcementButton.Location = new System.Drawing.Point(145, 130);
             this.announcementButton.Name = "announcementButton";
             this.announcementButton.Size = new System.Drawing.Size(633, 68);
@@ -129,7 +129,7 @@ namespace intial_form_1_
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButton.FlatAppearance.BorderSize = 3;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
             this.backButton.Location = new System.Drawing.Point(26, 448);
             this.backButton.Margin = new System.Windows.Forms.Padding(2);

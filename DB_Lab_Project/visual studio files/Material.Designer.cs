@@ -138,7 +138,7 @@ namespace intial_form_1_
             // materialTitleLabel2
             // 
             this.materialTitleLabel2.AutoSize = true;
-            this.materialTitleLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialTitleLabel2.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialTitleLabel2.Location = new System.Drawing.Point(111, 113);
             this.materialTitleLabel2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.materialTitleLabel2.Name = "materialTitleLabel2";
@@ -178,7 +178,7 @@ namespace intial_form_1_
             this.updateMaterialButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.updateMaterialButton.FlatAppearance.BorderSize = 3;
             this.updateMaterialButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateMaterialButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateMaterialButton.Font = new System.Drawing.Font("HP Simplified Hans", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateMaterialButton.Location = new System.Drawing.Point(895, 452);
             this.updateMaterialButton.Margin = new System.Windows.Forms.Padding(2);
             this.updateMaterialButton.Name = "updateMaterialButton";
@@ -192,7 +192,7 @@ namespace intial_form_1_
             // materialTypeLabel2
             // 
             this.materialTypeLabel2.AutoSize = true;
-            this.materialTypeLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialTypeLabel2.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialTypeLabel2.Location = new System.Drawing.Point(719, 149);
             this.materialTypeLabel2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.materialTypeLabel2.Name = "materialTypeLabel2";
@@ -204,7 +204,7 @@ namespace intial_form_1_
             // materialDescriptionLabel2
             // 
             this.materialDescriptionLabel2.AutoSize = true;
-            this.materialDescriptionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialDescriptionLabel2.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialDescriptionLabel2.Location = new System.Drawing.Point(111, 198);
             this.materialDescriptionLabel2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.materialDescriptionLabel2.Name = "materialDescriptionLabel2";
@@ -225,7 +225,7 @@ namespace intial_form_1_
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label10.Location = new System.Drawing.Point(480, 474);
             this.label10.Name = "label10";
@@ -247,7 +247,7 @@ namespace intial_form_1_
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(893, 48);
             this.label6.Name = "label6";
@@ -259,7 +259,7 @@ namespace intial_form_1_
             // updateMaterial
             // 
             this.updateMaterial.AutoSize = true;
-            this.updateMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateMaterial.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateMaterial.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.updateMaterial.Location = new System.Drawing.Point(18, 24);
             this.updateMaterial.Name = "updateMaterial";
@@ -276,7 +276,7 @@ namespace intial_form_1_
             this.materialListForModification.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(84)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -285,7 +285,7 @@ namespace intial_form_1_
             this.materialListForModification.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(236)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -299,7 +299,7 @@ namespace intial_form_1_
             this.materialListForModification.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -338,7 +338,7 @@ namespace intial_form_1_
             this.deleteMaterialButton.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.deleteMaterialButton.FlatAppearance.BorderSize = 3;
             this.deleteMaterialButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteMaterialButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteMaterialButton.Font = new System.Drawing.Font("HP Simplified Hans", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteMaterialButton.Location = new System.Drawing.Point(888, 452);
             this.deleteMaterialButton.Margin = new System.Windows.Forms.Padding(2);
             this.deleteMaterialButton.Name = "deleteMaterialButton";
@@ -360,7 +360,7 @@ namespace intial_form_1_
             this.materialListToRemove.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -369,7 +369,7 @@ namespace intial_form_1_
             this.materialListToRemove.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -382,7 +382,7 @@ namespace intial_form_1_
             this.materialListToRemove.ReadOnly = true;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("HP Simplified Hans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -398,7 +398,7 @@ namespace intial_form_1_
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label9.Location = new System.Drawing.Point(480, 474);
             this.label9.Name = "label9";
@@ -420,7 +420,7 @@ namespace intial_form_1_
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(893, 48);
             this.label4.Name = "label4";
@@ -432,7 +432,7 @@ namespace intial_form_1_
             // removeMaterialLabel
             // 
             this.removeMaterialLabel.AutoSize = true;
-            this.removeMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeMaterialLabel.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeMaterialLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.removeMaterialLabel.Location = new System.Drawing.Point(18, 24);
             this.removeMaterialLabel.Name = "removeMaterialLabel";
@@ -443,7 +443,7 @@ namespace intial_form_1_
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(893, 48);
             this.label2.Name = "label2";
@@ -455,7 +455,7 @@ namespace intial_form_1_
             // newMaterialLabel
             // 
             this.newMaterialLabel.AutoSize = true;
-            this.newMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newMaterialLabel.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newMaterialLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.newMaterialLabel.Location = new System.Drawing.Point(18, 24);
             this.newMaterialLabel.Name = "newMaterialLabel";
@@ -484,7 +484,7 @@ namespace intial_form_1_
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.backButton.FlatAppearance.BorderSize = 3;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("HP Simplified Hans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
             this.backButton.Location = new System.Drawing.Point(19, 452);
             this.backButton.Margin = new System.Windows.Forms.Padding(1);
@@ -511,7 +511,7 @@ namespace intial_form_1_
             // noMaterialLabel
             // 
             this.noMaterialLabel.AutoSize = true;
-            this.noMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noMaterialLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noMaterialLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.noMaterialLabel.Location = new System.Drawing.Point(16, 111);
             this.noMaterialLabel.Name = "noMaterialLabel";
@@ -533,7 +533,7 @@ namespace intial_form_1_
             // subjectNameLabel
             // 
             this.subjectNameLabel.AutoSize = true;
-            this.subjectNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subjectNameLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subjectNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.subjectNameLabel.Location = new System.Drawing.Point(29, 55);
             this.subjectNameLabel.Name = "subjectNameLabel";
@@ -544,7 +544,7 @@ namespace intial_form_1_
             // classroomName
             // 
             this.classroomName.AutoSize = true;
-            this.classroomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classroomName.Font = new System.Drawing.Font("HP Simplified Hans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classroomName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.classroomName.Location = new System.Drawing.Point(18, 22);
             this.classroomName.Name = "classroomName";
@@ -555,7 +555,7 @@ namespace intial_form_1_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(480, 474);
             this.label1.Name = "label1";
@@ -611,7 +611,7 @@ namespace intial_form_1_
             // materialTitleLabel
             // 
             this.materialTitleLabel.AutoSize = true;
-            this.materialTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialTitleLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialTitleLabel.Location = new System.Drawing.Point(63, 112);
             this.materialTitleLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.materialTitleLabel.Name = "materialTitleLabel";
@@ -634,7 +634,7 @@ namespace intial_form_1_
             this.CreateAssignment.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.CreateAssignment.FlatAppearance.BorderSize = 3;
             this.CreateAssignment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateAssignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAssignment.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAssignment.Location = new System.Drawing.Point(848, 404);
             this.CreateAssignment.Margin = new System.Windows.Forms.Padding(1);
             this.CreateAssignment.Name = "CreateAssignment";
@@ -647,7 +647,7 @@ namespace intial_form_1_
             // AssignmentDescriptionLabel
             // 
             this.AssignmentDescriptionLabel.AutoSize = true;
-            this.AssignmentDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmentDescriptionLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssignmentDescriptionLabel.Location = new System.Drawing.Point(63, 205);
             this.AssignmentDescriptionLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.AssignmentDescriptionLabel.Name = "AssignmentDescriptionLabel";
@@ -657,7 +657,7 @@ namespace intial_form_1_
             // 
             // materialTypeBox
             // 
-            this.materialTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialTypeBox.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialTypeBox.Location = new System.Drawing.Point(789, 205);
             this.materialTypeBox.Margin = new System.Windows.Forms.Padding(1);
             this.materialTypeBox.Name = "materialTypeBox";
@@ -667,7 +667,7 @@ namespace intial_form_1_
             // materialTypeLabel
             // 
             this.materialTypeLabel.AutoSize = true;
-            this.materialTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialTypeLabel.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialTypeLabel.Location = new System.Drawing.Point(785, 170);
             this.materialTypeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.materialTypeLabel.Name = "materialTypeLabel";
@@ -678,7 +678,7 @@ namespace intial_form_1_
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("HP Simplified Hans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label8.Location = new System.Drawing.Point(480, 474);
             this.label8.Name = "label8";
