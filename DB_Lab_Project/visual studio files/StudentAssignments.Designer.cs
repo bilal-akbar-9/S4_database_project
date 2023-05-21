@@ -47,7 +47,7 @@
             this.backButtonStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButtonStu.ForeColor = System.Drawing.Color.White;
             this.backButtonStu.Location = new System.Drawing.Point(23, 475);
-            this.backButtonStu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.backButtonStu.Margin = new System.Windows.Forms.Padding(1);
             this.backButtonStu.Name = "backButtonStu";
             this.backButtonStu.Size = new System.Drawing.Size(86, 40);
             this.backButtonStu.TabIndex = 32;
@@ -124,7 +124,7 @@
             this.label1.Text = "Made by BTI with 💓";
             this.label1.Visible = false;
             // 
-            // StudentAssignments
+            // studentAssignments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -135,8 +135,9 @@
             this.Controls.Add(this.noClassLabelStu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "StudentAssignments";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "studentAssignments";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentAssignments";
             this.Activated += new System.EventHandler(this.loadAssignmentAtStartPageStudentClas);
             this.panel1.ResumeLayout(false);
