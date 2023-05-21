@@ -125,10 +125,6 @@ create table Comment
     foreign key (commentUserName) references tblUser(username)
 )
 
-
-
-drop table Comment
-
 create table announcementComment
 (
     announcementCommentID int identity(1,1) not null,

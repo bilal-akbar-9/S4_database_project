@@ -42,9 +42,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +61,7 @@
             this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.username.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Italic);
             this.username.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.username.Location = new System.Drawing.Point(21, 288);
+            this.username.Location = new System.Drawing.Point(22, 358);
             this.username.Margin = new System.Windows.Forms.Padding(2);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(275, 23);
@@ -71,7 +73,7 @@
             this.password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.password.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Italic);
             this.password.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.password.Location = new System.Drawing.Point(21, 330);
+            this.password.Location = new System.Drawing.Point(22, 400);
             this.password.Margin = new System.Windows.Forms.Padding(2);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
@@ -88,7 +90,7 @@
             this.Login.Font = new System.Drawing.Font("HP Simplified", 12F);
             this.Login.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Login.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Login.Location = new System.Drawing.Point(167, 376);
+            this.Login.Location = new System.Drawing.Point(168, 446);
             this.Login.Margin = new System.Windows.Forms.Padding(2);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(130, 34);
@@ -103,7 +105,7 @@
             this.button2.Font = new System.Drawing.Font("HP Simplified", 11.25F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(21, 376);
+            this.button2.Location = new System.Drawing.Point(22, 446);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 34);
@@ -118,7 +120,7 @@
             this.studentRadioButton.Font = new System.Drawing.Font("HP Simplified", 9F);
             this.studentRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.studentRadioButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.studentRadioButton.Location = new System.Drawing.Point(21, 255);
+            this.studentRadioButton.Location = new System.Drawing.Point(22, 325);
             this.studentRadioButton.Name = "studentRadioButton";
             this.studentRadioButton.Size = new System.Drawing.Size(63, 18);
             this.studentRadioButton.TabIndex = 5;
@@ -133,7 +135,7 @@
             this.teacherRadioButton.Font = new System.Drawing.Font("HP Simplified", 9F);
             this.teacherRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.teacherRadioButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.teacherRadioButton.Location = new System.Drawing.Point(135, 255);
+            this.teacherRadioButton.Location = new System.Drawing.Point(136, 325);
             this.teacherRadioButton.Name = "teacherRadioButton";
             this.teacherRadioButton.Size = new System.Drawing.Size(63, 18);
             this.teacherRadioButton.TabIndex = 6;
@@ -148,7 +150,7 @@
             this.adminRadionButton.Font = new System.Drawing.Font("HP Simplified", 9F);
             this.adminRadionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.adminRadionButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.adminRadionButton.Location = new System.Drawing.Point(243, 255);
+            this.adminRadionButton.Location = new System.Drawing.Point(244, 325);
             this.adminRadionButton.Name = "adminRadionButton";
             this.adminRadionButton.Size = new System.Drawing.Size(56, 18);
             this.adminRadionButton.TabIndex = 7;
@@ -163,7 +165,7 @@
             this.loginAsLabel.Font = new System.Drawing.Font("HP Simplified", 12F, System.Drawing.FontStyle.Bold);
             this.loginAsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.loginAsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.loginAsLabel.Location = new System.Drawing.Point(17, 223);
+            this.loginAsLabel.Location = new System.Drawing.Point(18, 293);
             this.loginAsLabel.Name = "loginAsLabel";
             this.loginAsLabel.Size = new System.Drawing.Size(72, 21);
             this.loginAsLabel.TabIndex = 8;
@@ -172,6 +174,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.loginAsLabel);
             this.panel1.Controls.Add(this.username);
@@ -183,14 +186,14 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(23, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 449);
+            this.panel1.Size = new System.Drawing.Size(320, 513);
             this.panel1.TabIndex = 9;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 27);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 65);
             this.panel2.TabIndex = 9;
@@ -201,11 +204,21 @@
             this.label1.Font = new System.Drawing.Font("HP Simplified", 20.25F);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(101, 17);
+            this.label1.Location = new System.Drawing.Point(100, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "WELCOME";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::intial_form_1_.Properties.Resources.security;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 94);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(275, 181);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
@@ -213,9 +226,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(368, 500);
+            this.ClientSize = new System.Drawing.Size(368, 553);
             this.Controls.Add(this.panel1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
@@ -225,6 +237,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -245,6 +258,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

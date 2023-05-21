@@ -251,6 +251,12 @@
   <ItemGroup>
     <None Include="Resources\cyber-security-g8f1e0ea85_1280.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-Icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
