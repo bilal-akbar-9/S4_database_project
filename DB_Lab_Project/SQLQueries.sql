@@ -100,7 +100,7 @@ CREATE TABLE Submissions
     -- assignmentID from Assignment
     assignmentID int not null,
     submissionFile varchar(100),
-    submissionDate date,
+    submissionDate DATETIME,
     submissionPoints int,
     -- Primary key
     primary key (studentusername, assignmentID),
@@ -113,7 +113,7 @@ create table Comment
 (
     commentID int IDENTITY(1,1) not null,
     commentDescription varchar(100) not null,
-    commentDate date not null,
+    commentDate DATETIME not null,
     assignmentID int not null,
     commentUserName varchar(20) not null,
     -- Primary key
