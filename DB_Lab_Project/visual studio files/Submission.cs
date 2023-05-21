@@ -26,7 +26,11 @@ namespace intial_form_1_
 
         String assignmentDescription;
 
-        String DueDate;
+        String DueDate; //studentName, studentusername, classroomID, teacherName, teacherUsername
+        String studentName;
+        String classroomID;
+        String teacherName;
+        String teacherUsername;
 
 
         public Submission()
@@ -34,7 +38,7 @@ namespace intial_form_1_
             InitializeComponent();
         }
 
-        public Submission(String studentusername, String assignmentID, String submissionPoints, String assignmentTitleSubmission, String assignmentDescription, String DueDate)
+        public Submission(String studentusername, String assignmentID, String submissionPoints, String assignmentTitleSubmission, String assignmentDescription, String DueDate, String studentName, String classroomID, String teacherName, String teacherUsername)
         {
             InitializeComponent();
             this.studentusername = studentusername;
@@ -43,8 +47,11 @@ namespace intial_form_1_
             this.assignmentTitleSubmissions = assignmentTitleSubmission;
             this.assignmentDescription = assignmentDescription;
             this.DueDate = DueDate;
+            this.studentName = studentName;
+            this.classroomID = classroomID;
+            this.teacherName = teacherName;
+            this.teacherUsername = teacherUsername;
             cn = new SqlConnection(dbcon.MyConnection());
-
         }
 
         private void Submission_Load(object sender, EventArgs e)
@@ -52,6 +59,27 @@ namespace intial_form_1_
             txtAssTitleSUbmission.Text = assignmentTitleSubmissions;
             txtAssDescsubmission.Text = assignmentDescription;
             dueDateLabelsubmission.Text = DueDate;
+            //show the submission if the student has submitted before
+            cn.Open();
+            cm = new SqlCommand("SELECT submissionFile FROM Submissions WHERE studentUsername = @studentusername AND assignmentID = @assignmentID", cn);
+            cm.Parameters.AddWithValue("@studentusername", studentusername);
+            cm.Parameters.AddWithValue("@assignmentID", assignmentID);
+            dr = cm.ExecuteReader();
+            dr.Read();
+            if (dr.HasRows)
+            {
+                textBoxsubmission.Text = dr["submissionFile"].ToString();
+                SubmitButton.Visible = false;
+            }
+            else
+            {
+                textBoxsubmission.Text = "";
+                SubmitButton.Visible = true;
+            }
+            dr.Close();
+            cn.Close();
+
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -87,6 +115,14 @@ namespace intial_form_1_
                 MessageBox.Show("Submission has been added");
 
             }
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            studentAssignments studentAssignments = new studentAssignments(studentName, studentusername, classroomID, teacherName, teacherUsername);
+            studentAssignments.Show();
+            
         }
     }
 }

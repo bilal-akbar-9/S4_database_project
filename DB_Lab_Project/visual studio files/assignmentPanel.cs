@@ -50,8 +50,12 @@ namespace intial_form_1_
                 SqlConnection cn = new SqlConnection();
                 cn = new SqlConnection(dbcon.MyConnection());
                 cn.Open();
-                cm = new SqlCommand("select * from submissions where assignmentID in (select assignmentID from assignment where classroomID = @classroomID)", cn);
+                cm = new SqlCommand("select * from Submissions where assignmentID in (select assignmentID from Assignment where classroomID = @classroomID and assignmentID = @assignmentID and username_Teacher = @teacherUserName)", cn);
+                // cm = new SqlCommand("select * from Submissions where assignmentID = @assignmentID and teacherUserName = @teacherUserName", cn);
                 cm.Parameters.AddWithValue("@classroomID", classroomID);
+                cm.Parameters.AddWithValue("@assignmentID", assignmentID);
+                cm.Parameters.AddWithValue("@teacherUserName", teacherUserName);
+
                 adapter = new SqlDataAdapter(cm);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
@@ -63,7 +67,6 @@ namespace intial_form_1_
                 int count = (int)cm.ExecuteScalar();
                 countlabel.Visible = true;
                 countlabel.Text = "Total Count: " + count.ToString();
-
             }
             catch (Exception ex)
             {
@@ -381,19 +384,6 @@ namespace intial_form_1_
 
                 //check if the value is not greater than submission points from the assignment table
                 int assignmentID = Convert.ToInt32(row.Cells["assignmentID"].Value);
-
-                // cn.Open();
-                // cm = new SqlCommand("select submissionPoints from Assignment where assignmentID=@AssignmentID", cn);
-                // cm.Parameters.AddWithValue("@AssignmentID", assignmentID);
-                // dr = cm.ExecuteReader();
-                // dr.Read();
-                // //store the submission points from the assignment table
-                // int submissionPoints = Convert.ToInt32(dr["submissionPoints"]);
-                // dr.Close();
-                // name = ViewProgressDatagridView
-                 
-
-
 
                 try
                 {

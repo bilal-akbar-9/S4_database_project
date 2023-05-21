@@ -134,7 +134,7 @@ namespace intial_form_1_
                         panel.Click += (s, ev) =>
                         {
                             this.Hide();
-                            Submission submission = new Submission(Studentusername,assignmentIDString,submissionPoints,assignmentTitleString,assignmentDescriptionString,DueDateString);
+                            Submission submission = new Submission(Studentusername,assignmentIDString,submissionPoints,assignmentTitleString,assignmentDescriptionString,DueDateString,studentName,classroomID,teacherName,teacherUsername);
                             submission.Show();
                         };
                     }
